@@ -33,6 +33,11 @@
       "macro_f1": 0.7465881109748682
     },
     {
+      "model": "BiLSTM baseline",
+      "accuracy": 0.8887096774193548,
+      "macro_f1": 0.6410320956576463
+    },
+    {
       "model": "BiGRU final",
       "accuracy": 0.8822580575942993,
       "macro_f1": 0.6328652893031255
