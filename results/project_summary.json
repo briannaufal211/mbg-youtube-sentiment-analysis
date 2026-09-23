@@ -9,7 +9,7 @@
   },
   "empty_after_preprocessing": 561,
   "avg_comment_tokens": 9.859083333333333,
-  "median_comment_tokens": 6.0,
+  "median_comment_tokens": 6,
   "peak_discussion_date": "2026-09-21",
   "peak_discussion_volume": 895,
   "sentiment_peak_by_label": {
@@ -38,7 +38,7 @@
       "macro_f1": 0.6410320956576463
     },
     {
-      "model": "BiGRU final",
+      "model": "BiGRU candidate",
       "accuracy": 0.8822580575942993,
       "macro_f1": 0.6328652893031255
     }
