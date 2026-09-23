@@ -160,3 +160,14 @@ This repository separates:
 - **sentiment analysis** for dataset-level sentiment composition
 - **model benchmarking** for positive-vs-negative classification
 - **interpretation** for converting outputs into data-driven findings and clearly stated limitations
+
+## Verification
+
+The checked-in notebook is portfolio-ready and includes:
+- stratified train/test split before model training;
+- TF-IDF + Logistic Regression baseline with embedded test results;
+- guarded BiLSTM/BiGRU sections with the required GRU import;
+- no duplicate tokenization section;
+- reproducibility notes and dataset-specific interpretation boundaries.
+
+The notebook has no embedded error outputs in the committed version.
