@@ -1,110 +1,160 @@
 # MBG YouTube Sentiment Analysis & Text Mining
 
-End-to-end **Text Mining + NLP + Machine Learning + Deep Learning** project that analyzes 12,000 YouTube comments related to the Makan Bergizi Gratis (MBG) discussion.
+End-to-end **Text Mining + NLP + Machine Learning + Deep Learning** project for analyzing 12,000 YouTube comments related to the MBG discussion.
 
-## Project Overview
+## Project Objective
 
-The project turns unstructured YouTube comments into measurable information through:
+The project turns unstructured YouTube comments into measurable outputs through:
 
-**Data validation → text preprocessing → exploratory text mining → sentiment analysis → sentiment trend → binary classification → model benchmarking → evaluation → insight**
+**Data quality → duplicate-leakage control → label validation workflow → text preprocessing → exploratory text mining → binary classification → model benchmarking → imbalance-aware evaluation → Optuna tuning → error analysis → explainability → 3-class classification**
 
-### Questions addressed
-
-- What is the sentiment composition of the collected comments?
-- When is discussion volume highest?
-- Which words dominate the conversation after preprocessing?
-- Can positive vs negative comments be classified automatically?
-- How does a classical NLP baseline compare with BiLSTM and BiGRU?
+The notebook is intentionally designed to distinguish descriptive findings from model-evaluation evidence and dataset limitations.
 
 ## Dataset
 
-Primary file:
+Primary portfolio file:
 
 `data/mbg_comments_labeled.csv`
 
-Current portfolio dataset:
+Current dataset snapshot in the repository contains 12,000 labeled comments. The notebook computes the exact post-deduplication modeling counts at runtime instead of hard-coding them.
 
-| Metric | Value |
-|---|---:|
-| Total comments | 12,000 |
-| Positive | 220 (1.83%) |
-| Negative | 2,880 (24.00%) |
-| Neutral | 8,900 (74.17%) |
-| Binary modeling rows | 3,100 |
-| Binary negative share | 92.9% |
-| Binary positive share | 7.1% |
+### Labeling
 
-### Labeling note
+The current portfolio dataset uses **AI-assisted semantic labeling** for:
+- `positive`
+- `negative`
+- `neutral`
 
-Sentiment labels use **AI-assisted semantic labeling**. They are not human gold-standard annotations. Model metrics therefore measure performance against this labeling scheme rather than against an independently verified human benchmark.
+The repository also contains `Scripts/02_prepare_labeling.py`, which prepares a sample for manual annotation.
 
-## NLP & Modeling
+The notebook now creates:
 
-### Text preprocessing
+`results/human_validation_sample_for_annotation.csv`
+
+This is a **blinded** validation file: the AI label is not exposed to the human annotator. Until `human_label` is actually filled, the notebook reports validation status as **PENDING** and does not fabricate agreement metrics.
+
+## Data Quality & Leakage Controls
+
+Before ML splitting, the notebook:
+
+1. normalizes raw text into a deterministic duplicate key;
+2. removes empty/invalid texts from the ML corpus;
+3. detects duplicate groups with conflicting labels;
+4. excludes conflicting duplicate groups rather than choosing an arbitrary label;
+5. deduplicates repeated text **before** train/validation/test splitting;
+6. asserts there is no duplicate-key overlap between splits.
+
+The raw dataset remains available for descriptive EDA, while the model corpus is protected against repeated-text leakage.
+
+## NLP Preprocessing
 
 The notebook handles Indonesian YouTube-style text through:
 
 - HTML/entity normalization
 - URL and mention removal
-- hashtag symbol normalization
-- lowercasing and punctuation cleanup
+- hashtag normalization
+- Unicode normalization
+- lowercasing
+- repeated-character normalization
 - slang normalization
 - Indonesian stopword removal
 - explicit preservation of negation words
 - optional Sastrawi stemming
 
-### Models
+## Modeling
 
-1. **TF-IDF + Logistic Regression** — classical NLP baseline
-2. **Bidirectional LSTM** — deep-learning baseline
-3. **Bidirectional GRU** — deep-learning candidate
-4. **Optuna** — optional hyperparameter tuning for BiGRU
+### Binary task
 
-### Evaluation
+**Positive vs Negative** is treated as a focused polarity-classification experiment. Neutral is kept for dataset-level analysis and a separate 3-class benchmark.
 
-The notebook reports:
+Models:
+
+1. **TF-IDF + Logistic Regression** — interpretable classical baseline
+2. **BiLSTM** — deep-learning baseline
+3. **BiGRU + Optuna** — tuned deep-learning candidate
+
+### Class imbalance
+
+The binary task is expected to be strongly imbalanced, so the notebook reports:
 
 - Accuracy
-- Precision
-- Recall
-- F1-score
+- Balanced Accuracy
+- Positive-class Precision / Recall / F1
 - Macro F1
-- Confusion matrix
-- Training / validation curves
+- Weighted F1
+- ROC-AUC
+- PR-AUC / Average Precision
+- confusion matrix
+- error analysis
 
-Macro F1 is emphasized because the binary dataset is highly imbalanced.
+Class weights are learned from the training set only.
 
-## Portfolio Run Results
+### Optuna
 
-Embedded outputs in the notebook come from an executed run on the 12,000-comment dataset.
+Optuna's objective is explicitly:
 
-| Model | Accuracy | Macro F1 |
-|---|---:|---:|
-| TF-IDF + Logistic Regression | **93.39%** | **74.66%** |
-| BiLSTM baseline | 88.87% | 64.10% |
-| BiGRU candidate | 88.23% | 63.29% |
+**maximize validation Macro F1**
 
-On the 620-row test set, there are 44 positive and 576 negative examples.
+The test set is never used during hyperparameter tuning.
 
-### Key dataset findings
+Repository Actions run Optuna by default. For a faster local smoke test:
 
-- **Neutral is the dominant label:** 8,900 comments (74.17%).
-- **Peak discussion volume:** 21 September 2026 with 895 comments.
-- **Top five words:** `mbg`, `gak`, `tidak`, `makan`, `anak`.
-- The binary classification task is strongly imbalanced, so accuracy should not be read alone.
-- In this run, the classical TF-IDF baseline recorded a higher Macro F1 than the tested deep-learning models.
+```
+RUN_OPTUNA=0
+```
 
-## Important Interpretation Boundary
+You can also control the number of trials with:
 
-The project describes the collected **YouTube dataset**, not the opinion of the entire population. Discussion spikes are descriptive and are not treated as proof of a specific cause.
+```
+OPTUNA_TRIALS=5
+```
 
-## Limitations
+The notebook prints:
+- whether Optuna was requested;
+- whether it actually ran;
+- number of completed trials;
+- best parameters.
 
-- Platform-specific sample; not automatically population-representative.
-- Online comments can contain slang, sarcasm, typo, emoji, spam, and ambiguity.
-- AI-assisted labels are not an independently validated human gold standard.
-- Binary modeling removes neutral from training.
-- RNN-based models have limitations with long context and sarcasm.
+## Explainability
+
+The notebook includes coefficient-based explainability for the TF-IDF + Logistic Regression model, showing which unigram/bigram features push predictions toward positive or negative sentiment.
+
+This provides a transparent benchmark even when the deep-learning models are less interpretable.
+
+## 3-Class Classification
+
+Neutral is not discarded from the project. A separate **3-class TF-IDF + Logistic Regression** model evaluates:
+
+- positive
+- negative
+- neutral
+
+This benchmark also uses class weighting and reports Macro F1, Balanced Accuracy, and macro PR-AUC.
+
+## Error Analysis
+
+The notebook exports:
+
+`results/error_analysis.csv`
+
+and surfaces false positives, false negatives, and error rates by comment-length bucket.
+
+## Results Artifacts
+
+The notebook writes reusable outputs to `results/`, including:
+
+- `data_quality_profile.csv`
+- `human_validation_sample_for_annotation.csv`
+- `human_validation_scoring.csv` (only when human labels exist)
+- `model_comparison.csv`
+- `tfidf_binary_metrics.csv`
+- `bilstm_binary_metrics.csv`
+- `bigru_binary_metrics.csv`
+- `three_class_metrics.csv`
+- `optuna_trials.csv`
+- `error_analysis.csv`
+- `explainability_top_terms.csv`
+- `project_summary.json`
 
 ## Repository Structure
 
@@ -116,9 +166,11 @@ The project describes the collected **YouTube dataset**, not the opinion of the 
 │   ├── mbg_comments_to_label.csv
 │   └── mbg_comments_labeled.csv
 ├── Scripts/
+│   ├── 01_data_quality_cleaning.py
+│   ├── 02_prepare_labeling.py
+│   ├── 03_merge_labels.py
+│   └── 04_prepare_human_validation.py
 ├── results/
-│   ├── model_comparison.csv
-│   └── project_summary.json
 ├── sentiment_analysis_mbg_youtube.ipynb
 ├── requirements.txt
 └── .github/
@@ -126,7 +178,7 @@ The project describes the collected **YouTube dataset**, not the opinion of the 
         └── execute-mbg-notebook.yml
 ```
 
-## How to Run
+## Reproducibility
 
 Install dependencies:
 
@@ -138,36 +190,20 @@ Then open:
 
 `sentiment_analysis_mbg_youtube.ipynb`
 
-The notebook is designed to run from the repository root.
+The notebook is designed to run from the repository root. The GitHub Actions workflow also executes it automatically when the notebook or its labeled dataset changes.
 
-Optuna is disabled by default to keep the normal portfolio run practical. To enable it:
+## Important Interpretation Boundary
 
-**Windows CMD**
-```cmd
-set RUN_OPTUNA=1
-```
+This project describes the collected **YouTube sample** and the model's performance against the repository's labeling scheme.
 
-**macOS / Linux**
-```bash
-export RUN_OPTUNA=1
-```
+It does not:
+- establish causality from discussion spikes;
+- represent the opinion of the entire population;
+- treat AI-assisted labels as human gold standard;
+- report a fabricated human-validation score.
 
-## Portfolio Notes
+The main data-quality caveat that remains is the need to complete the blinded human-validation sample. That step is made explicit and reproducible in the repository.
 
-This repository separates:
+## Portfolio Takeaway
 
-- **EDA / text mining** for understanding the collected conversation
-- **sentiment analysis** for dataset-level sentiment composition
-- **model benchmarking** for positive-vs-negative classification
-- **interpretation** for converting outputs into data-driven findings and clearly stated limitations
-
-## Verification
-
-The checked-in notebook is portfolio-ready and includes:
-- stratified train/test split before model training;
-- TF-IDF + Logistic Regression baseline with embedded test results;
-- guarded BiLSTM/BiGRU sections with the required GRU import;
-- no duplicate tokenization section;
-- reproducibility notes and dataset-specific interpretation boundaries.
-
-The notebook has no embedded error outputs in the committed version.
+This project goes beyond “train a sentiment model.” It demonstrates a complete analytics workflow with **data quality, leakage prevention, label validation workflow, NLP preprocessing, EDA, imbalanced classification, hyperparameter tuning, PR-AUC, error analysis, model explainability, and 3-class benchmarking**.

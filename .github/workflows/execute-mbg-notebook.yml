@@ -17,12 +17,12 @@ permissions:
 
 jobs:
   execute-notebook:
-    # Avoid re-triggering the execution job when the bot commits the rendered notebook.
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      RUN_OPTUNA: "0"
+      RUN_OPTUNA: "1"
+      OPTUNA_TRIALS: "5"
       TF_CPP_MIN_LOG_LEVEL: "2"
 
     steps:
@@ -55,6 +55,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No notebook/result changes to commit."
           else
-            git commit -m "Execute MBG sentiment portfolio notebook"
+            git commit -m "Execute refined MBG sentiment portfolio notebook"
             git push
           fi
