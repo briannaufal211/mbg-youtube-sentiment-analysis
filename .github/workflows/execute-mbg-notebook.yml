@@ -8,6 +8,10 @@ on:
       - ".github/workflows/execute-mbg-notebook.yml"
   workflow_dispatch:
 
+concurrency:
+  group: mbg-portfolio-notebook
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
