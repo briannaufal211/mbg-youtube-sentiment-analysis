@@ -17,6 +17,8 @@ permissions:
 
 jobs:
   execute-notebook:
+    # Avoid re-triggering the execution job when the bot commits the rendered notebook.
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
