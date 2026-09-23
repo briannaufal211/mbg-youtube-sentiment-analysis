@@ -1,29 +1,20 @@
 # MBG YouTube Sentiment Analysis & Text Mining
 
-End-to-end text mining and sentiment classification project using **12,000 YouTube comments** related to the Makan Bergizi Gratis (MBG) discussion.
+End-to-end **Text Mining + NLP + Machine Learning + Deep Learning** project that analyzes 12,000 YouTube comments related to the Makan Bergizi Gratis (MBG) discussion.
 
-## Project Objective
+## Project Overview
 
 The project turns unstructured YouTube comments into measurable information through:
 
-1. Data validation and profiling
-2. Indonesian text preprocessing
-3. Exploratory text mining
-4. Positive / negative / neutral sentiment analysis
-5. Sentiment trend analysis over time
-6. Binary sentiment classification (positive vs negative)
-7. Model evaluation and error analysis
+**Data validation → text preprocessing → exploratory text mining → sentiment analysis → sentiment trend → binary classification → model benchmarking → evaluation → insight**
 
-## Modeling
+### Questions addressed
 
-The notebook includes:
-
-- **TF-IDF + Logistic Regression** as a lightweight baseline
-- **Bidirectional LSTM** as the deep-learning baseline
-- **Bidirectional GRU** as the final candidate
-- **Optuna** for optional hyperparameter tuning
-
-Evaluation includes accuracy, precision, recall, class-level F1, Macro F1, confusion matrix, and training/validation curves.
+- What is the sentiment composition of the collected comments?
+- When is discussion volume highest?
+- Which words dominate the conversation after preprocessing?
+- Can positive vs negative comments be classified automatically?
+- How does a classical NLP baseline compare with BiLSTM and BiGRU?
 
 ## Dataset
 
@@ -31,17 +22,89 @@ Primary file:
 
 `data/mbg_comments_labeled.csv`
 
-Current labeled dataset:
-- 12,000 comments
-- 220 positive
-- 2,880 negative
-- 8,900 neutral
+Current portfolio dataset:
 
-For binary modeling, neutral comments are excluded, leaving 3,100 positive/negative comments.
+| Metric | Value |
+|---|---:|
+| Total comments | 12,000 |
+| Positive | 220 (1.83%) |
+| Negative | 2,880 (24.00%) |
+| Neutral | 8,900 (74.17%) |
+| Binary modeling rows | 3,100 |
+| Binary negative share | 92.9% |
+| Binary positive share | 7.1% |
 
 ### Labeling note
 
-Sentiment labels are **AI-assisted semantic labels**, not human-annotated gold-standard labels. Model metrics should therefore be interpreted as performance against this labeling scheme.
+Sentiment labels use **AI-assisted semantic labeling**. They are not human gold-standard annotations. Model metrics therefore measure performance against this labeling scheme rather than against an independently verified human benchmark.
+
+## NLP & Modeling
+
+### Text preprocessing
+
+The notebook handles Indonesian YouTube-style text through:
+
+- HTML/entity normalization
+- URL and mention removal
+- hashtag symbol normalization
+- lowercasing and punctuation cleanup
+- slang normalization
+- Indonesian stopword removal
+- explicit preservation of negation words
+- optional Sastrawi stemming
+
+### Models
+
+1. **TF-IDF + Logistic Regression** — classical NLP baseline
+2. **Bidirectional LSTM** — deep-learning baseline
+3. **Bidirectional GRU** — deep-learning candidate
+4. **Optuna** — optional hyperparameter tuning for BiGRU
+
+### Evaluation
+
+The notebook reports:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Macro F1
+- Confusion matrix
+- Training / validation curves
+
+Macro F1 is emphasized because the binary dataset is highly imbalanced.
+
+## Portfolio Run Results
+
+Embedded outputs in the notebook come from an executed run on the 12,000-comment dataset.
+
+| Model | Accuracy | Macro F1 |
+|---|---:|---:|
+| TF-IDF + Logistic Regression | **93.39%** | **74.66%** |
+| BiLSTM baseline | 88.87% | 64.10% |
+| BiGRU candidate | 88.23% | 63.29% |
+
+On the 620-row test set, there are 44 positive and 576 negative examples.
+
+### Key dataset findings
+
+- **Neutral is the dominant label:** 8,900 comments (74.17%).
+- **Peak discussion volume:** 21 September 2026 with 895 comments.
+- **Top five words:** `mbg`, `gak`, `tidak`, `makan`, `anak`.
+- The binary classification task is strongly imbalanced, so accuracy should not be read alone.
+- In this run, the classical TF-IDF baseline recorded a higher Macro F1 than the tested deep-learning models.
+
+## Important Interpretation Boundary
+
+The project describes the collected **YouTube dataset**, not the opinion of the entire population. Discussion spikes are descriptive and are not treated as proof of a specific cause.
+
+## Limitations
+
+- Platform-specific sample; not automatically population-representative.
+- Online comments can contain slang, sarcasm, typo, emoji, spam, and ambiguity.
+- AI-assisted labels are not an independently validated human gold standard.
+- Binary modeling removes neutral from training.
+- RNN-based models have limitations with long context and sarcasm.
 
 ## Repository Structure
 
@@ -49,8 +112,13 @@ Sentiment labels are **AI-assisted semantic labels**, not human-annotated gold-s
 .
 ├── data/
 │   ├── mbg_comments_raw.csv
+│   ├── mbg_comments_clean.csv
+│   ├── mbg_comments_to_label.csv
 │   └── mbg_comments_labeled.csv
 ├── Scripts/
+├── results/
+│   ├── model_comparison.csv
+│   └── project_summary.json
 ├── sentiment_analysis_mbg_youtube.ipynb
 ├── requirements.txt
 └── .github/
@@ -60,26 +128,35 @@ Sentiment labels are **AI-assisted semantic labels**, not human-annotated gold-s
 
 ## How to Run
 
-Create a Python environment, install dependencies, then open:
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then open:
 
 `sentiment_analysis_mbg_youtube.ipynb`
 
-For a normal local run, Optuna is disabled by default.
+The notebook is designed to run from the repository root.
 
-To enable tuning:
+Optuna is disabled by default to keep the normal portfolio run practical. To enable it:
 
-```bash
+**Windows CMD**
+```cmd
 set RUN_OPTUNA=1
 ```
 
-On macOS/Linux:
-
+**macOS / Linux**
 ```bash
 export RUN_OPTUNA=1
 ```
 
 ## Portfolio Notes
 
-The notebook is intentionally data-driven: numerical results and insights are generated from the project dataset during execution rather than copied from another notebook.
+This repository separates:
 
-YouTube comments should be treated as a platform-specific sample, not as a direct estimate of the views or opinions of the entire population.
+- **EDA / text mining** for understanding the collected conversation
+- **sentiment analysis** for dataset-level sentiment composition
+- **model benchmarking** for positive-vs-negative classification
+- **interpretation** for converting outputs into data-driven findings and clearly stated limitations
