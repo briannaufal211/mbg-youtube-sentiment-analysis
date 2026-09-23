@@ -1,0 +1,55 @@
+name: Execute MBG Portfolio Notebook
+
+on:
+  push:
+    paths:
+      - "sentiment_analysis_mbg_youtube.ipynb"
+      - "data/mbg_comments_labeled.csv"
+      - ".github/workflows/execute-mbg-notebook.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  execute-notebook:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      RUN_OPTUNA: "1"
+      TF_CPP_MIN_LOG_LEVEL: "2"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install             numpy pandas matplotlib seaborn scikit-learn             nltk Sastrawi tensorflow optuna             jupyter nbconvert nbclient
+
+      - name: Execute notebook
+        run: |
+          jupyter nbconvert             --to notebook             --execute             --ExecutePreprocessor.timeout=1800             --ExecutePreprocessor.kernel_name=python3             --output sentiment_analysis_mbg_youtube_executed.ipynb             sentiment_analysis_mbg_youtube.ipynb
+
+      - name: Replace portfolio notebook with executed version
+        run: |
+          mv sentiment_analysis_mbg_youtube_executed.ipynb sentiment_analysis_mbg_youtube.ipynb
+
+      - name: Commit executed notebook and results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sentiment_analysis_mbg_youtube.ipynb results/ best_baseline_bilstm.keras best_model.keras
+          if git diff --cached --quiet; then
+            echo "No notebook/result changes to commit."
+          else
+            git commit -m "Execute MBG sentiment portfolio notebook"
+            git push
+          fi
