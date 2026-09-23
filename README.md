@@ -25,13 +25,13 @@ The current portfolio dataset uses **AI-assisted semantic labeling** for:
 - `negative`
 - `neutral`
 
-The repository also contains `Scripts/02_prepare_labeling.py`, which prepares a sample for manual annotation.
+The repository also contains `Scripts/02_prepare_labeling.py`, which prepares a sample for annotation.
 
-The notebook now creates:
+The project now includes a reviewed binary validation sample in:
 
 `results/human_validation_sample_for_annotation.csv`
 
-This is a **blinded** validation file: the AI label is not exposed to the human annotator. Until `human_label` is actually filled, the notebook reports validation status as **PENDING** and does not fabricate agreement metrics.
+For the validation workflow, the label space is intentionally **binary: `positive` vs `negative`**. Comments that were previously marked `neutral` in the AI-assisted draft were mapped to `negative` according to the project owner's reviewed annotation rule. The completed file records these labels in `human_label` and is treated as **human-reviewed AI-assisted annotation**, not as an independent gold-standard annotation study.
 
 ## Data Quality & Leakage Controls
 
@@ -202,7 +202,7 @@ It does not:
 - treat AI-assisted labels as human gold standard;
 - report a fabricated human-validation score.
 
-The main data-quality caveat that remains is the need to complete the blinded human-validation sample. That step is made explicit and reproducible in the repository.
+The validation sample has now been reviewed using a binary sentiment scheme (`positive` / `negative`). Because the starting labels were AI-assisted and the human review was based on those proposed labels, the result should be described as human-reviewed annotation rather than an independent gold-standard benchmark.
 
 ## Portfolio Takeaway
 
