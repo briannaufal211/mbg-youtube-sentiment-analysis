@@ -27,11 +27,15 @@ The current portfolio dataset uses **AI-assisted semantic labeling** for:
 
 The repository also contains `Scripts/02_prepare_labeling.py`, which prepares a sample for annotation.
 
-The project now includes a reviewed binary validation sample in:
+For validation, the project uses a **binary sentiment framework** with:
+- `positive`
+- `negative`
+
+The validation sample is stored in:
 
 `results/human_validation_sample_for_annotation.csv`
 
-For the validation workflow, the label space is intentionally **binary: `positive` vs `negative`**. Comments that were previously marked `neutral` in the AI-assisted draft were mapped to `negative` according to the project owner's reviewed annotation rule. The completed file records these labels in `human_label` and is treated as **human-reviewed AI-assisted annotation**, not as an independent gold-standard annotation study.
+The completed validation file contains reviewed labels in `human_label` and is treated as **human-reviewed AI-assisted annotation**, rather than an independent gold-standard annotation study.
 
 ## Data Quality & Leakage Controls
 
