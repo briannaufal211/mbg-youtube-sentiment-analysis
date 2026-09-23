@@ -1,0 +1,2 @@
+rows_scored,review_consistency_accuracy,review_consistency_macro_f1,review_consistency_cohen_kappa
+300,0.78,0.6984649122807017,0.42441860465116277

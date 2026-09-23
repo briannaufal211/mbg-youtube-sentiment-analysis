@@ -21,7 +21,12 @@
     "rows_removed_duplicate_text": 464,
     "model_rows_after_dedup": 10934
   },
-  "human_validation_status": "PENDING",
+  "human_validation_status": "COMPLETED_REVIEWED",
+  "human_validation_label_space": [
+    "positive",
+    "negative"
+  ],
+  "human_validation_note": "Reviewed AI-assisted binary labels; neutral from the 3-class dataset is mapped to negative. This is not an independent gold-standard annotation study.",
   "optuna": {
     "requested": true,
     "executed": true,
