@@ -1,0 +1,41 @@
+{
+  "dataset_rows": 12000,
+  "valid_labeled_rows": 12000,
+  "binary_rows": 3100,
+  "label_counts": {
+    "positive": 220,
+    "negative": 2880,
+    "neutral": 8900
+  },
+  "empty_after_preprocessing": 561,
+  "avg_comment_tokens": 9.859083333333333,
+  "median_comment_tokens": 6.0,
+  "peak_discussion_date": "2026-09-21",
+  "peak_discussion_volume": 895,
+  "sentiment_peak_by_label": {
+    "positive": {
+      "date": "2026-07-03",
+      "count": 13
+    },
+    "negative": {
+      "date": "2026-09-21",
+      "count": 233
+    },
+    "neutral": {
+      "date": "2026-09-21",
+      "count": 650
+    }
+  },
+  "model_metrics": [
+    {
+      "model": "TF-IDF + Logistic Regression",
+      "accuracy": 0.9338709677419355,
+      "macro_f1": 0.7465881109748682
+    },
+    {
+      "model": "BiGRU final",
+      "accuracy": 0.8822580575942993,
+      "macro_f1": 0.6328652893031255
+    }
+  ]
+}
