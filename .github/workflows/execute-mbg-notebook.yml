@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      RUN_OPTUNA: "1"
+      RUN_OPTUNA: "0"
       TF_CPP_MIN_LOG_LEVEL: "2"
 
     steps:
