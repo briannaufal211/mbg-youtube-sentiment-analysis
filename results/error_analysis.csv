@@ -1,0 +1,594 @@
+row_id,comment,published_at,sentiment,true_label,predicted_label,positive_probability,error_type,token_length,length_bin
+9542,"Bapak Prabowo yang terhomat mohon turun ke lapangan jangan hanya menunggu 
+laporan dari mentri2 Bapak 
+Yang ABS saja njih.... miris sekali liat anak2 begini😢",2026-09-18 20:39:17+00:00,negative,0,0,0.18279313204367387,correct,19,16-30
+5997,"Y paling bapak nya yg yg punya sppg,sedikit pembelaan,supaya TDK d bubarkan mbg",2026-09-21 06:00:36+00:00,negative,0,0,0.2540184795157222,correct,10,8-15
+1955,"Setuju tolak MBG, hanya mubazir mending dananya langsung  diberikan kekeluarga miskin, MBG hanya kedok buat bisnis .....
+Apa presiden tidak peka.....dana begitu besar tidak dinikmati langsung tepat sasaran...
+
+Rakyat sudah muak dibodohin....kalau benar2",2026-05-05 22:24:03+00:00,negative,0,0,0.28367881684502566,correct,31,31+
+3873,"Zimbabwe kedua akan terjadi kalo MBG ga guna itu terus lanjut, miris punya pemimpin gak ada yg kompeten mulu",2026-05-25 16:03:53+00:00,negative,0,0,0.1873816392977133,correct,14,8-15
+9574,"Bagusnya setiap sekolh melarang mbg aja,dri pda keracunan trus pemerintah mah sengaja beri racun sama makanan mereka,biar GX DA orang pintar yg jdi saingan kluarga mereka",2026-09-18 16:19:11+00:00,negative,0,0,0.13687149193751383,correct,22,16-30
+3865,Kenapa sih si Bowo ini tidak dilengserkan.. ayolah rakyat Indonesia mari kita bersatu untuk lengserkan org bodoh ini dan sekaligus wakilnya anak haram konstitusi yg sudah merusak negri kita tercinta,2026-05-26 01:57:24+00:00,negative,0,0,0.1966627589553749,correct,22,16-30
+4159,Orang tua larang saja anaknya menerima dan makan MBG biar mencegah keracunan. Anak saya dapat MBG tapi tidak mau makannya.,2026-09-08 14:33:28+00:00,negative,0,1,0.5520821982053671,false_positive,16,16-30
+5801,"perbedaannya sangat mengkhawatirkan, indonesia mudah2n cepat merdeka dari orang2 yg otaknya setengah.",2026-09-21 08:57:39+00:00,negative,0,0,0.22525711787539945,correct,9,8-15
+4685,Mbg racun,2026-08-04 01:43:06+00:00,negative,0,0,0.18315647022324813,correct,2,0-3
+1177,👍 sadar tidak sadar diakui atau tidak program mbg adalah program yang betul-betul tidak masuk akal sedikitpun tidak ada dampak untuk masyarakat,2026-05-14 22:08:51+00:00,positive,1,0,0.27407096028082834,false_negative,18,16-30
+4210,"Pengurus MBG lbh goblok tuk ngurus gizi tuk ank2...
+Yg paham dan lbh pintar  itu ibu dr ank2 tsb.
+Salam otak waras",2026-08-28 08:51:16+00:00,negative,0,0,0.20485943856135413,correct,16,16-30
+2885,Tebu bodoh,2026-09-04 08:44:00+00:00,negative,0,0,0.21188907950892355,correct,2,0-3
+11627,Adek nya bilek bg lu ikhlas GK sih ngasih MBG 😭😭😭😭😭,2026-05-16 13:30:25+00:00,negative,0,0,0.23604395650192722,correct,9,8-15
+5156,Oh bgini ya pemerintah kasih MBG anak sekolah biasa makanannya biasa dan beracun klo anak sekolah internasional makanannya bergizi banget...apakah mngkin yg dilaporkan oleh BGN kepada Presiden  makanan sekolah internasional dan yg sekolah biasa dianggap oleh Presiden ya sama ...wahai pejabat hati nurani Kalian dimana... Allah melihat semuaNYA...Maha Kuasa Allah.... Aamiin 🤲,2026-09-22 02:11:58+00:00,negative,0,0,0.19736478679177735,correct,47,31+
+3191,Bohong itu anak bua mu bowo berbohong kepada bp prabowo hati wo bowo nnti jd tumbal,2026-09-09 00:50:23+00:00,negative,0,0,0.13701493447698332,correct,15,8-15
+6344,Di Tutup MBG sampai kiamat jangan sampai di buka peluang Korupsi para pejabat,2026-02-09 04:31:41+00:00,negative,0,0,0.17228399815522782,correct,11,8-15
+6787,Kalau saya sangat setuju untuk di batalkan di samping tak tepat sasaran justru menambah bruet mending anak anak sekolah yg orang tuanya miskin di bantu karena anak sekolah tersebut tidak semuanya miskin aduh negara ini gak tepat kebijaksanaan banyak fasilitas jg harusnya di di dahulukan betul ini komentar bagaimana tak menjadi racun karena harus basi saking banyaknya yg harus makan mbg,2025-09-27 01:07:29+00:00,negative,0,0,0.24731419623281248,correct,45,31+
+10874,Majalah basi ga laku gaada yang bi mau bangkrut,2025-04-25 14:26:56+00:00,negative,0,0,0.18398214268757548,correct,8,8-15
+11154,lah kok di habisin sih gimana mau di makan coba😭👊,2026-07-09 12:19:43+00:00,negative,0,0,0.4058865877764369,correct,6,4-7
+5221,Kesenjangan sosial berlaku di negeri ini...miris😢,2026-09-22 00:28:20+00:00,negative,0,0,0.1463506131599907,correct,5,4-7
+9055,"semua sekolah wajib menolak MBG karena berbahaya ,tiap saat bisa mengancam keselamatan jiwa .",2026-09-22 04:00:41+00:00,negative,0,0,0.18778063223278155,correct,11,8-15
+6997,Nah nah... Inilah tujuan si peracun.,2025-09-25 16:15:27+00:00,negative,0,0,0.24276813336159966,correct,6,4-7
+4084,Orang tua harus cegah anaknya makan MBG  daripada keracunan.,2026-09-14 14:47:04+00:00,negative,0,0,0.23906782120280812,correct,9,8-15
+9392,Sudahlah sekolahan harus menolak MBG dengan kompak seluruh Indonesia.......harus kompak menolak nya ......❤❤❤,2026-09-19 12:37:42+00:00,negative,0,0,0.15410004435721444,correct,11,8-15
+3349,Pemimpin indonesia goblok nya minta ampun 😂,2026-06-10 04:17:39+00:00,negative,0,0,0.10405721699326362,correct,5,4-7
+4893,Ga Cuman Keracunan tapi Mubadzir !! Makanannya  ! TAPI PRABOWO UDAH BUTA TULI BISU / LUMPUH ! GA MAU DENGAR SUARA RAKYAT !!,2026-07-23 13:39:53+00:00,negative,0,0,0.254594415744014,correct,18,16-30
+3284,Mmg Indonesia sombong... Cakap besar..... Tapi presedent ya goblok... Pi gilak kasut US Dan Perancis...,2026-06-12 02:46:05+00:00,negative,0,0,0.20102775781859408,correct,14,8-15
+11860,MBG yang termewah di indonesia klok menunnya itu setiap hari pasti murid sekolah pengen masuk setiap hari 😅😅😅,2026-05-05 07:34:41+00:00,negative,0,0,0.292725057089967,correct,14,8-15
+9564,Buang prabowo biar gak meracuni anak anak,2026-09-18 17:31:49+00:00,negative,0,0,0.193866835555368,correct,7,4-7
+4689,Maju. Terus. Bu. Pemikiran. Rasional  Lawan  pemikiran. Orang. Orang  bodoh. YG bikin  program. MBG.  Utk. Korupsi,2026-08-03 09:35:04+00:00,negative,0,0,0.26508673084297046,correct,14,8-15
+7523,"Heran di Indonesia korupsi yg digemari oleh pejabat dan anggota DPR, polisi dan tentara.",2026-07-04 01:51:48+00:00,negative,0,0,0.10030952203857291,correct,9,8-15
+11844,Ini lu yang makan atau adik nnya😭😭😭😭,2026-05-07 03:33:19+00:00,negative,0,0,0.16390820095581582,correct,4,4-7
+7239,"Kalau saya perhatikan, di Konoha yg lebih sehat yg pemilik dapurnya, sedangkan penerima manfaat utamanya sering keracunan 😅",2026-07-05 11:52:10+00:00,negative,0,0,0.3695826359436345,correct,11,8-15
+7499,"kalau menu MBG nya menarik maka anak2 sekolah bisa lebih semangat utk berangkat sekolah seperti di Jepang, kalau di Konoha sini kebanyakan dikorupsi akhirnya kualitas makanan yg sampai ke anak2 sekolah tinggal bongkengnya aja, naudzubillah",2026-07-04 03:20:40+00:00,negative,0,0,0.3614190070322865,correct,24,16-30
+5885,Mungkin  sekolah ini  bayar  MBG  jd ya jelas beda...nggak keracunan....namanya juga bisnis,2026-09-21 07:35:30+00:00,positive,1,0,0.3967961950185425,false_negative,12,8-15
+7453,Klo diindo mkanan beracun 😂😂😂,2026-07-04 05:58:21+00:00,negative,0,0,0.10421073110877806,correct,4,4-7
+9662,Siapa yg bisa menghentikan MBG??!!tentu RAKYATNYA HARUS BERSATU JGN MAU DI ADU DOMBA OLEH OKNUM BUZZEERP PEMERINTAH,2026-09-18 12:27:08+00:00,negative,0,0,0.22994969697839357,correct,14,8-15
+3298,"Presdein bnagsat mafia, kejam ,makan duit rakyat",2026-06-11 10:16:53+00:00,negative,0,0,0.1517895992966954,correct,7,4-7
+3981,Kami rakyat sangat setuju MBG di tutup aja tidak berguna gizi tidak ada hapus aja 🔥,2026-05-22 22:38:56+00:00,positive,1,1,0.869325877782956,correct,9,8-15
+7578,Korupsi terlalu parah di Negara ini....,2026-07-03 23:20:28+00:00,negative,0,0,0.05664515238318814,correct,4,4-7
+9594,"Makanan kalau dikelola sebagaimana layaknya sehari-hari di rumah seharusnya tidak mungkin beracun. Kemungkinan pertama; kejahatan pengelola SPPG yang mau untung cepat sehingga membeli bahan baku tidak layak yang memang juga kemungkinan ada di pasaran. Kemungkinan kedua; demi untuk merusak citra negara (intrik politik) ada oknum yang sengaja meracuni, jadi niat meracuni tidak mungkin datang dari pemimpin negara.
+
+Karena makanan adalah vital makanya institusi sekelas pemasyarakatan tidak menyerahkan pengelolaan bahan makanan kepada pihak ketiga, melainkan dikelola sendiri oleh petugas dan warga binaan.",2026-09-18 15:28:20+00:00,negative,0,0,0.2035019658522233,correct,67,31+
+466,Kalau aku sih ga pernah di mkn mbg nya aku selalu bawain bekel yg udah pasti sehat bersih tidak seperti itu nyawa manusia  terancam yg masak harus di hukum mati jng tutup mata,2026-05-24 08:32:45+00:00,negative,0,0,0.32232913577306405,correct,24,16-30
+4967,"mantaf bu, Lanjuttt 
+STOP MBG",2026-07-23 04:30:29+00:00,negative,0,0,0.1903065829916661,correct,5,4-7
+6761,"Stop dulu segera program MBG.
+Segera evaluasi program MBG sebelum jatuh korban lebih banyak lagi. 
+Segera stop kasihan anak2 jadi korban kebodohan ini.",2025-09-27 07:35:36+00:00,negative,0,0,0.28154152766086493,correct,20,16-30
+11180,Ini bukan kasih MBG buat adik tapi malah tolong makan 😂😂,2026-06-28 09:30:02+00:00,negative,0,0,0.2368811637407629,correct,8,8-15
+3320,"Laporan busuk dipercaya trs,payah",2026-06-10 21:20:34+00:00,negative,0,0,0.16833449769700812,correct,5,4-7
+6651,"Yang pasti kalo rakyat sejahtera ,anaknya pasti tidak kurang makan,bisa gak pemerintah mensejahterakan rakyatnya,hukum korupsi,sita asetnya",2025-09-29 01:38:18+00:00,negative,0,0,0.14160914385472667,correct,16,16-30
+9566,"Kejamnya, dimana mata hati kalian(pemerintah)",2026-09-18 17:27:36+00:00,negative,0,0,0.13468975151954535,correct,6,4-7
+4752,"Saya tidak menemukan seorang pun yang makan MBG berkata untung karna MBG wkwkwk 
+Gurunya juga apa lagi pada ngeluh makin cape ngajar makin berkurang 😂😂",2026-07-25 01:32:49+00:00,negative,0,0,0.3830116055125959,correct,19,16-30
+3161,"Bp selalalu berkata DPT LAPIRAN, DPT LAPIORAN , DPTLAPORAN  BP tdk SELIDIKI LAPORAN -LAPORAN  ITU BENAR APA TIDAK ??? LAPORAN-LAPORAN YG bp DWNGAR ITU BANYAK BOHONG NYA ! Yang melaporkan rahu bo TIFAK MAMPU MATE-MATEKA !",2026-09-09 07:07:41+00:00,negative,0,0,0.24787510973056429,correct,27,16-30
+6209,"fiks pemerintah tidak akan membiarkan rakyatnya pinter ,contoh sekolah full gratis. gaji guru honorer layak.  rakyat diberi makan biar kenyang lalu diam dan tidur dengan kebodohanya.",2026-02-24 12:12:56+00:00,negative,0,0,0.2632840316125212,correct,23,16-30
+643,MBG nya beracun 😭😭😭😭,2026-05-14 01:19:00+00:00,negative,0,0,0.1517372613573114,correct,2,0-3
+5483,"😂😂😂😂 Jangan iri....donk...makanya jadi org kaya. Realita hidup itu nyata dan menyakitkan. Klu kaya, kalian dihormati. Klu kalian miskin, kalian diinjak dan dibiarkan mati. 
+Kalian mau protes tapi itulah kehidupan nyata. Klu iri, berarti kalian goblok.",2026-09-21 15:02:35+00:00,negative,0,0,0.16024916022690666,correct,33,31+
+6262,Hentikan mbg gajih guru yang benar karna guru mengurus felanaran anak bangsa,2026-02-17 08:10:23+00:00,negative,0,0,0.13374277462960732,correct,11,8-15
+11591,Adik belike:Mak Abang makan mbg adik😂😂😂😂,2026-05-17 11:21:30+00:00,negative,0,0,0.2964286325067999,correct,7,4-7
+9634,"Rakyat :""*dimana sebenarnya letak gizinya itu katakan sekali lagi coba kau katakan sekali lagi. Mbg yang kau lihat tidak seperti yang kau bayangkan*"" mbg (makan beracun gratis)",2026-09-18 13:35:46+00:00,negative,0,0,0.21203919690979053,correct,24,16-30
+10550,"namanya projek pasti aDa PAY. Proyek nasionsl bagus tuJuan muLia..Dasar WAJAH.masa depan Indonesia. pembentuksn fisik. Caracter..Qualit.hidup.normalis,iq.EUgenetiK. BaRu.negara besar. memasuki di tahun. 2045.SeJaJar kan dg negara. Lain.tionkok.jepan chenes. 1.mau di bentuk yayasan. Bakti psncasiLa.(npwp.situ /BH). 2..project ini semoga.cepat.Jadi programm. masyarakat. (PKSmou) yayasan koperasi. Bundes. ud. cv. Ukm. inventarisasi. Organisasi. Pemuda. Karang tarunanpwpssitu.. Pokja.. dll. ( Mari Dukung mbg.)",2025-12-13 19:51:05+00:00,positive,1,0,0.4826028227961708,false_negative,65,31+
+258,Murid nya kasian ke racunan MBG 😢😢😢😢😢😢😢😢😮😮😮😮😮😮,2026-07-02 11:21:47+00:00,negative,0,0,0.21782417852146346,correct,4,4-7
+4796,"Payah distop,kalau rakyat gak kompak.",2026-07-24 11:10:38+00:00,negative,0,0,0.20565052365088682,correct,5,4-7
+6483,"Hentikan MBG , makaan orang sakit, tak ada rasa, busuk, bau, tidak layak",2026-01-20 14:14:20+00:00,negative,0,0,0.12162891614369246,correct,11,8-15
+6567,"Setuju mbg d brhetikan,bos ketring mbg jdi kaya rayaa.",2025-10-05 00:28:53+00:00,positive,1,1,0.9588687795320691,correct,9,8-15
+7554,😂😂...di indo..MBG banyak siswa keracunan😂😂😂... Program maling berjamaah,2026-07-04 00:50:23+00:00,negative,0,0,0.24292689051152955,correct,8,8-15
+7698,Kl Indonesia MBG nya ditunggangi..oleh oknum oknum yang ngambil keuntungan..tau sendiri Indonesia pejabat pejabat nya kebanyakan koruptor muluu..pusiiing 😢😢,2026-07-03 14:09:54+00:00,negative,0,0,0.2249707716016695,correct,17,16-30
+10688,"Kita hanya tidak kebagian uang korupsinya saja,, kalau korupsi bagi2 lah",2025-05-26 00:27:14+00:00,negative,0,0,0.139036619465278,correct,7,4-7
+7309,"Yg jls, org indo, pada mikir diri sendiri. Peduli sesama sangat kurang. Klu org eeopa, mereka keperdulianya sangat kuat. Klu indoptg perutku kenyang sendiei... 😆😆😆😆😆😆makanya penjajah, mampu bertahan ratusan tahun. Indo berjiwakere,",2026-07-04 23:15:17+00:00,negative,0,0,0.24718457588056256,correct,27,16-30
+6047,"Bubar kan aja pak presiden,mbg nya😂😂😂",2026-05-30 07:40:42+00:00,negative,0,0,0.2574438788863082,correct,4,4-7
+7433,Masih belum ada apa-apanya banding MBG di Konoha. Bikin petinggi dan  pengusaha dapurnya jadi kaya raya 😊😊😊,2026-07-04 07:14:21+00:00,negative,0,0,0.3692929755184931,correct,13,8-15
+5052,Mantap. Teruskan... Pemerintah ini ok banget. Menipu rakyat dengan bagus. Rakyat nya aja goblok mau di tipu sama pemimpin nya.,2026-09-22 05:45:02+00:00,negative,0,0,0.36726074269729914,correct,14,8-15
+1199,"Menurut saya program MBG bagus.
+Ga ada bener""y jadi pemerintah. 
+Begini salah, begitu salah.
+Slalu disalah kan.",2026-05-14 14:44:55+00:00,positive,1,1,0.7345559055233278,correct,13,8-15
+10079,"Rencana tujuannya bagus.
+Tapi pelaksanaannya sangat buruk. Karena sistem tidak di bangun dengan baik.
+Wajar bila banyak kritik dan kecewa.
+Indikasi banyak yang mencari kesempatan disini.
+
+Program ini memang terkesan sangat dipaksakan terutama bila dilihat dari anggaran yang harus di keluarkan ditengah minimnya anggaran APBD disetiap daerah akibat efisiensi 
+
+Perlu diketahui infrastruktur jalan di setiap daerah rusak berat memprihatinkan akibat terbatasnya anggaran.",2026-06-02 18:40:43+00:00,negative,0,0,0.4167400592761385,correct,50,31+
+319,Mereka keracunan aku yang trauma,2026-06-23 05:03:13+00:00,negative,0,0,0.18843396476616792,correct,2,0-3
+7178,Di Indonesia niatnya bukan MBG tetapi korupsi berkelanjutan yang aman terbukti bukan makanan bergizi di bahas malah barang 2 aneh di belanja,2026-07-06 06:12:29+00:00,negative,0,0,0.0781565642665046,correct,17,16-30
+7279,"Lah tujuan mereka bener2 menyehatkan generasi penerus...lah klo kita beda emang ...menyesatkan generasi penerus dengan buaian kata2 menyehatkan,mencegah stunting tp ujung2ny memastikan kantong pribadi tetap sehat ,aman dan sentosa😂😂 karena generasi penerus yg dimaksud adalah anak garis keturunannya sendiri bisa hidup kaya, berkecukupan,kenyang ma uang haram hasil korupsi...berbagga lagi baju orange",2026-07-05 05:49:06+00:00,negative,0,0,0.12242888205262795,correct,46,31+
+4915,"Sebenarnya programnya sdh bagus, tp pelaksanaan nya yg tak terkontrol, jd ajang Korupsi berjamaah, dan lagi orang2 yg tdk berkompeten yg pegang dapur2nya, keracunan, lele msh mentah disajikan, nasi beras raskin disuruh makan!! 
+Dengar ya pa wowo programnya amburadul, cuma ajang korupsi. 
+MBG Maling BerkedokGisi!!",2026-07-23 11:39:34+00:00,negative,0,0,0.35635470129759295,correct,39,31+
+1318,Proyek bodoh,2026-05-13 12:07:33+00:00,negative,0,0,0.1250515310255726,correct,2,0-3
+2030,Kenapa Prancis mau muntah 😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂,2026-09-20 23:29:37+00:00,negative,0,0,0.1973991359363197,correct,4,4-7
+4926,"Bahaya ni orang,",2026-07-23 09:44:17+00:00,negative,0,0,0.1545366720248089,correct,3,0-3
+8277,Aku udah setwits mbg nya😊😊,2026-03-02 23:21:55+00:00,negative,0,1,0.5508518473392121,false_positive,3,0-3
+9144,Program lahan korupsi.. program pembunuh rakyat.. mari jgn berhenti viralkan trus,2026-09-21 13:43:57+00:00,negative,0,0,0.09155720706125414,correct,11,8-15
+11434,"MBG porsi gede ❎
+MBG porsi dikit ✅ kocak wkwkwk 🤣😂😂🤣🤣🤣🤣🤏🤏🤏🤏🤏",2026-05-30 11:01:34+00:00,negative,0,0,0.380882579722387,correct,8,8-15
+9497,"Kenapa sebelum ada MBG TDK ada anak keracunan , bahkan jajan dipinggir jalan,tapi kok bisa MBG, katanya bergizi, harusnya higienis, malah beracun.",2026-09-19 00:42:47+00:00,negative,0,0,0.21022407712479524,correct,18,16-30
+5568,"Ini sih kalo bener MBG dari pemerintah, berarti terjadi diskriminasi, atau konten ini tuk membela MBG yg keracunan, bisa jadi 😂😂😂",2026-09-21 13:21:18+00:00,negative,0,0,0.22638715220331285,correct,12,8-15
+1009,200 ribu per bulan resiko nya keracunan pula 😂😂,2026-09-12 09:46:23+00:00,negative,0,0,0.19285539398222445,correct,7,4-7
+5481,"Gitu rupanya cara mainnya. Anak orang kaya MBG nya mewah, sekolah di desa MBG nya pakai telor 😢 Bubarkan MBG",2026-09-21 15:08:14+00:00,negative,0,0,0.38932611519147103,correct,16,16-30
+7128,klu di Indonesia sistem mbg nya amburadul dan banyak korupsi 🤭🤭🤭,2026-07-06 14:22:38+00:00,negative,0,0,0.11959105552659738,correct,7,4-7
+7386,"D  indo nompr berapa ya,,harus nya bergizi kok mlalah,ada nasi basi lauk nya asal"" an nggk bergizi",2026-07-04 10:59:13+00:00,negative,0,0,0.16323481670785714,correct,14,8-15
+9708,"Para pejabat buta, egois dengan program mbg, yg ujung²nya buat korupsi berjamaah",2026-09-18 10:54:57+00:00,negative,0,0,0.20432341986633373,correct,9,8-15
+9922,Klw masyarakat pintar kalian ga usah terima MBG.. Kasih anak anak kalian bekal untuk ke sekolah.udah tau banyak yang keracunan masih makan MBG. Lebih baik mencegah dari pada mengobati. Ga ada MBG anak anak kalian aman aman saja ga ada berita keracunan MBG. 😂😂😂,2026-09-18 07:28:43+00:00,positive,1,0,0.41586904114087153,false_negative,35,31+
+10519,Sangat setuju kalau bukan program tapi Proyek korupsi utk kroni2 prabowo.,2026-01-16 23:48:03+00:00,negative,0,0,0.21759888946506212,correct,8,8-15
+4266,"Mantap ibu ini,,top marketop dah,,,,tutup MBG",2026-08-23 17:23:06+00:00,negative,0,0,0.35772969222979834,correct,6,4-7
+4226,MBG deket rumah ku malah lg di benerin 😅😅,2026-08-27 08:07:11+00:00,negative,0,0,0.373040972819377,correct,7,4-7
+2614,Gw kalo yg jadi hewan peliharaannya belike : jijikk anjirr😭😭,2026-09-09 08:48:41+00:00,negative,0,0,0.16862120826233057,correct,6,4-7
+3752,Aduhh..kalian tidak bernasib baik wahai saudaraku serumpun..jika berterusan negara kalian di pimpin oleh orang goblok ini bisa bankrup negara kalian..ini orang lebih parah dari pak jokowi pada pendapat saya walaupun saya bukan orang indo,2026-05-30 15:40:58+00:00,negative,0,0,0.14748605990069905,correct,27,16-30
+9988,Biasa nya anak ku kalau MBG nya saya suruh bawa pulang agar bisa saya cek dulu layak atau tidak buat dimakan tapi sekarang muncul edaran kalau MBG nya tidak boleh dibawa pulang lagi.kira2 apa alasan nya ya?karna kalau guru nya disekolah benar2 selektif mungkin gak akan ada siswa yg keracunan.sangat2 mengkhawatirkan pemerintah kita sekarang ini.,2026-09-18 07:04:35+00:00,negative,0,0,0.5107745917428635,correct,40,31+
+7241,DI INDONESIA BELUM ADA SATU TAHUN KORUPSI UGAL- UGALAN ....DASAR GILA,2026-07-05 11:34:09+00:00,negative,0,0,0.13433358063491257,correct,9,8-15
+3860,Stop MBG...KARNA EKONOMI Merosot ancorr.orang orang pandai berpendidikan dulu..tak ada makan MBG....bukti nya jadi penguasa😭🤕🕺💃🤭,2026-05-26 10:06:45+00:00,negative,0,0,0.2596112384997561,correct,16,16-30
+5439,Sekolah orang2 kaya koq dapat MBG...malunya😅😅,2026-09-21 15:52:30+00:00,negative,0,0,0.4455339586647835,correct,6,4-7
+1821,Sayangnya presidennya Goblog,2026-05-07 01:06:20+00:00,negative,0,0,0.28083486873630176,correct,3,0-3
+1733,"Gorengan MBG dari otak gosong 
+Jaman Jokowi aspal tidak bisa dimakan...
+SamPh negara tiap detik bertambah...
+Menjijikkan....",2026-05-08 18:09:37+00:00,negative,0,0,0.28980559116209187,correct,15,8-15
+1439,Stop MBG dan uangkan semua dan dibagikan kepada semua masyarakat....,2026-05-12 10:32:21+00:00,negative,0,0,0.16481754594685422,correct,8,8-15
+5400,Sdh berbeda jauh ..kok bisa dpt mbg yo...😢😢😢 beda kelas..beda dpt nya...benar2 kalian ...😮😮😮,2026-09-21 17:07:12+00:00,negative,0,0,0.1927432160339684,correct,9,8-15
+7662,Lah disini udh disunat beracun pula 😅😅😅,2026-07-03 15:33:30+00:00,negative,0,0,0.12189560839872282,correct,4,4-7
+742,Njirtidakbahaya🎉❤😢😮,2026-05-10 00:16:19+00:00,negative,0,0,0.2297884760939009,correct,1,0-3
+9595,Pelanggaran ham berat. Ini program baik dihentikan. Mbg bisa racuni geñrasì,2026-09-18 15:23:41+00:00,negative,0,0,0.47864438716108715,correct,10,8-15
+6791,Setop MBG yg membahayakan nyawa anak2 didik.,2025-09-26 22:31:52+00:00,negative,0,0,0.17641894498824454,correct,6,4-7
+610,Jadi takut deh  pergi ke sekolah 🏫😱😱,2026-05-16 04:02:28+00:00,negative,0,0,0.1874131804686495,correct,4,4-7
+3003,Rakyat mnginginkN. STOP !! MBG. ISINYA MNCURIGAKN. NGERI BRACUN. KRAP DIKORUF. MKN DISKOLAH GK PUAS PULANG LAPARR LGI.,2026-09-17 14:57:21+00:00,negative,0,0,0.16237469448364614,correct,17,16-30
+9490,"Harusnya mbg dihentikan sejak ada kasus pertama keracunan dulu. Ini malah diteruskan sampe sekarang hingga ada yg kondisinya sangat serius hilang ingatan dan gangguan ginjal. 
+Sampai kapan pemerintah harus mengorbankan anak²? 
+
+Kita para ortu juga jadi parno tiap hari denger berita siswa keracunan mbg, bahkan udah ada kasus keracunan mbg di kecamatan tempat kami tinggal, untungnya bukan di sekolah anak² kami.",2026-09-19 01:24:19+00:00,negative,0,0,0.37393954982279803,correct,47,31+
+818,Keracunan mbgya,2026-05-06 03:27:43+00:00,negative,0,0,0.16775349460456618,correct,2,0-3
+3056,Bahaya si koplak Wowo... benar2 mau menghancurkan Negara Indonesia...hutang terus pendapatan gk ada...apa mau gadaikan negara Indonesia.MBG terus sudah di tolak sama Rakyat Indonesia masih MBG.,2026-09-13 04:03:05+00:00,negative,0,0,0.1330299705206608,correct,26,16-30
+5616,"Klw di cerna dgn luas,maka intinya adalah indonesia ini tidak layak di kelola oleh pemerintah ,lebih baik di kelola oleh swasta.
+  Bahkan swasta lebih menguntungkan ketimbang pemerintah.",2026-09-21 12:17:25+00:00,negative,0,0,0.33969671647381194,correct,19,16-30
+9875,"Berarti MBG sengaja di campur racun, sebaiknya jgn di mkn wahai rakyat Indonesia.",2026-09-18 07:47:34+00:00,negative,0,0,0.16690690882036155,correct,11,8-15
+1078,"MBG,,, bantuan yang lain itu Percuma,, pengurus Nya,,HAK UNTUK MASYARAKAT,,, Indonesia seperti Flem Sinetron,,, Rumah ada Atap,,, tapi tiang slalu merasakan Sakit nya,,, 😭",2026-05-19 15:23:39+00:00,negative,0,0,0.23040523768870733,correct,18,16-30
+3305,"STOP ABS HASIL NARASI 0%
+BUBARKAN MBG DAN KDMP",2026-06-11 08:17:22+00:00,negative,0,0,0.12558769285700533,correct,7,4-7
+10046,"Sebenernya sangat mudah loh ... Silahkan pemerintah mana saja buat project besar buat vis misi nya .. cukup buat pencegahan dalam pelaksanaan nya , dengan membuat tegas hukum mati buat koruptor, jika UUD Hukum Mati sudah jelas dan bisa di laksanakan, silahkan buat project besar dengan catatan klw ada korupsi sedikitpun , yg punya ide gagasan,dpr yg mengesahkan dan pelaku koruptor lgsg hukum mati !!!",2026-06-22 07:20:04+00:00,negative,0,0,0.14753009604035117,correct,41,31+
+5403,"MBG Dari Sekolah Itu......😅😂
+Bukan Dari Negara",2026-09-21 17:02:24+00:00,negative,0,0,0.2255284199947985,correct,4,4-7
+7802,Program nya bagus yang gak bagus di korupsi menu sembarangan gak ada higienis nya,2026-07-03 11:39:59+00:00,negative,0,1,0.8219376465875232,false_positive,9,8-15
+10807,"Batalkan proyek2 gak guna dan ladang korupsi. MBG, koperasi merah putih, apa lagi ya",2025-04-27 03:15:02+00:00,negative,0,0,0.1143984348955064,correct,13,8-15
+1274,"Benar pak,masyarakat dukung bubarkan mbg korupsi itu,lebih bagus bagi uang,jdi jelas.",2026-05-13 18:43:46+00:00,negative,0,0,0.3461804608010638,correct,11,8-15
+11143,Minta surat daftar sekolah adiknya kk 🙏🏻🙏🏻,2026-07-18 05:47:48+00:00,negative,0,0,0.3888664763522362,correct,6,4-7
+7415,Mbg memang tujuan nya sangat bagus utk anak anak sekolah. Tpi yg jdi masalah nya menu tdk sesuai dgn anggaran yg di anggarkan. Dan kurang higienis makanan yg di sajikan. Hingga membuat siswa keracunan,2026-07-04 08:26:14+00:00,positive,1,0,0.5032611700369846,false_negative,23,16-30
+7256,MBG di negara lain bagus karena di sana koruptor di hukum mati beda dengan Indonesia MBG banyak yg Basi karena di Indonesia banyak kerupsinya,2026-07-05 09:51:03+00:00,negative,0,0,0.2816981010112126,correct,16,16-30
+6430,Benerkan mbg ada maksud tertentu  buat meracuni  generasi penerus  bahaya ini hrs d hentikan,2026-01-29 09:53:20+00:00,negative,0,0,0.12163135893743654,correct,10,8-15
+2203,Keliatan nya mbg Arabic serba emas 😭😭😭,2026-09-17 06:41:26+00:00,negative,0,0,0.2975714480999042,correct,5,4-7
+8115,ada juga yang keracunan kak banyak loh,2026-05-29 06:10:36+00:00,negative,0,0,0.1847134698762002,correct,4,4-7
+3563,Ini lah akibat manusia bodoh di angkat jadi presiden. Tolong jng pilih Prabowo dan keturunan Jokowi.,2026-06-04 05:29:12+00:00,negative,0,0,0.10391110182690917,correct,11,8-15
+3535,Yg metenteng anda itu pak.  Py program gagal prodak byk utang ko di banggakan..,2026-06-04 22:35:53+00:00,negative,0,0,0.1619822768281348,correct,10,8-15
+9436,Semua sekolah jangan terima mbg sudah,2026-09-19 08:08:53+00:00,negative,0,0,0.25080081395152726,correct,5,4-7
+8054,Aku mah waktu dulu di sekolah aku belum ada MBG tapi nanti aku dapat MBG Senin besok Senin besok nya lagi 😊👏,2026-07-04 13:26:22+00:00,negative,0,1,0.8231220903319186,false_positive,13,8-15
+1808,Betul juga MBG itu lahan korupsi dikumpulkan di korupsi utk persiapan pemilu 2029,2026-05-07 04:08:57+00:00,negative,0,0,0.06259175657486858,correct,9,8-15
+10602,"Ya itu pastilah, nggak jabatan tapi proyek juga nggak nolak, mau berantas korupsi?",2025-09-29 03:31:31+00:00,negative,0,0,0.1725627621533517,correct,11,8-15
+7569,"Indonesia no 1. MBG nya.
+Emang kampungannya.
+Duit di korupsi, yg punya pejabat. Liat negara org.
+Memalukan.
+Mau jadi negara hebat.
+Indonesia emas.
+MBG aja begini.",2026-07-03 23:40:03+00:00,negative,0,0,0.09011318447819716,correct,20,16-30
+10978,"Program proyek makan bergizi gratis buat para tim  Sukses ...
+Biasalah urusan perut.. akal dan ahlak ga perlu  😇😇",2025-04-24 05:20:15+00:00,negative,0,0,0.2940915857438445,correct,15,8-15
+9721,"cara mengurangi populasi, kasih makan beracun",2026-09-18 10:22:51+00:00,negative,0,0,0.1753051593379713,correct,6,4-7
+6269,"Prabowo yg panting butuh setoran, sedangkan MBG ini rentan korupsi",2026-02-16 12:07:02+00:00,negative,0,0,0.12987651652342377,correct,8,8-15
+1327,"Kalau soal korupsi
+Konoha paling jago lah",2026-05-13 11:06:53+00:00,negative,0,0,0.11773991318303136,correct,5,4-7
+7892,"di luar negeri gk pakai korupsi,,,beda kalau di negara kita",2026-07-03 09:45:41+00:00,negative,0,0,0.10710123565158775,correct,7,4-7
+4888,"Ibuk....ibuk bicara untuk menghentikan MBG dengan para pemilik dapur MBG, percuma...telinga dan mata mereka sdh buta dan tuli, tapi setidaknya ibu sdh mewakili rakyat,",2026-07-23 13:56:03+00:00,negative,0,0,0.22267264069866505,correct,19,16-30
+5356,Ini ayam siap saji yg dibilang gak sehat.tapi MBG kan makan bergizi gratis tapi kok ada yg keracunan. Mending siap saji dong,2026-09-21 19:50:56+00:00,negative,0,0,0.16934646201493445,correct,17,16-30
+3251,Negara kita negara kaya.tapi negara ini bakal bangkrut......dibuat presdent kita yg bodoh..berhitung.aja kalh ama anak tk masak..10+2=13.....hhhhhhhh,2026-09-08 02:57:27+00:00,negative,0,0,0.33175159990164305,correct,19,16-30
+6147,"GK mau lah Prabowo cs hentikan MBG, itu proyek besar untuk bagi bagi duit negara secara legal, satu orang bisa punya sampai 10 SPPG, 1 SPPG bisa hasilkan 1,8 m per tahun, kalo 5 tahun bisa dpt 90 m, CUAN BESAR BOSQU",2026-03-16 03:45:14+00:00,negative,0,0,0.20633729266274575,correct,27,16-30
+10259,"Cucu sd di depok dapet jatah 
+Telor rebus 3
+Roti warung 3(@rp 3000)
+Kurma tiga bungkus(@3  biji)
+Pisang 3 biji
+Tapi itu untuk 3 hari
+Masya Allloh puasa masih korupsi gak takut dosa ya",2026-03-04 10:59:21+00:00,negative,0,0,0.23340426138204617,correct,27,16-30
+3919,"DPR juga Goblok , tidak ada Gunanya jadi DPR,uang Negara habis,alias Negara bisa Bangkrut",2026-05-24 14:10:15+00:00,negative,0,0,0.19591052628925323,correct,11,8-15
+7978,Gak ada korupsinya.. Jd menunya berkwalitas,2026-07-03 07:47:14+00:00,negative,0,0,0.1583305818135177,correct,5,4-7
+4248,Aku mendukung ibu  setop MBG,2026-08-25 04:35:29+00:00,negative,0,0,0.16427837083969007,correct,4,4-7
+6407,"Rakyat sudah memohon hentikan MBG, eh aki aki diam saja.",2026-02-02 06:42:26+00:00,negative,0,0,0.12395231271062679,correct,8,8-15
+6247,Banyak anak anak Keracunan makanan akibat MBG... Anak anak juga Trauma dengan makan MBG.,2026-02-19 02:31:57+00:00,negative,0,0,0.34385112158432435,correct,12,8-15
+8168,Aku dapat MBG geratis 😊😊😊,2026-05-01 13:50:51+00:00,negative,0,0,0.3326514428369453,correct,2,0-3
+4275,"BetuL Buuu, jangan dikira pejabat perempuan ga doyan korupsi wihhhh kalo tau mah 3 kali lipat ngerinya nyelot duit n ngamen sana sini...
+Sadessss Buuu, trimakasih pendapat anda semoga didengar dan diaminkan ma yg duduk2 itu😊",2026-08-23 00:05:12+00:00,negative,0,0,0.08425140141020948,correct,28,16-30
+1776,Pejabat negra rata2 itu org munafik dan korporsiannya itu punya muka Kta org Jawa ..Rai gedek Rai ndableg GK punya muka dan munafik ..GK punya malu ..suara rkyat itu GK didenger pura2 tuli MSA bodoh ..Krn dia ptg perutnya kenyang dpt uang korupsi ..mkanya kita klau mau mensuarakan haknya ...jgn cumn ngomong dimedia sosial sja GK ckup GK digobres .. semua rkyt hrus kompak turun jln demo besar2an tnp trkecuali .. klau demo jgn tanggung2  hrus semua turun ke lapangan tnp trkecuali .. kl GK suaranya GK didenger pura2 mbodo .. dpatnya koar2 cuman capek .. nglawan pejbt yg ndableg itu hrus berani MSA dikumpulin tnp trkecuali turun lapangan semua .klau cumn sgelintir yg demo 😅😅😅😅😅😅 GK ngaruh SM pjbt2 yg buta mata buta hati .,2026-05-07 16:48:04+00:00,negative,0,0,0.0955065979678113,correct,105,31+
+4093,"Prabowo sangat puas dengan berhasilnya program unggulan nya sukses besar meracuni anak Indonesia 
+Lanjutkan proyek MBG biar duit korupsi mengalir setiap hari",2026-09-14 05:58:54+00:00,negative,0,0,0.49622953281659316,correct,19,16-30
+8739,aku belum ada mbg aku lihat di tipi banyak yang kerumah sakit,2025-11-15 22:52:44+00:00,negative,0,0,0.39381081867835277,correct,7,4-7
+6230,"Penjorok😂😂😂
+MBG ( makanan bakteri gratis)😅😅",2026-02-21 12:45:38+00:00,negative,0,0,0.2579006423128342,correct,5,4-7
+436,ka aku sekolah nya di angkasa 1  aku liat di kelas aku mbg nasi terus  ada batu kecil lagi  jadi selama ini aku gak makan mbg aku  bekel dari rumah kasihan😢,2026-05-27 09:14:10+00:00,negative,0,0,0.36089063261487575,correct,18,16-30
+3351,"Hentikan MBG, kopdes dan kunjungan keluar negeri presiden dan pejabat2 negara",2026-06-10 02:46:19+00:00,negative,0,0,0.10367650943945145,correct,9,8-15
+849,lah barusan aku udah 5 hari dapat MBG tapi aman aman ajasih😮😮😮😔😔😔😐😐😐😐😔😞😞😞😟😟😥😥😰😨😰😨😱☹️🙁😕,2026-05-03 12:45:29+00:00,positive,1,1,0.6429473750351342,correct,8,8-15
+19,"Masak sih MBG kok kalah berkualitas dari masakan buatan pedagang makanan UKM (Usaha Kecil Menengah) yg merakyat ???🤨🤔😲🤭😩🤦🙈🙊😌 
+
+Kenapa makanan MBG masakan buatan SPPG dg arahan BGN bisa beracun / berpatogen walau sudah matang ??? 🤨🤔 Ini aneh, gk masuk akal, gk rasional..... 
+
+Jika makanan yg higienis sudah dimasak matang yg diolahnya bersih terjaga kebersihannya oleh SPPG, walau sudah dimasak cukup lama waktunya (bisa membunuh patogennya) ternyata kok masih juga beracun / berpatogen ??? 🤨🤔😲😩🤦🙈🙊 
+
+Gk usah pakai cara satgas pengawas MBG segala lagi, memangnya satgas nya mau cicipi MBG beracun / berpatogen gk ??? 😩🤦🙊🙈 Karena racun atau patogen itu gk kelihatan mata lho.....🤨🤔 Jika ada orang yg racuni / cemari makanannya dg sembunyi-sembunyi tetap saja gk kelihatan satgasnya karena yg kasih racun / patogen nya juga punya akal bulus bisa pikirkan caranya. 😩🤦
+
+Bisa saja caranya kasih racun saat pencucian bahan masakan, atau bahannya dipasok sudah diracuni lebih dulu saat di kirim atau saat di pasar, kan yg benar saja satgas nya harus periksakan setiap semua bahannya ???🤨🤔😩🤦
+
+Jika pakai cara dicemari dg patogen beda lagi, yaitu dg penularan pada alat, wadah, air, bahkan sampai tangan pun bisa jadi penularannya. 🤨🤔😲 Mau periksa gimana satgasnya??? 🤨🤔 Kan kudu dibawa ke laboratorium dulu baru bisa ketahuan, dan perlu waktu berapa lama satgasnya beraksi ??? 🤨🤔😲😩🤦🙊🙈😌
+
+Program MBG dihentikan saja dan diganti dg <program sekolah gratis> dg membayar para guru pengajarnya yg layak nilai upahnya, program ini bisa mencerdaskan bangsa, jika gizi untuk anak sekolah ini bisa dg BGN diusahakan bersama UKM rakyat pedagang makanan saja guna memajukan aktivitas ekonomi rakyat juga (bisa juga untuk kemajuan gizi masyarakat umum). 🙏🏼 Mudah-mudahan berjalan lancar dan bagus. Jika masalah memang masih bisa terjadi namun akan minim dan kecil. 💪🏼👍🏼 
+
+Keracunan dari Makanan Beracun / Berpatogen Gempar (MBG) korbannya harus diobati juga dg obat detox herbal untuk keluarkan racun dari dalam tubuhnya, contoh obat detox herbal seperti: kumis kucing, akar bajakah, daun sirsak, benalu, mengkudu, dll. 
+
+Banyak orang bangsa kita yg bawahan pejabat pun tidak amanah juga, makanya pemimpin teratas lah yg juga kena batunya.
+
+Itu termul nya perjuangkan jilatannya untuk majikannya (geng solo) walaupun dongengan / fiksi namun sangat semangat dan bangga banget ya 😩🤦🙊🙈💩
+
+Orang wapresnya saat ini kerjanya cuma MAGABU (makan Gaji Buta), atau jadi mandor pengangguran (mandor yg malas kerja kecuali kulinya saja yg kerja keras sedangkan mandor cuma santai nunggu hasil kulinya selesai kerja). 😩🤦🙈🙊💩 Kerjanya hanya pencitraan (pamer diri dg gaya dan hiasan dirinya supaya tampak dilihat publik dirinya itu wibawa, berprestasi, berintelektual, kompeten, dan kerja bagus.
+
+Pejuang dan pembela ijazah palsu udah kayak aktor komedi saja perkaranya yg janggal menggelitik gk masuk akal 🤭😩🤦🙈🙊💩 mereka kelabakan oleh urusan usaha penyelundupan pembajakan ijazah golongannya sendiri 🤭😩🤦🙈🙊💩",2026-09-12 13:59:20+00:00,negative,0,0,0.2892815588987658,correct,331,31+
+6629,Guru jadi tumbal keracunan MBG? Udah gaji nya kecil skrg di tambah beban bertanggung jawab kalo ada yang keracunan.....,2025-09-29 15:28:34+00:00,negative,0,0,0.2347901634728713,correct,13,8-15
+5881,"Serlok sekolah internasionalnya dimana bang, besok saya mau kesana mau liat2.. 😂😂",2026-09-21 07:37:01+00:00,negative,0,1,0.5985363953941477,false_positive,10,8-15
+5763,Beda ya isinya sama sekolah SD di sini😅😅,2026-09-21 09:44:43+00:00,negative,0,0,0.16343361468004092,correct,7,4-7
+3117,Takut miskin kyknya kalo MBG dihentikan.. Sdh jelas byk masalahnya yg korupsilah yg keracunan.. Mestinya kalian yg kerancuan makan Uang MBG..,2026-09-10 02:47:16+00:00,negative,0,0,0.3475139417062778,correct,16,16-30
+9746,Udah makannya setiap sekolah tolak mbg ga usah takut.. Klo semua menolak mbg psti brhenti dgn sndirinya..,2026-09-18 09:40:17+00:00,negative,0,0,0.14875864938392613,correct,16,16-30
+6498,"CARA PEMERINTAHAN PRESIDEN OMON2 MELEGALKAN KORUPSI BERJAMAAH MELALUI PROGRAM MBG YG BNYK MUDARATNYA...... LANGSUNG HAPUS PROGRAM MBG YG TIDAK BERMANFAAT, TRANSFER SAJA KE REKENING MASING2 ORANG TUA MEREKA",2026-01-07 02:41:16+00:00,negative,0,0,0.281998179287829,correct,23,16-30
+10740,"Bikin kementerian baru, tapi masih pake yayasan, karena jadi tameng itu yayasan, klo salah ya nanti salah yayasannya, sudah niat buruk dari awal, Makan Bancakan Gratis 😂",2025-05-03 00:01:24+00:00,negative,0,0,0.31014198087404105,correct,21,16-30
+10596,Presiden Prabowo bilang keracunan masal MBG jangan dipolitisasi padahal  ini program janji politinya Prabowo kalau banyak pendukungnya atau timsesnya di BGN atau SPPG udah pasti kan dalam politik tak ada makan siang gratis sebuah janji kampanye yang harus diberikan jabatan ketika terpilih jadi presiden,2025-09-29 05:46:08+00:00,negative,0,0,0.2683452385376201,correct,34,31+
+11443,Itu mah lu yang makan ego😂😂😂😂😅😅😅😅😅😅😅😅😑😑😑😑😑😑😑😑😑😑😑😑😑😑😑😑😑😑😑😑😑😩😩😩😩😩😩😩😩😩😩😩😟😅😅😅😅😅😅😅😅😅😅😅😅😅😅😅,2026-05-29 13:56:27+00:00,negative,0,0,0.19332176890990668,correct,3,0-3
+7648,❤❤❤❤❤❤❤❤❤❤di Malaysia orang orang yang  mengelola MBG nya orang orang yang jujur bnget,2026-07-03 16:21:53+00:00,positive,1,0,0.3431702401643355,false_negative,9,8-15
+9797,"presiden koplak, keracunan MBG di bilang sakit perut biasa",2026-09-18 08:41:00+00:00,negative,0,0,0.29012523832859327,correct,8,8-15
+11814,Ini mah bukan adiknya yang makan tapi lu sendiri yang makan 😂😂😂,2026-05-09 08:59:36+00:00,negative,0,0,0.3961337321310114,correct,7,4-7
+10559,"Serba salah di indonesia ini,mau dimanapun kapan pun pasti ada aja celah buat korupsi",2025-10-19 03:48:23+00:00,negative,0,0,0.10288735924637132,correct,9,8-15
+9229,"Maaf sebelumnya,ini sudah banyak lohhh kasus anak yg keracunan termasuk didaerah saya,kok masih dilanjutkan ya",2026-09-20 16:02:05+00:00,negative,0,0,0.1650489838465925,correct,12,8-15
+2573,Aku lagi makan lohh🤣🤣🤣🤣🤣🤣🤣,2026-09-09 15:19:37+00:00,negative,0,0,0.19106494293629278,correct,3,0-3
+46,Ini di racuin ...makan basi bau dah kecium..rasa ga enak,2026-09-06 02:22:51+00:00,negative,0,0,0.22531276159294025,correct,8,8-15
+584,EMG nyaada racunnya😢,2026-05-17 10:59:49+00:00,negative,0,0,0.13137769026110938,correct,3,0-3
+7177,56 tahun gais.. tidak ada yang mati keracunan.,2026-07-06 06:19:26+00:00,negative,0,0,0.3314320909273477,correct,6,4-7
+6017,"MASALAH  SEKOLAH  BOBROK  KARENA  DANA PEMBANGUNAN  SEKOLAH  DIKORUPSI  ,  DAN  GAJI  GURU2  JUGA  HARUS  DIURUS  TERSENDIRI  --->   SEMUA  ADALAH  KORBAN  APARAT2  BOBROK  PENYUNAT  DANA  KERJA .
+MASING2  DIURUS  SECARA  TERPISAH , SEBAB  PEMERINTAH  SUDAH  MEMBERIKAN  DANA  YANG  CUKUP  BAGI  MASING2  PROYEK .
+PENCOLENG2  PENCURI  UANG2  NEGARA  HARUS  DIPAKSA  MENGEMBALIKAN  SECARA  PAKSA  DANA YANG  MEREKA  KORUPSI 
+-->  JANGAN  DIJADIKAN  ALASAN  UNTUK  MENGHENTIKAN   MBG  YG PENTING  MENDIDIK  GENERASI  BANGSA  ,  AGAR  TAU  MAKAN  MAKANAN  BERGIZI  ,  LAGIPULA  ACARA  MAKAN  BERSAMA  MEMPER-ERAT  KEAKRABAN   BANGSA .",2026-08-03 16:58:18+00:00,negative,0,0,0.09561769263623006,correct,64,31+
+119,Di seluruh indonesia sekolahan harus menolak makanan yg di pasok iyalah MBG seharus nya jgan di trima lg pada guru tanpa MBG kita masih bisa orang tua memberi makan anak nya dan jajan untuk sekolah tanpa ada makanan seperti MBG yg akhir nya menyebabkan keracunan masah,2026-07-29 14:35:40+00:00,negative,0,0,0.14810609744691358,correct,32,31+
+1464,Stop mbg haya JD ladang korupsi,2026-05-12 04:43:22+00:00,negative,0,0,0.04888516382353372,correct,6,4-7
+10762,Beneeeer PROYEK bukan program😂😂. Tempo enak didenger dan perlu.,2025-04-30 08:57:01+00:00,negative,0,0,0.4851205958243011,correct,8,8-15
+9409,Propaganda yang ngracun.siapa yang mau di runtuhkan?mbg nya. Dapurnya yg harus di hukum.bukan program pemerintahnya,2026-09-19 11:27:19+00:00,negative,0,0,0.32295020133403085,correct,12,8-15
+9015,Aneh ....MBG baru setahun.....konyol klu MBG dikatdksn meracuni.....sungguh konyol.....,2026-09-22 06:49:43+00:00,negative,0,0,0.2573700969979331,correct,11,8-15
+7250,Lah Indonesia NO.MER brp ya...😂😂😂... ...MBG ko menu nya Sukro Ama roti 2000an...😜,2026-07-05 10:14:25+00:00,negative,0,0,0.3538807757456907,correct,12,8-15
+7347,Empunya content busuk hati,2026-07-04 14:41:18+00:00,negative,0,0,0.12882915855489926,correct,4,4-7
+622,"Saya hanya menilai program mpg patut diberi kesempatan, sejauh ini membantu dan membuka lapangan pekerjaan, hasil panen petani juga mulai naik, tidak seperti seblum2ny, sy rasakan sebagai seorang yg berada d desa.
+Di era sby progaram pendidikan 10 thun mengedepankan pendidikan dg angraan sangat besar juga menuai polemik. 
+Di era jokowi juga demikian pembangunan besar2an yg paling terlihat bagi kami adalah pembangunan desa yg diharapkan desa tersebut bisa mandiri, dan bantuan dana ke siswa dg dibuatkan rekening pribadi agr tidak dicaplok sana sini, namun pro dan kontra juga terjadi dan tidak sedikit bermunculan bgtupun dg kepala desa, tidah heran sehingga saat ini dipangkas.
+Semua presiden memiliki kebijakannya masing2. Kebijakan setiap era presiden menuai pro dan kontra krna ada yg diuntungkan dan dirugikan, kas yg sudah ada dipangkas untuk memenuhi kebutuhan program baru sedangkan pendapatan negara tidak berubah, Benar menurut almarhum gusdur jika kita memelihara tikus dalam lambung tidak harus membunuh tikus cukup musnahkan lambung/keruk isi lambung agar tikus kelaparan.
+Klo dihitung pendapatan bersih perdapur mmang besar 50-70 juta/bulan krna oprasionalnya 40 -60 juta perhari.
+Wajar mnurut sya jika meraka untung 3% s/d 4% bulan Mengingat tranportasi, gedung bukan dari kas negara tpi dari perorangan. Yg g wajar itu ngambil di atasnya krna ini bntuan pemerintah untuk masyarakat khusus nya ank sekolah, busui & bumil. Harapan sy cuma 1 semoga orng yg mengoprasikannya amanah.
+Bagimana tanggakpan kalian ? Jika mbg d tutup apa ada program yg lebih baik jika ada komen dibawah",2026-05-15 05:42:50+00:00,negative,0,0,0.32467873156883353,correct,190,31+
+7872,"Lu salah besar min,
+Yg no 1 Konoha= anggaran triliunan makanannya sangat bergizi ( tapi boong )😂😂",2026-07-03 10:10:51+00:00,negative,0,0,0.20123165965381076,correct,12,8-15
+4070,"Program bisnis kepentingan, korupsi sangat masif,ribuan anak sudah keracunan MBG.",2026-09-15 07:37:11+00:00,negative,0,0,0.15667831220942918,correct,9,8-15
+10390,MBG hanya proyek rampok uang negara.😂😂😂,2026-02-15 12:03:08+00:00,negative,0,0,0.32616755719416407,correct,6,4-7
+7864,"Tapi yang memgurusi tetap kantinnya sekolah, 
+Lha di Indo yang mengurusi MBG bagian pengkorupsian",2026-07-03 10:26:42+00:00,negative,0,0,0.25512754491804807,correct,11,8-15
+9799,Semua rakyat Indonesia jgn mau kasih MBG....nanti stop sendiri katena semua menolak MBG,2026-09-18 08:38:54+00:00,negative,0,0,0.13735195251128324,correct,14,8-15
+4259,"Benar bu, MBG menghina perempuan, jd artinya ibu"" nggak bs masak ya ,begitu ya ..stop MBG , MBG bisa"" bikin ibu"" stres mikirin anak nya keracunan..anaknya jg trauma mkn MBG selanjutnya.",2026-08-24 06:00:08+00:00,negative,0,0,0.21323169153285781,correct,28,16-30
+4818,Gara2 MBG! UMKM sempoyongan 😢,2026-07-24 07:29:35+00:00,negative,0,0,0.28138722399588084,correct,4,4-7
+9878,"Ya Allah Ya Robb sediiiihhh bangeet saya dgn MBG, kasihan Anak² saat ini, bagaimana inii, prihatiiinn bangeet, Orang Tua² menangiiisss, bagaimana ini MBG ???, Ya Allah Ya Gusti Allah, sediiihhh bangeettt🙏🙏😭😭😭😭😭😭😭😭😭",2026-09-18 07:44:28+00:00,negative,0,0,0.3429726799971747,correct,26,16-30
+10597,"SEMANGAT JAYA..... JAYA 
+KORUPSI Berjaya",2025-09-29 05:23:21+00:00,negative,0,0,0.06151889828600099,correct,5,4-7
+7107,"Di indonesia banyak dikorupsi, dan menu makanannya ada belatung ada ulatnya...",2026-07-06 22:20:13+00:00,negative,0,0,0.24078666288119943,correct,7,4-7
+5240,Ini baru MBG....kalau MBG dikelola pemerintah.yang ada basi dan beracun.,2026-09-22 00:07:03+00:00,negative,0,0,0.26156512042867097,correct,7,4-7
+10572,Smua jg dr presiden smpe kebwh .mrk kong kalikong .jgn mau di bodohi sm presiden .klo d bwh presiden PD korup tentu presiden k bagian lebih bnyak . Cobalah pintar rakyat jgn slalu d bohongi dgn sgl program .itu smua ladang korupsi,2025-10-01 00:29:35+00:00,negative,0,0,0.07501180658203846,correct,32,31+
+5503,MBG klu dr negara isi racun 😅😅,2026-09-21 14:43:37+00:00,negative,0,0,0.28413752440822554,correct,5,4-7
+4673,Sangat Setuju ibu yg sangat cerdas.untuk dibubarkan MBG.kasian anak 2 yg sering terjadi kerajunan,2026-08-05 21:17:09+00:00,negative,0,0,0.2537282571463095,correct,10,8-15
+9310,"Yg masih mendukung sppg mereka cm penjilat"" yg punya  penguasa yg punya bisnis d dlmnya TDK peduli SDH bnyk korban dr ulah kalian dr sppg",2026-09-19 23:46:51+00:00,negative,0,0,0.10652900939200577,correct,17,16-30
+3470,"Beginilah jika Menkeu tidak mau terbuka dan berterus terang dgn rakyatnya ...........terutama project MBG yg tak terlalu penting bahkan gagal, hanya dimanfaatkan para kolega pemerintah utk melakukan KORUPSI 😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",2026-06-06 09:39:03+00:00,negative,0,0,0.16582418233873553,correct,24,16-30
+9219,Tuntut mereka,2026-09-20 22:13:37+00:00,negative,0,0,0.1735823422975234,correct,1,0-3
+5974,Gila emang internasional d kasih mbg lebih bagus gilaaaaaa bubarkan MBG gila,2026-09-21 06:16:07+00:00,negative,0,1,0.6356312764009433,false_positive,10,8-15
+10492,"MBG salah satu bukti bahwa korupsi masih bekerja dengan aman bayangkan 1,2 T /perhari Gilaa benarrr",2026-01-22 09:38:33+00:00,negative,0,0,0.20624107523972487,correct,13,8-15
+5124,"Bodoh amat sama pemerintah kan aku anti nyoblos 😂
+Ni aja bentuknya kliayan x di anak tirikan kalian😂",2026-09-22 03:09:14+00:00,negative,0,0,0.08775920057333222,correct,12,8-15
+439,Keracunnan,2026-05-27 06:37:49+00:00,negative,0,0,0.2297884760939009,correct,1,0-3
+6626,"Negara dengan SDM rendah pola pikirny kurang bagus. Niat baik kepala negara trus di hujat, kapan mau maju negara... Klo ada yg keracunan harus di evaluasi bukan nyalahin programnya,...",2025-09-29 22:34:34+00:00,negative,0,0,0.465168723990234,correct,24,16-30
+81,Omg. Korupsi. Mereka. Kasih mkanan sehat gratis×   kasih penyakit geratisv,2026-08-09 13:52:27+00:00,negative,0,0,0.12088921012645988,correct,9,8-15
+415,Mbg itu udah ada ulatnya udah nggak layak lagi apalagi mbg itu udah basi juga,2026-05-30 05:37:50+00:00,negative,0,0,0.27352337068710075,correct,11,8-15
+6686,Hentikan mbg...sekarang juga..g ada gunanya mbg,2025-09-28 10:33:11+00:00,negative,0,0,0.17080916161338378,correct,5,4-7
+9701,Alhamdulilah di sekolah anak ku menolak keras soal MBG .bukan cuma dr guru dan kepala sekolah tapi semua murid menolak MBG .kami selaku orang tua madih sanggup kasih makanan bergizi dan sehat terutama halal .,2026-09-18 11:02:22+00:00,negative,0,0,0.12908912436863113,correct,29,16-30
+7170,"Di konoha biadab pemerintahan nya malah meracuni anak"" Bangsa",2026-07-06 08:40:20+00:00,negative,0,0,0.08541619163065903,correct,7,4-7
+3469,ANGGARAN NEGARA (UANG RAKYAT) ........ HABIS HANYA DIGUNAKAN MBG 😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭,2026-06-06 09:40:53+00:00,negative,0,0,0.2614979786025093,correct,8,8-15
+3373,"Stop MBG.. apa sih manfaat MBG untuk anak2. Kenapa ngotot MBG harus dijalankan,Anakku tidak pernah makan itu MBG . Di makan sedikit. Sisanya di buang.  Mending duit itu buat subsidi sekolah. Atau benerin jalan2 yg rusak. tidak usah sok mikir anak kami.",2026-06-09 08:56:15+00:00,negative,0,0,0.4251955217856941,correct,33,31+
+5392,"Wah MBG nya gk adil, banget, knp harus di beda bedakan,...?  Sekolah internasional di kasih yg bergizi, sedang sekolah yg bawah di kasih yg  beracun,....",2026-09-21 17:20:11+00:00,negative,0,0,0.22682433363091203,correct,18,16-30
+11568,"ngurangin mbg❌
+ ngabisin mbg✅🗿💢",2026-05-18 13:34:02+00:00,negative,0,1,0.8731732005829983,false_positive,4,4-7
+6961,Skandal korupsi semakin ok,2025-09-26 00:17:34+00:00,negative,0,0,0.11217683464819553,correct,4,4-7
+10,Politik sangatlah kejam... ternyata rakyat Indonesia semua sama ya bodohnya wkwkwk...setelah kovit kita tambah bodoh wkwwkwkkw hantu saja sekarang bisa mati wkwkwkwkkangka kemtian sangat banyak kuburan nya dimana woiiiii,2026-09-15 17:25:21+00:00,negative,0,0,0.0990029837663702,correct,25,16-30
+9622,"WIS ngene kondisine Yo jek ndableg tetep lanjut. Kentir kentir !!! Ngomonge Ben anak² sehat, tapi malah sakit. Kudune kompak serempak menolak mbg Ben mandeg.",2026-09-18 14:08:54+00:00,negative,0,0,0.16095058125340145,correct,24,16-30
+5760,"Kok mbgnya beda banget, nah ini berarti pemerintah tidak adanya p... Hadeuh... Hadeuh gimana ini dibeda bedakan😢😢😢",2026-09-21 09:48:24+00:00,negative,0,0,0.22126369695431455,correct,13,8-15
+5194,"Penjabat sama penjahat
+Cuma beda B - H aja",2026-09-22 01:24:15+00:00,negative,0,0,0.1620572903810585,correct,5,4-7
+3318,"Statistik halu ,pak klu ngomong d pikirkan dulu jgn bikin malu sendiri ,trus bpk wowo sdh cek hasil MBG ,apakah siswa jd pandai dan cekatan atau semakin bodoh",2026-06-10 22:54:41+00:00,negative,0,0,0.17028185377091665,correct,24,16-30
+6973,"Jangan di lanjut bukan nya jadi sehat malllah banyak korban, itu ,, pembangunan   buat MBG kan uang negara ,, segera  ambil dan periksa , ygdi cianjur.",2025-09-25 23:03:04+00:00,negative,0,0,0.26158952612797626,correct,16,16-30
+4769,"PEJABAT PEMERINTAH NINDAS RAKYATNYA DI KASIK MAKAN MBG KERACUNAN, PEKJABAT GAK PEDULI  YNG UTAMA DAPAT KORUPSI DARI JATAH (DANA) MAKAN MBG  , DASAR IBLIS BIN SETAN 🇮🇩👿👹👺🇮🇩",2026-07-24 15:00:59+00:00,negative,0,0,0.22277075804352187,correct,22,16-30
+9631,"Percuma, mereka senang kita bodoh, biar slalu di bodoh bodohi",2026-09-18 13:45:20+00:00,negative,0,0,0.14907728119940847,correct,7,4-7
+7113,"Negara luar MBG nya murni dan benar2 bergizi kaga seperti di indonesia pemimpin dan pelaksana nya orang ZOLIM hak untuk MBG masih dikorupsi udah kaga punya rasa kemanusiaan kaga punya rasa kasih sayang, celakalah kau hai penghianat semoga terkutuk hidupmu maduk jahanam nya Allah Taala, aamiin",2026-07-06 21:34:17+00:00,negative,0,0,0.1217060051076949,correct,39,31+
+7253,Indonesia. banyak di korupsi malah buat bisnis ya gagal ga sehat ga enak ga fer.,2026-07-05 10:07:56+00:00,negative,0,0,0.11331380248333077,correct,13,8-15
+8113,Aku pernah dapet mbg ada belatung😢😢😢😢,2026-05-30 13:10:43+00:00,negative,0,1,0.5548067698252508,false_positive,4,4-7
+2466,Oy di indo doang yang ada mbg😂😂,2026-09-12 05:27:20+00:00,negative,0,0,0.23943082000174548,correct,4,4-7
+10566,"Berarti presiden terlibat korupsi juga dong...artinya koruptor adalah: ""seseorang yg menggunakan jabatan/kekuasaannya dalam memperkaya diri sendiri/orang lain"". Proyek MBG dari awal jg sdh di prediksi akan menjadi biang korupsi, ternyata benar sekali, dan rakyat jd korban krn pengelolaan tdk benar😢😢😢 sekarang gimana Prabowo mau menghentikan proyek ini? Sedangkan inilah proyek balas budi kpd tim pemenangan😅😅😅",2025-10-02 17:02:21+00:00,negative,0,0,0.15560941943478507,correct,47,31+
+6688,Stop MBG hentikan MBG jangan nunggu korban meninggal baru dihentikan ❗❗❗❗,2025-09-28 08:22:26+00:00,negative,0,0,0.3488581936283202,correct,10,8-15
+10058,Ini presidennya bisa dipidana nggak sih karena mengorkestra proyek korupsi terbesar dalam sejarah,2026-06-16 00:37:31+00:00,negative,0,0,0.1501768417373625,correct,9,8-15
+54,kenapa harus memaksakan ngasih mbg udah tau banyak yg keracunan bukan bergiji terus memaksakan mau membunuh warga indonesia  pak persiden hentikan tida ada mangpaatnya malahan dampaknya segala bahan baku pada naik harganya pada mahal apalagi sekarang melihat banyak yg keracunan banyak mbg yg di buang tida di makan di rumah buatan mamah2nya yg higenis bersih belum pernah ada berita keracunan hentikan pak prabowo jangan memaksakan,2026-09-04 03:32:44+00:00,negative,0,0,0.13479029062804235,correct,54,31+
+11542,"MBG buat orang ❎
+MBG buat sendiri ✅
+😱😱😱😱",2026-05-20 04:49:24+00:00,negative,0,1,0.6284636859815371,false_positive,4,4-7
+1895,Tolak segala bentuk korupsi berjamaah,2026-05-06 10:20:36+00:00,negative,0,0,0.08979482546965856,correct,5,4-7
+6468,"KASIHAN ANAK SEKOLAH ❤❤YANG SUDAH MAKAN MENIKMATI MAKAN DENGAN ENAK YANG BERGIZI, Tiba tiba dihentikan. Lanjut TERUS MBG.",2026-01-24 09:41:17+00:00,positive,1,0,0.3890894668268062,false_negative,14,8-15
+6496,Yg bertanggung jawab mbg. Ya presiden yg harus dihukum.,2026-01-10 12:13:06+00:00,negative,0,0,0.23316487264058078,correct,7,4-7
+11757,Itu mah lu yg makan bg🗿🗿,2026-05-14 03:43:38+00:00,negative,0,0,0.21777972873802082,correct,3,0-3
+274,Makanan anak sekolah pun tdk luput dari cengkeraman koruptor n mafia negeri ini 😂😂😂,2026-06-30 11:04:38+00:00,negative,0,0,0.17287910448353952,correct,9,8-15
+9001,Sdh berhentikan saja embg y pemrintah hentikan sajaaa jgan smpee bnyk lgi korban berjatuhan,2026-09-22 07:26:25+00:00,negative,0,0,0.1412568590890107,correct,11,8-15
+5079,Sekolah elit mbg KFC kena sekolah di plosokan ikan lele busuk😂😂😂,2026-09-22 04:41:25+00:00,negative,0,0,0.16824178313510357,correct,10,8-15
+7893,"Bnyk komen negatif tentang kerajaan indo.. soalan sy, siapa yg memilih pemerintah? Kamu yg pilih org bodoh utk memimpin.",2026-07-03 09:45:16+00:00,negative,0,0,0.16379898327357972,correct,16,16-30
+4875,"Sangat setuju dengan paparan dan argumentasi ibu yg sangat cerdas ini. MBG sama sekali tidak ada manfaatnya cuma menghambur hamburkan anggaran negara. Dan lagi lagi masyarakat kecil yang aka dikorbankan dengan berbagai macam cara,salah satunya dg menaikan pajak di sertai dg intimidasi seperti yg dilakukan pada masa penjajahan.",2026-07-23 15:58:58+00:00,negative,0,0,0.23262337950568296,correct,36,31+
+5336,MBG MAKANAN BERACUN GUYS 🤣🤣🤣,2026-09-21 21:04:10+00:00,negative,0,0,0.1174204934272673,correct,4,4-7
+6068,Kasian anak2 keracunan,2026-04-27 14:24:26+00:00,negative,0,0,0.1636875861484038,correct,3,0-3
+9400,"Rakyat kecil menderita, yg meminta keadilan. Bukanx dijadikan pelajaran bagi pemerintah, ehhh jalan/lanjut terus. Lalu pengobatanx bagaimana? Tentu mjdi beban lagi bagi keluarga korban.",2026-09-19 12:09:30+00:00,negative,0,0,0.20507070464006535,correct,22,16-30
+5612,Menurunkan angka kemiskinan bukan berarti dikasih makan beracun bambang !!,2026-09-21 12:22:01+00:00,negative,0,0,0.26567921761882257,correct,9,8-15
+4494,Kalo ibu nani pura2 ga tau yg penting kan korupsiny pejabat kebanyakan rakus tikus,2026-08-13 08:24:57+00:00,negative,0,0,0.16005559558057625,correct,11,8-15
+8939,"Yang udh dapet MBG ngumpul
+👇
+👇
+👇",2025-11-07 05:39:27+00:00,negative,0,0,0.5161041772679297,correct,3,0-3
+10589,Program tergagal yang pernah ada😢,2025-09-29 15:32:10+00:00,negative,0,0,0.3719179711694952,correct,3,0-3
+6744,Cepat tanggap untuk menghentikan mbg,2025-09-27 12:26:16+00:00,negative,0,0,0.2087845327652303,correct,4,4-7
+3465,mbg harusnya pake duit pribadi dr yg paling suka mbg. ini malah pake duit rakyat yg jelas2 rakyat banyak yg menolak mbg. Pancasila mana yg kamu dustakan bos!!!,2026-06-06 14:48:33+00:00,negative,0,0,0.2696463171969119,correct,22,16-30
+9351,TRIK PRABOWO UNTUK MERACUNI ANAK BANGSA DGN CARA  MEMBUAT MBG  DAN MENGELUARKAN DANA FANTASTIS  YG DIAMBIK DARI DUIT RAKTAT.,2026-09-19 15:25:30+00:00,negative,0,0,0.14481722627887256,correct,14,8-15
+3300,Dari pada rakyat menderitarakyat lebih baik di hentikan mbg.,2026-06-11 09:59:03+00:00,negative,0,0,0.19115607278618904,correct,5,4-7
+1838,Habis d korupsi yg mengelola aja gajinya per Minggu 50 juta,2026-05-06 18:03:29+00:00,negative,0,0,0.15416026556770382,correct,8,8-15
+7762,Kalau di Indonesia mbg nya 😂😂,2026-07-03 12:39:40+00:00,negative,0,0,0.34847752583154973,correct,2,0-3
+1892,"Yes betul banget MBg hanya menguntungkan pihak pihak tertentu aja malah jadi ajang korupsi, bubarkan aja",2026-05-06 10:30:58+00:00,negative,0,0,0.11358400678591091,correct,13,8-15
+361,Ini sekarang bukan makanan bergizi gratis tp makanan beracun gratis kasihan yg keracunan ini harus diberhentikan segera sebelum makan harus dicek dulu basi/nggak😟😟😞😞😞😞😞😞,2026-06-11 11:34:59+00:00,negative,0,0,0.10251361264849178,correct,21,16-30
+8144,Saya sih udah dapet mbg masih aja tetap masih dapat😊,2026-05-14 07:40:00+00:00,positive,1,0,0.5327243957410647,false_negative,7,4-7
+1444,Bubarkan MBG itu Uang Pajak Rakyat bukan Gratis lbh baik buat Pendidikan dan Subsidi Kesehatan Rakyat,2026-05-12 09:48:58+00:00,negative,0,0,0.2230357613364691,correct,12,8-15
+7405,MBG DI KONOHA HANYA DINIKMATI OLEH PRABOWO DAN PARA PEJABAT 😂😂,2026-07-04 09:32:06+00:00,negative,0,0,0.2632337265352709,correct,7,4-7
+6993,"Kayaknya harus demo besar2an dengan tuntutan hentikan MBH ni buat hentikan, Prabowo pasti nga tau ada ribuan anak keracunan",2025-09-25 16:45:32+00:00,negative,0,0,0.10568056022034546,correct,16,16-30
+9817,IBU ITU PROYEK PUNYA PRESIDEN BUKAN BGN TAPI PRESIDEN PRABOWO YG MERACUNI ANAK IBU DAN KORBAN YG LAIN .,2026-09-18 08:18:03+00:00,negative,0,0,0.068653815867561,correct,14,8-15
+7721,Mbg di indonesia paling hebat  sampai di korupsi  1 miliar sehari. ..hebat kan  bro. !!!,2026-07-03 13:28:57+00:00,negative,0,0,0.28293289828144363,correct,10,8-15
+7328,Kalo di luar negri  boleh di percayA TDK seperti di Indon  makanan banyak TDK layak mbg di korupsi anak anak di kasih makanan TDK bergisi,2026-07-04 16:57:21+00:00,negative,0,0,0.17044441430639876,correct,19,16-30
+10316,Program MBG baik tujuannya karena masih banyak ortu yang kurang peduli dengan kualitas sarapan/ makanan anaknya. Dengan MBG ini akhirnya semua orang mulai paham pentingnya makanan berkualitas.,2026-02-26 04:10:21+00:00,positive,1,0,0.4131607529041373,false_negative,22,16-30
+7100,KONOHA JELAS AJANG KORUPSI BANYAK TIKUS NYA,2026-07-07 00:24:15+00:00,negative,0,0,0.07571506797857301,correct,6,4-7
+7828,Indonesia belum 1 tahun dan pada ngritik korupsi 😅:,2026-07-03 11:15:03+00:00,negative,0,0,0.14283648565252827,correct,5,4-7
+6947,Betul banget pak usulannya bagus banget,2025-09-26 01:50:24+00:00,positive,1,1,0.583889564506183,correct,6,4-7
+338,Astaga tukang MBG nya jahat banget 😟😟😟😟,2026-06-16 07:06:11+00:00,negative,0,0,0.25372404375777646,correct,5,4-7
+6644,Buang2 uang Luh wo...g becus... berapa ratus triliun... program bodoh sang jendral tua,2025-09-29 03:27:15+00:00,negative,0,0,0.14784083285662872,correct,13,8-15
+9675,"Negara ini akan kehilangan generasi bangsa karena anak2  adek2 yg seharusnya  di rawat dengan baik kok malah diracuni,",2026-09-18 12:02:38+00:00,negative,0,0,0.1506601630305873,correct,11,8-15
+9098,"Smg dgn keajaiban dr Allaah anaknya bs sembuh kembali bu, memang pejabat yg jd penjahat sudah mati hati nuraninya dan Allaah pasti menyempurnakan balasannya kpd para pejabat penjahat di indonesia.",2026-09-21 23:34:08+00:00,negative,0,0,0.14265354631454136,correct,24,16-30
+9374,"Saya merasakn sakitnya ibu sampai nangis,seoga cepat sembuh nak sehat dn lbh sehat lg,tutup MBG, seluruh sekolah wajib kompak jangn terima lg.",2026-09-19 13:35:50+00:00,negative,0,0,0.12988397715987354,correct,22,16-30
+5928,Beda lahhhh pasti itukan sekolah internasional...beda dengan sekolah biasa...🤦🤦🤦..,2026-09-21 06:56:29+00:00,negative,0,0,0.22420416581392386,correct,9,8-15
+8016,Aku gak dapet mbg karna sekolahku swasta katolik tapi aku Muslim😭,2026-09-04 08:04:47+00:00,negative,0,1,0.6558710897600554,false_positive,9,8-15
+5550,"Ko bisa beda heey di sekolah anak saya keseringan telor Mulu 😂😂😂
+Beda kasta kah 
+Tapi pajak naik nya rata loh 
+Ya sudahlah",2026-09-21 13:43:58+00:00,negative,0,0,0.163215503620778,correct,18,16-30
+7781,"DI INDONESIA, MBG MALAH MENJADI LADANG KORUPSI PALING BESAR SEPANJANG SEJARAH PERADABAN MANUSIA DI SELURUH DUNIA.
+
+DENGAN ANGGARAN 1 TRILIYUN PERHARI, YANG DI TERIMA ANAK ANAK TIDAK LEBIH BAIK DARI MAKANAN BABI...",2026-07-03 12:08:34+00:00,negative,0,0,0.16213230721196067,correct,24,16-30
+6059,Saya sangat setuju mbg di bubarkan engga ada manfaatnya hanya untuk sarang korupsi saja,2026-05-04 13:27:07+00:00,positive,1,1,0.7148890209219726,correct,8,8-15
+6253,Lanjutkan MBG Pak karena murid di kampung senang dapat makan gizi gratis guru juga senang dapat makan gizi gratis dan juga dapat insentif pembagian dan kordinir makan gratis,2026-02-18 05:07:35+00:00,positive,1,0,0.486930343078123,false_negative,19,16-30
+11569,Mbg  kakak  kobisa   sariawAn  jangan   dimakan   nati  bisa   sebu  semangat  kita  bisamayin   dimana😢❤🎉😊,2026-05-18 13:20:16+00:00,negative,0,0,0.37617950709513076,correct,11,8-15
+8950,Aku udah tapi nggak Ada racunnya sih,2025-11-06 13:18:39+00:00,negative,0,0,0.3410326469505235,correct,5,4-7
+3595,"ternyata program MBG yg di gembar gemborkan saat kampanye sudah terbukti :
+terbukti banyak yg keracunan
+terbukti APBN tekor",2026-06-03 07:49:42+00:00,negative,0,0,0.2524091951793389,correct,14,8-15
+6654,Niat baik tidak berjalan mulus lebih baik cari aman lebih baik stop.MGB dlu kalau banyak keracunan ini yg slah siapa ..😮,2025-09-29 01:05:00+00:00,negative,0,0,0.3890138880157571,correct,16,16-30
+10795,"Seharusnya, semua yg akan menyediakan makanan bagi khalayak umum, apalagi sekolah, harus diterapkan sistem sertifikat utk food safety. Jadi nggak ada lagi ulat, anak2 yg makan makanan kadaluarsa dan cross contaminated foods. 
+Kalau sampai ada yg muntah dan diketemukan ulat dll, harusnya catering tersebut harus bertanggung jawab.",2025-04-28 02:29:49+00:00,negative,0,0,0.19284184388263803,correct,35,31+
+530,Mbg racun cacing mbg nya,2026-05-20 06:59:12+00:00,negative,0,0,0.24969546345478674,correct,4,4-7
+6383,Anggaran ratusan triliun cuma mau dikorupsi dan jd tai doang,2026-02-04 07:37:54+00:00,negative,0,0,0.16995860208244512,correct,9,8-15
+9048,Hee rakyat Indonesia ada apa dgn kalian semua nenek moyang kita dulu mengusir penjajah kenapa sekrang kok tidak berani melawan aturan program pmrintah yg menghancurkan rakyatnya😂😂,2026-09-22 04:45:26+00:00,negative,0,0,0.17560474535103437,correct,21,16-30
+3010,"STOP MBG.
+JIKA TIDAK MAU STOP, DUIT MBG HARUS PAKE DUIT PRIBADI PAK PRABOWO. JANGAN PAKE UANG RAKYAT UNTUK MBG.
+
+SETUJUUUU....",2026-09-14 22:21:07+00:00,negative,0,0,0.26205874100732646,correct,20,16-30
+9399,"Hati hati bolo bolo ☝️ 
+Itu termasuk meracuni masal atau pembunuhan masal ☝️ itu termasuk kebijakan konyol ngawur yg tertunda vaksinasi yg ingin pembunuhan masal ☝️",2026-09-19 12:10:28+00:00,negative,0,0,0.21902668933669842,correct,18,16-30
+3293,"Sepertinya proyek besar diciptakan utk dikorupsi besar besaran.
+Memang licik dan biadab
+Setiap presiden sepertinya punya proyek besar yg gagal.
+Contoh 
+hambalang 
+Ibu kota negara 
+Mbg",2026-06-11 13:58:26+00:00,negative,0,0,0.1470070749680147,correct,23,16-30
+153,Yg nama nya makanan itu di massk lngsung di makan  bukan harus di tunggu   jadi basi yg ada,2026-07-18 09:50:40+00:00,negative,0,0,0.18300998266937138,correct,9,8-15
+6002,Sangat. Sangat setuju MBG di. Stop.,2026-09-17 15:10:41+00:00,positive,1,1,0.956866525187478,correct,3,0-3
+857,"Mbg nya di stop aja nanti makin banyak korban jiwa, biarkan org tau kita saja yang masak jadi biar aman di makan anak nya 
+Mbg(makan beracun gratis)",2026-05-03 06:13:30+00:00,negative,0,0,0.26499364283595217,correct,19,16-30
+5741,"😂😂😂MbG skolah elit KFC..
+MBG skolah SD pelosok ayam kemaren..",2026-09-21 10:03:43+00:00,negative,0,0,0.24614125070775328,correct,10,8-15
+5529,Al Azar...sekolah anak elit😂😂😂 .bener dah dapur MBG emang bajingan,2026-09-21 14:02:38+00:00,negative,0,0,0.20521145671619065,correct,10,8-15
+754,Aku mbg nya enga beracun kok kan di cobain dulu sama sppg,2026-05-09 05:51:47+00:00,negative,0,0,0.1712870755899429,correct,7,4-7
+7671,Indonesia mbg nya di sulat jadi lumbung korupsi hebat banget.,2026-07-03 15:08:54+00:00,negative,0,0,0.18335404874934388,correct,7,4-7
+1535,"Jangan dibagi, itu hanya membuat kita malas, mengharap bantuan. Makanya kita harus kerja, tuntutan rakyat sebenarnya bukan MBG, tapi berantas korupsi.",2026-05-11 10:12:17+00:00,negative,0,0,0.38081077657513795,correct,18,16-30
+7410,"Di Konoha mah malah dikorupsi jd gizi yg nyampe ke tujuannya juga kuarang,,,",2026-07-04 09:06:37+00:00,negative,0,0,0.10745506671938768,correct,8,8-15
+6752,"Lebih baik MBG DICANCEL, TAPI CIPTAKAN LAPANGAN KERJA BAGI ORTU, agar mereka mampu mengurus ekonominya sendiri.... AMAN 🙏🙏🙏🙏🙏",2025-09-27 10:27:25+00:00,negative,0,0,0.34037390104233767,correct,14,8-15
+562,"MBG (MAKAN BERACUN GRATIS) 😹
+Gimana sih ni MBG 😤🙄😒🫵",2026-05-19 04:44:46+00:00,negative,0,0,0.29237794990310145,correct,8,8-15
+7007,"Di Konoha.. para pejabat dan berpangkat berjamaah untuk membangun dapur sppg.. karena banyak cuan tidak perduli , menu nya bikin anak anak keracunan",2026-08-03 12:37:27+00:00,negative,0,0,0.24602131720843123,correct,17,16-30
+3413,"Lanjutkan MBG dgn pengawasan ketat, jangan ada korupsi.
+Yg dibenahi korupsinya, bukan MBG nya.",2026-06-08 02:00:26+00:00,positive,1,0,0.4602483842891705,false_negative,10,8-15
+10430,SISWA tidak butuh 👉MBG : MAKANAN BERACUN GRATIS 👎👉SISWA butuh Pendidikan Gratis 👍,2026-02-10 03:36:14+00:00,negative,0,0,0.1826533962996471,correct,11,8-15
+7276,"SDM'nya belom nyampe...harus pelan2...
+Ditambah ditumpangi urusan politik negara ini yg terkenal kejam dan tak pandang bulu...",2026-07-05 06:25:45+00:00,negative,0,0,0.16462702682051897,correct,15,8-15
+7543,Di indonesia mah kacau 😂😂😂 banyak pejabat yg korupsi,2026-07-04 01:23:09+00:00,negative,0,0,0.07709146897521942,correct,5,4-7
+4999,Dimasak di dapur MBG jam 1 malam...diberikan ke siswa jam 8 pagi ...😂😂😂 Benar ibu ini blg Makana nya sdh dingin dan nutrisinya sdh ga jelas Gmn mau dibilang bergizi....,2026-07-23 00:33:33+00:00,negative,0,0,0.29923186000180035,correct,21,16-30
+5731,"Sekolah elit MBG Berkualitas,  sekolah pelosok MBG nya RACUN",2026-09-21 10:19:49+00:00,negative,0,0,0.21412536689437828,correct,8,8-15
+11064,"Mbg buat adek❎
+Mbg buat diri sendiri✅👁️👄👁️",2026-08-22 00:43:52+00:00,negative,0,0,0.44619623939046105,correct,5,4-7
+6696,Sudah di stop sahaja buang buang uang angaran biar ortunya yanh masakin anaknya buat sekolah bagi uangnya sahaja kalau tidak stop dari pada banyak keracunan pekerjaan itu bukan kasus mbg sahaja ysng korupsi jufa belum selesai sudah tambah lagi keracunan mbg banyak kasus indonesia itu orang nya pada ngeyel tidak mau di fikir dulu sekiranya membahayakan soal mbg labih baik stop sahaja lebih baik begitu,2025-09-28 05:53:27+00:00,negative,0,0,0.21010662800413246,correct,51,31+
+7964,"Lanjutkan MBG INSONESIA.
+Mari sama2 dikoreksi & kasih masukan k pemerintah.
+Ada kejanggalan & korupsi lsg dilaporkan.
+Pemerintah siapkan aplikasi/website utk melaporkan sgala penyimpangan.",2026-07-03 08:04:24+00:00,positive,1,1,0.7003040759039052,correct,20,16-30
+3832,Manusia paling bodoh,2026-05-28 09:51:35+00:00,negative,0,0,0.1574512234122099,correct,3,0-3
+3934,Buset goblok bangat nih presiden.,2026-05-24 08:56:57+00:00,negative,0,0,0.13430080818796303,correct,5,4-7
+3352,Prabowo korban dari ke jahatan presiden se belumnya ..,2026-06-10 02:20:04+00:00,negative,0,0,0.12897498312283281,correct,6,4-7
+7961,Aaahh disini MBG nya lain disini Makan Basi Giloooo😆😆😆😆😆😆😆😆TDK sesuai dg mknan bergisi😮😮,2026-07-03 08:09:20+00:00,negative,0,0,0.3202635854936911,correct,13,8-15
+7230,"Klo di Indonesia,...makanan nya ......sgt menyedihkan...😢",2026-07-05 12:36:20+00:00,negative,0,0,0.1367107076105808,correct,5,4-7
+5180,"kalo skolah internasional isinya anak orang kaya, kalo smpe ga brgizi atau beracun takut di labrak sama ortu kaya😂klo orng miskin mah kasih seadanya aja biar beracun juga ortunya ga bisa apa2😂 kira2 bgitu logikanya",2026-09-22 01:38:12+00:00,negative,0,0,0.1598329846446074,correct,28,16-30
+459,Ya Allah kasian kk makan ko gitu ya Allah kasian sekali 🥺😔😔,2026-05-25 03:04:00+00:00,negative,0,0,0.1921112543813789,correct,11,8-15
+9109,"Ini sebenarnya ingin memberi Gisi kepada anak - anak, atau mau memberi racun kepada anak - anak .?",2026-09-21 21:04:01+00:00,negative,0,0,0.21599255042183924,correct,13,8-15
+698,Apakah itu mbg beracun😮,2026-05-11 11:59:48+00:00,negative,0,0,0.1327241234095232,correct,3,0-3
+3559,"😂 jangan dengar bawahan aja tapi audit pak, stop mbg tak berguna jangan sampai habis dikorupsi",2026-06-04 08:13:10+00:00,negative,0,0,0.1768489566474969,correct,14,8-15
+941,Sampai ada korban jiwa baru ditanggapi,2026-04-28 08:01:51+00:00,negative,0,0,0.2452363736441736,correct,5,4-7
+11520,Bilang aja mau di makan sendiri😭,2026-05-21 05:47:44+00:00,negative,0,0,0.28090513338497264,correct,4,4-7
+967,Ya tuhan pokonya mbg udah stop banyak anak anak keracunan kalian kasih apa di dalam makanan mbg kalian harus tanggung jawab😡😡😡,2026-04-24 12:00:06+00:00,negative,0,0,0.15101793351764523,correct,19,16-30
+6055,Betul 2 tutup tutup tutup MBG pakkk setop MBG pakkk GK jelas,2026-05-10 00:53:21+00:00,negative,0,0,0.165095730839701,correct,11,8-15
+4696,"Terima ksh ibu 🙏🙏, mngkin jg mbg di uangkan  tak ada kesempatan untuk korupsi",2026-08-02 23:53:52+00:00,negative,0,0,0.14135502029812308,correct,9,8-15
+7767,"Tapi tdk di korupsi ,tdk seperti negara saya",2026-07-03 12:28:03+00:00,negative,0,0,0.12464498828024631,correct,6,4-7
+8412,"Aku udah dapat kok mbg nya 
+👇🏻
+👇🏻
+👇🏻",2026-01-16 08:32:25+00:00,negative,0,0,0.41867886455218234,correct,2,0-3
+615,Indonesia itu tidak membutuhkan namanya makanan bergizi pensil gratis bodo amat yang paling benar tuh kesehatan gratis rumah sakit gratis peh,2026-05-15 13:16:21+00:00,negative,0,0,0.16905265943723718,correct,18,16-30
+3084,"Dan korupsi di MBG bisa triliunan perhari karna SPPG piktif, gak masuk akal jumlahnya",2026-09-11 18:00:29+00:00,negative,0,0,0.1313198347079913,correct,11,8-15
+10455,Kenyataan cucu saya sekolah SD kelas 2 sekaliwaktu makan mbg bau jadi mau muntah sekarang harus bawa bekel dari rumah saya tetmasuk keluarga kurang mampu juga kasihan,2026-02-05 03:01:32+00:00,negative,0,0,0.28383914958613393,correct,21,16-30
+8854,Aku sudah hari ini mbg nya spaghetti bolognese kalo disekolah aku 😊,2025-11-11 04:33:54+00:00,positive,1,0,0.4037788414693558,false_negative,5,4-7
+86,Kayana embege na udah busuk lama bangat,2026-08-09 02:01:57+00:00,negative,0,0,0.23550474364282606,correct,7,4-7
+4100,Betul Bu dari pada keracunan Otong anakku belum dapat.,2026-09-13 13:15:01+00:00,negative,0,0,0.20278064715145935,correct,6,4-7
+6459,Saya sangat  sangat setuju mbg di setop  saya masih bisa mengasih  anak cucu  saya,2026-01-26 12:46:38+00:00,positive,1,1,0.8226375988565929,correct,7,4-7
+7140,"Padahal di negara Konoha terkenal dan banyak orang asing cita karena kekayaan alamnya sangat luar biasa sejak kemerdekaan tahun 1945,kenapa sekarang jadi miris ya terkenalnya hanya menjadi negara koruptor terbesar,tidak punya kehebatan yg seperti negara mereka.",2026-07-06 12:36:57+00:00,negative,0,0,0.20029566070558621,correct,31,31+
+6714,Itu pasti ada orang dlm yg dibyr sama orang yg suka menghujad dengan makan gratis    kalok gk mana mungkin setiap hari ada kejadian keracunan   sebab mereka sengaja mau merusak makan bergizi gratis dari pemerintah    aku yakin sekali,2025-09-28 00:34:03+00:00,negative,0,0,0.19678774404711707,correct,28,16-30
+3847,Pejabat paling jahat menindas memeras habisin uang rakyat demi kepentingan sendiri dan gerombolannya,2026-05-27 07:06:15+00:00,negative,0,0,0.28251316131986204,correct,12,8-15
+4156,Lebih baik beli makanan sehat dari pada di kasih makanan beracun gratis,2026-09-08 18:05:03+00:00,negative,0,0,0.12315381430855564,correct,8,8-15
+9771,Hapus kan mbg itu membuka lahan korupsi dan kopdes juga membuka lahan korupsi,2026-09-18 09:16:45+00:00,negative,0,0,0.09975736188852789,correct,9,8-15
+331,Mbg  emang  jahat  banget  masak  ada yang  sampek kayak gini  keracunan  sih 🤬🤬🤬🤬🤬🤬🤬🤬,2026-06-19 02:47:20+00:00,negative,0,0,0.29602398486627923,correct,10,8-15
+10857,"ORANG LUAR TERJEBAK KORUPSI KRN HILAF, KITA DISUSUN RAPI SEJAK AWAL DAN JADI PENGHASILAN TERAP SAMPAI BANGKAI INI TERCIUM",2025-04-25 19:04:16+00:00,negative,0,0,0.2247878535828765,correct,14,8-15
+1721,"Rampok berkedok mbg. 
+Sangat kejam",2026-05-09 02:06:16+00:00,negative,0,0,0.20608823744654825,correct,4,4-7
+7282,"Kira2 di negara sana banyak korupsinya gak ya ? 
+Kok kelihatannya jauh beda",2026-07-05 05:12:20+00:00,negative,0,0,0.14885436243472613,correct,10,8-15
+10145,Antara program mbg untuk rakyat miskin atau proyek menguntungkan kroni kroni dan relawan 😇😇😇,2026-05-02 14:31:25+00:00,negative,0,0,0.26821129121960313,correct,10,8-15
+6815,"Memang sangat tidak mudah memberi makan 85 juta anak makan siang dalam waktu yang BERSAMAAN (jam 12 siang...)...😊
+Mungkin ada baiknya dievaluasi dan bisa memang tdk efektif,  ya dihentikan saja...😊",2025-09-26 14:36:15+00:00,negative,0,0,0.4852734810173955,correct,23,16-30
+4010,"Betul sekali ibu. 😢maju terus ibu perjuankan hak kami sebagai perempuan . Sembako makin tdk terjangkau.akibat MBG. 
+PROGRAM YG CUMA MENGUNTUNGKAN PENJILAT PARA PENGUASA RAKUS.",2026-09-20 03:48:25+00:00,negative,0,0,0.3377425845604636,correct,22,16-30
+52,Ingat peristiwa Corona..ternyata konspirasi tingkat besar kan.kami betul 2 khawatir dg MBG ada nya pro kontra diteruskan akhirnya murid2 yg jd korban krn konspirasi politik.ini munkin misal ada pihak yg sengaja masukin sesuatu secara masal msh gejala mual diare pusing terus  kalo msh ndak ada respon kami cuma khawatir dan semoga tidak lah ada oknum 2 yg sengaja memberi dan hal2 yg lebih extrim demi suatu tujuan...bgmn kalo sementara sekali lg sementara istirahat dulu berbenah dulu dari segala lini akan perjalann MBG...,2026-09-05 01:00:34+00:00,negative,0,0,0.23601649781765296,correct,62,31+
+4745,"Urusan makan buat anak'  bkn urusan pemerintah tp urusan ortu nya nasing2 jd sgt tdk epektif  ada nya  MBG  kacau balau dg yg py ide MBG 
+Dg ada nya MBG  justru mengundang korupsi berkedok gizi  di maanfaat kan sm.org2 yg ahklaq nya  sdh pd bejat ..sdh terkkti kan kep BGN  korupsi  besar2an ..sdh STOP MBG ...dengerin suara Rskyat",2026-07-25 04:34:09+00:00,negative,0,0,0.14223174316412165,correct,44,31+
+4683,Pejabatnya pada goblok semua negara kita sebentar lagi hancur,2026-08-04 04:14:53+00:00,negative,0,0,0.10566141848216302,correct,7,4-7
+4843,"Yg masih mendukung MBG lanjut ......hanya orang yg mati rasa, hatinya busuk/buta, guoblok, aku yakin hanya memikirkan keuntungan pribadi/ingin korupsi"""""""".100% suara ibu ini betul, mewakili suara rakyat yg murni ingin kebaikan, punya nurani. PEMERINTAH sebenarnya anda itu maunya apa????jujur dengar nuranimu. nafsu mu telah ditunggangi syaiton.",2026-07-24 05:36:36+00:00,positive,1,0,0.17260295091608094,false_negative,43,31+
+6408,"Yg paling miris sppg diangkt pppk,smntr guru honor yg sdh masuk dapodik,punya nuptk,punya serdik,guru sdh frofesionl justru dirumhkn sungguh tdk adil",2026-02-02 04:04:48+00:00,negative,0,0,0.19072892495687285,correct,21,16-30
+793,Tapi di sekolah ku nga ada keracunan,2026-05-07 07:00:37+00:00,negative,0,0,0.4562614634494175,correct,5,4-7
+6513,"MBG Padang Sidempuan adalah ladang korupsi,di Padangsidimpuan hari Sabtu diganti dengan roti, apapun program nya manusia Indonesia kebanyakan bermental korupsi, dmi banyak korupsi karena semua instansi pemerintah tukang korupsi, MBG juga dikorupsi, semua dikorupsi, Indonesia ranking satu masalah korupsi 👊👊👊💥💥🔥🔥🔥🖕🖕🖕🖕",2025-12-25 02:27:07+00:00,negative,0,0,0.07526058561723427,correct,35,31+
+3825,Suatu masalah bila ada perubahan pasti ada dampak org ko menilai org hanya dari segi keburukan a untuk kebaikan ga di nilai semua masalah akan ada penyelesaian,2026-05-28 14:38:27+00:00,negative,0,0,0.18751515207859376,correct,19,16-30
+10418,raja omon omon bodoh.. proyek mbg ladang koruptor.. ladang cari dukungan tapi akhirnya berbalik meruntuhkan gerindra krn UMKM  mati dan guru honerer makin terpuruk,2026-02-12 00:41:47+00:00,negative,0,0,0.23629729799432397,correct,22,16-30
+6189,Setuju mbg di hentikan  saya masih bisa memberi makan,2026-02-27 01:16:31+00:00,positive,1,1,0.9142399874926733,correct,6,4-7
+10238,"Helo Bocor Alus... Tlg cari bocoran dowk, sebenarnya brp nominal paket MBG yg diterima oleh siswa...?? Krn pihak dapur hy terima 5rb per paket... Yg 10rb kemana...?? Kena sunat di berbagai lembaga pemerintah daerah... Seribu/paket/hr di masing² instansi...🤔🤦‍♂️👹
+Tempo Bocor Alus bs lakukan investigasi tuk menampik info liar ini...",2026-03-23 13:31:54+00:00,negative,0,0,0.23226967030422166,correct,44,31+
+7481,Disana tidak di korupsi.....menu sangat sehat....di Konoha menu tidak sesuai dan tidak sehat,2026-07-04 04:21:52+00:00,negative,0,0,0.3095281093871346,correct,11,8-15
+5445,Kalau sekolah negeri dikasih sejenis mbg sekolah internasional dijamin anaknya keracunan makanan mewah.,2026-09-21 15:41:35+00:00,negative,0,0,0.22656576247928806,correct,12,8-15
+9273,"Tadi hutan kebakaran terus di tolong oleh luar negeri, sekarang di racuni mbg😔🥀",2026-09-20 04:56:51+00:00,negative,0,0,0.2825698272069805,correct,10,8-15
+10346,Proyek korupsi dan di legalkan pemerintah di bungkus dengan kebaikan 😅,2026-02-24 18:00:35+00:00,negative,0,0,0.13220996031807028,correct,6,4-7
+11305,Itu mah bukan kasih Ade nya malah dimakan😂😂😂😅😅,2026-06-14 05:36:32+00:00,negative,0,0,0.271375863703601,correct,5,4-7
+6925,Kl banyak murid keracunan MBG pasti ada okmum yg sengaja memberi racun jadi sebaik nya berikan saja untuk makan geratis diganti dgn duit duit nya langsung masukan rekening orang tua siswa biar lah orang tua siswa saja yg mengelolahnya krn MBG ini rawan korupsi dan MBG pasti ada orang yg tdk suka prabowo  yg meracuni nya,2025-09-26 04:49:07+00:00,negative,0,0,0.11837660215947735,correct,38,31+
+10221,Karena program membrantas KOROPSI dia takut sama KOROPTOR ! Ya mending membuat Program yang BARU. Contohnya program MBG . Tidak cocok saat Pidato mau mengejar Koroptor sampai ANTARTIKA ! Maka menciptakan program KOROPSI baru . Menciptakan LADANG KOROPSI baru .😂😂😂,2026-03-27 09:02:46+00:00,negative,0,0,0.4745288865483289,correct,32,31+
+9538,Uangnya dikorupsi SM mereka semua .PD ga takut dosa .biar diakhirat kelak kena azab dan hukuman dr Allah ...Kl pun mmg kena azab didunia kenakan anak anak mereka hal yg serupa biar tau rasa.manusia manusia ini SDH tidak pantas disebut manusia .bahkan hewan buaspun msh punya hati .,2026-09-18 21:32:26+00:00,negative,0,0,0.12186824246751733,correct,40,31+
+1908,Betul bang  anjing korupsi yg makan,2026-05-06 07:23:50+00:00,negative,0,0,0.14597236301895924,correct,5,4-7
+373,"Sudahlah klu dpt mbg disemua sekolah lbh baik.JANGAN DITERIMA ...KLU DIPAKSA KHN JGN DIBERIKN KEPADA ANAK"" DIDIK MUUUU...SAMA JUGA DIRACUN RAKYAT NYA ???...",2026-06-09 06:11:35+00:00,negative,0,0,0.23825681952602787,correct,20,16-30
+3767,"Programmu bagus pak,tpi anggarannya yg jelek,pelaksanaanya yg bobrok,ketua BGNnya beli ini beli bikin itu,boncos APBN yg brdampak rakyat,pak presiden tolong pikir ulang rakyatmu punya cerita,cerita kepedihan.",2026-05-30 08:22:54+00:00,negative,0,0,0.22796764427743688,correct,27,16-30
+1426,"Bubarkan MBG membuang uang rakyat, jelas sekali sebagai PROYEK",2026-05-12 12:47:35+00:00,negative,0,0,0.1883711260482535,correct,8,8-15
+6795,"Saya warga Medan setuju klu mbh di hentikan ,yg pertama menggangu belajar,menjadi ajg korupsi dan bagi org tua yg TDK bisa menyekolahkan anaknya TDK mendpt bantuan mbg menurut saya bagikan KPD anak baik dia sekolah maupun yg TDK sekola biar adil,karna Mala yg miskin malah,TDK bisa mendpt mbg karna ia TDK sekola",2025-09-26 18:35:11+00:00,negative,0,0,0.2989627235204213,correct,43,31+
+7406,"Sebaik apapun itu program pemerintah, tapi ada korupsinya, koruptornya hrs dibui semaksimal mungkin. Jangan ada perlindungan diantara mereka.",2026-07-04 09:24:50+00:00,negative,0,0,0.1866058993240536,correct,14,8-15
+5075,Hancok kok beda jauh sama mbg di sekolah 2 yg sering muncul indek 10 ribu😂😂😂😂,2026-09-22 04:48:37+00:00,negative,0,0,0.23702962460485094,correct,11,8-15
+11206,bukan makanya yang ke banyakan tapi rotinya 😂😂😂,2026-06-20 17:07:37+00:00,negative,0,0,0.30675278002227885,correct,5,4-7
+3264,Kalau mggak mau setop MBG MUNGKI ORANG ITU takut kelaparan. Masalahnya MBG bisa di ambil uangnya lumayan tiap hari. Pak Prabowo kalauMBG TIDAK DI SETOP mungkin pak Prabowo rugi.,2026-07-18 06:51:33+00:00,negative,0,0,0.1789368174560241,correct,24,16-30
+2445,Masa cina makan bambu kaya panda sama Arabian malah ngajak hewan pelihara makan😂😂😂😂😂,2026-09-12 09:34:41+00:00,negative,0,0,0.2767010226438231,correct,13,8-15
+5491,MBG ternyata hanya untuk orang kaya 😭😭😭,2026-09-21 14:57:18+00:00,negative,0,0,0.45575607548462715,correct,5,4-7
+7816,Indonesia. Baru mau di mulai. Sdh di korupsi. Ampuuuunnnn emang benar. Koruptir mesti di hukum mati. Biar kedepanya tk ada lg curi uang hak rakyat byk,2026-07-03 11:27:49+00:00,negative,0,0,0.10683996257964215,correct,21,16-30
+7724,"Maju terus MBG, agar anak indonesia cerdas , jika ada celah korupsi segera laporkan bukan dihentikan MBG nya...jadi memang Masih baru jadi pasti banyak celah kesalahan..",2026-07-03 13:26:06+00:00,positive,1,0,0.3109018594052531,false_negative,22,16-30
+7064,Indo pengin kaya negara lain tapi si bro lupa kalo indo itu kebanyakan pejabat korupsi porgam nya udah bagus tapi pengelola nya yang ga jujur alhasil program bagus itu jadi jelek karena pejabat pejabat itu sendiri,2026-07-07 08:31:40+00:00,positive,1,0,0.506357355950164,false_negative,27,16-30
+9239,Jangan terima mbg selesai,2026-09-20 12:50:15+00:00,negative,0,0,0.2798304457852085,correct,4,4-7
+3245,Laporan bohong bung,2026-09-08 05:48:19+00:00,negative,0,0,0.21555147179115902,correct,3,0-3
+10772,"Makanan yg sdh dipotong harganya di sana sini dan berulat serta bahan2 yg sdh tak layak. Pantaskah disebut makanan bergizi. Apakah spt itumakanan bergizi anak indonesia. Belum yg mengolah makanan tersebut tak dibayar... Kalau begini bawahan kacau, pemimpinnya pasti kacau",2025-04-29 07:42:42+00:00,negative,0,0,0.08736097971161487,correct,32,31+
+7224,Sekelompok Org Indonesia malah menolak mbg,2026-07-05 13:12:24+00:00,negative,0,0,0.1496928533946496,correct,6,4-7
+8975,"Aku setiap hari dapat 
+       Aku sudah dapet mbg tadi juga dapat lauk nya soto sapi telur asin bukan dari ayam ya ada duduh nya terus ada sambel juga dan buah nya jeruk 🍊🍊🍊 
+Yang pernah dapat ngumpul sini ngaak maksa kokk 👇🏻👇🏻👇🏻",2025-11-06 05:13:39+00:00,negative,0,1,0.6743686881672765,false_positive,24,16-30
+7225,Di Konoha malah pada keracunan,2026-07-05 13:03:27+00:00,negative,0,0,0.12810858611629464,correct,3,0-3
+10813,"KLO nyebut MBG mirip mirip MDIF  ya,bedanya MBG dana dari rakyat buat rakyat ,KLO MDIF dana dari soros untuk antek-anteknya,upsy😅😅😅",2025-04-26 19:36:52+00:00,negative,0,0,0.21877836542133572,correct,19,16-30
+9040,Tutup aja itu MBG...dari pada mkin byak korban.,2026-09-22 05:42:53+00:00,negative,0,0,0.2042343422811622,correct,5,4-7
+5519,Kenapa MBG ga target kabupaten termiskin dulu 😢😢😢😢😢 toh yg protes justru orang2 berduit,2026-09-21 14:20:20+00:00,negative,0,0,0.3732727435708406,correct,12,8-15
+5859,Anak orang kaya Masi dapat dan mbg nya sangat layak . Giliran buat orang miskin isinya tempe beracun,2026-09-21 08:00:01+00:00,negative,0,0,0.23889453732291596,correct,12,8-15
+1393,"Ngomong tok.. Unting2an pemerintah sekarang kasih mbg.. Dulu mana ada.. Yg ngomong ini.. Koyo pinter pintero, asline gak entos.. Alias goblok",2026-05-12 15:03:45+00:00,negative,0,0,0.2503498999561569,correct,18,16-30
+4370,MBG program proyek presiden prabowo yg ambisi nya dan halusinasi nya tinggi yg mabuk krna kebanyakan makan daging ular weling parah wadidaw 😢😢😢😂😂😂😂,2026-08-17 10:18:08+00:00,negative,0,0,0.21454919357947788,correct,17,16-30
+3188,"Ini program Prabowo untuk mengembalikan modal yg di pakai dalam pilpres selama 4 priode... Jadi untuk apa kita berteriak stop MBG
+sementara semua petinggi negara beserta konco konco nya ber kata ANJING MENG GONGGONG KAFILAH BER LALU",2026-09-09 01:32:33+00:00,negative,0,0,0.18657151733531643,correct,27,16-30
+6086,Siapa yang di Hukum yang membuat Rakyat keracunan harus di penjara kan.,2026-04-16 05:30:10+00:00,negative,0,0,0.21343787780374918,correct,7,4-7
+10603,"Proyek MBG jelas telah gagal, bkn hanya materi tp anak2 Indonesia yg ikut  jdi korbannya..",2025-09-29 01:46:12+00:00,negative,0,0,0.2839384229313958,correct,14,8-15
+9990,Stop mbg....sblm memakan bnyak korban lgi,2026-09-18 07:03:59+00:00,negative,0,0,0.1322044626321753,correct,7,4-7
+4760,"Betul .....MBG hanyalah proyek,dagelan lawas😅😅😅",2026-07-24 20:18:37+00:00,negative,0,0,0.25544118218018,correct,6,4-7
+7348,"Mbg di luar negeri menu makanan nya enak bergizi istimewa.. 
+Sedang di Indonesia cuma telur buncis  tempe tahu.... Itu aja nga ganti"" Karena banyak yang di korupsi...",2026-07-04 14:21:12+00:00,negative,0,0,0.18017164213035183,correct,19,16-30
+4798,"Betul bu ibu, presiden prabowo da gibran sangat menghina ilmu pengetahuan dan ibu ibu di negara ini, demi menjarah apbn, benar benar ketularan planga plongo, korupsi mbg seakan akan tidak tahu saja, memang bego mereka semua.",2026-07-24 10:58:54+00:00,negative,0,0,0.08878209985222268,correct,29,16-30
+6731,Saggat setuju MBG di hapus aja gnti sembako gratis untuk siswa,2025-09-27 15:07:51+00:00,positive,1,1,0.9167525108576444,correct,8,8-15
+110,Wow untung aja di sekolah aku gaada mbg soalnya aku tinggal nya sama kaya disitu😢😢😢😢😢😢😢😢😢😢😢😢,2026-08-02 07:24:40+00:00,negative,0,0,0.41762227002360297,correct,10,8-15
+1392,"Perhitungannya enteng bngt, mentah.. 
+335T dibagi sekian utk sekian kk dst.. 
+itu itungan metematikanya boss.. Gampang dan sangat rapi.. 
+Tp saat sdh dilapangan nanti, itung2mu cuma jd skdar rumus - x - + : doang.. 😂😂
+
+MBG itu jg sdh dihitung secara matematikanya.. Tp pelaksanaan reel dilapangan?.. 
+
+yg berbentuk barang jadi aja msh di akal2in, apalgi berupa duit langsung.. 
+ga belajar dr program dana BOS, BLT dan Dana desa...",2026-05-12 15:03:51+00:00,negative,0,0,0.2846437770829534,correct,49,31+
+4804,"Betul hapus semua MBG.
+Rakyat d bodohi ,,di bdohi selamanya,",2026-07-24 10:20:19+00:00,negative,0,0,0.18657142369022445,correct,8,8-15
+7252,Nomor 1 pula di Konoha keracunanya paling sering 😂😂,2026-07-05 10:08:55+00:00,negative,0,0,0.19302088270897877,correct,6,4-7
+543,Itu keracunan MBG,2026-05-19 12:09:49+00:00,negative,0,0,0.504627193911747,correct,2,0-3
+8050,Udah 3 bulanan dapat mbg😊,2026-07-13 12:39:01+00:00,positive,1,1,0.5508518473392121,correct,3,0-3
+9689,"Kejadian ini disemua daerah terdampak semua..bbrp Minggu lalu dikab Pati kec Gembong ratusan siswa keracunan.
+Dulu juga pernah pada murid2ku pada muntah2",2026-09-18 11:43:24+00:00,negative,0,0,0.19359512300342493,correct,19,16-30
+3959,"Yg beri laporan siapa, jangan diterim bulat2. Cek dulu baru omng, bukan omon2",2026-05-23 13:23:48+00:00,negative,0,0,0.2673705844165433,correct,12,8-15
+9225,"Ya ALLAH ya Rabb, lindungilah kami dari pemimpin yang bodoh dan kekanak kanakan, azablah mereka pemimpin yang dzholim dengan azab yang paling pedih, tolong kami ya rabb 🥺🙏",2026-09-20 17:23:57+00:00,negative,0,0,0.14907465108147985,correct,18,16-30
+5502,Tebang pilih EA menu mbg ....kalo rakyat biasa mah makanan busuk di kasih 😅,2026-09-21 14:44:28+00:00,negative,0,0,0.3569003919311079,correct,10,8-15
+10185,proyek maling berkedok gizi,2026-04-14 16:39:30+00:00,negative,0,0,0.13648317711780605,correct,4,4-7
+9933,Ponakanku juga keracunan kemaren gara2 MBG  udh 4 HR g masuk sekolah total korban udh ada 6 org tp gada tanggapan apa2 dr sekolah,2026-09-18 07:24:59+00:00,positive,1,0,0.24310118159964475,false_negative,16,16-30
+9996,Kesengajaan membunuh generasi muda lebih parah dr pada terloris ituh,2026-09-18 07:01:57+00:00,negative,0,0,0.12955510258760372,correct,7,4-7
+5620,Pemerintah memang gak bejus ngurus negara sekolah elit mbg nya mewah sekolah orang miskin isi nya racun😂,2026-09-21 12:13:57+00:00,negative,0,0,0.15589296876034248,correct,15,8-15
+9075,Uda d bilang setop mbg. Jgn di terima kalau di antar mbg ke sekola2 di tolak saja.,2026-09-22 02:14:47+00:00,negative,0,0,0.27821114421104765,correct,10,8-15
+3893,Lebih bsik dari jepang...apax? Sampahx...korupsix,2026-05-25 06:35:13+00:00,negative,0,0,0.25919623631055627,correct,5,4-7
+3549,Kaya sengaja ini ..di hancurkan negara kita biar bangkrut .x yaa.stop mbg,2026-06-04 11:59:56+00:00,negative,0,0,0.18143219943860422,correct,9,8-15
+11153,Kak tasekakian ta makan ajah😂❤,2026-07-09 13:30:43+00:00,positive,1,0,0.2005247378923372,false_negative,5,4-7
+5429,"Kita dipajakin harga melonjak tinggi, untuk program yg gak bermanfaat",2026-09-21 16:02:01+00:00,negative,0,0,0.4978431712177479,correct,7,4-7
+4704,"Betull Bu ,urusan makan,gizi GK gizi  itu urusan BPK dan ibu,bukan urusanya pemerintah,kalau bantu Carikan lapangan kerja utk BPK dan ibunya ,cukup disitu,OPO nggoleke anggaran Ben koruppp lagi ,,,,,😭🇮🇩",2026-08-01 14:41:09+00:00,negative,0,0,0.14230623093233036,correct,27,16-30
+6605,"Jangan dihentikan MBG. Kalau kurang betul dibeyulkan bersama, permasalahan gampang. Jangan grusa grusu, sabar sabar. Omongannya ngaco, ❤❤❤",2025-09-30 13:58:53+00:00,negative,0,0,0.3512529863391569,correct,16,16-30
+10302,Wajar sih pemenang menimati kue kekuasaan. Yang penting jangan dikorupsi,2026-02-26 12:21:33+00:00,negative,0,0,0.15211530576307394,correct,9,8-15
+6946,Bagi uang nya aja..biar orang tua nya y masakan buat anak nya...dan  guru mengecek anak didiknya bawa makan bergizi engga.. jadi simpel.. engga ribet dan banyak korban lagi..itu menurut saya,2025-09-26 01:56:26+00:00,negative,0,0,0.12253543353342351,correct,21,16-30
+3930,"Omon2 segoblok ini,
+Presiden kaya gini mendingan di lengserkan saja sebelum Indonesia hancur.",2026-05-24 10:17:19+00:00,negative,0,0,0.18454301917687535,correct,10,8-15
+7505,Karyawan MBG anda yah.. ga iklas bener MBG di hapuskan. MBG cuma meracuni anak orang ga ada faedahnya. Sebelum ada MBG orang tua masih mampu..,2026-07-04 03:06:20+00:00,negative,0,0,0.27616328285918335,correct,21,16-30
+9857,Sekolah tolak mbg harus tolak,2026-09-18 07:55:19+00:00,negative,0,0,0.27888641179486534,correct,5,4-7
+7514,"Itu hebatnya negara lain,,,mereka bener² bukan hanya sebagai trik untuk dijadikqn lahan korupsi itu aja sih bedanya dengan negara INDONESIA",2026-07-04 02:24:17+00:00,negative,0,0,0.057365093091342516,correct,14,8-15
+11837,Itu Abang yang makan MBG nya katanya untuk adik nya malah Abang yang makan MBG hihihi 😂😂😂😂,2026-05-07 11:10:13+00:00,negative,0,0,0.3610214308210348,correct,10,8-15
+9037,"Kakta2 sampai hari ini,, mbg ,, maling berkedok gizi,,",2026-09-22 05:47:25+00:00,negative,0,0,0.23402129860319965,correct,7,4-7
+7105,Ini  MBG yg bergizi lain dgn Indonesia buáh busuk,2026-07-06 23:01:49+00:00,negative,0,0,0.20480440561249572,correct,6,4-7
+10983,gw sekolah di min2 tangsel  mbg nya kadang basi jir lawak ujung nya gapada makan,2025-04-24 03:21:40+00:00,negative,0,0,0.2154014866699716,correct,12,8-15
+253,"Sebelum ada MBG, anak2 Indonesia sering kelaparan, setelah ada MBG malah sering keracunan. Bukan begitu ya bund😂",2026-07-03 03:56:59+00:00,negative,0,0,0.20495785339305514,correct,15,8-15
+11505,Harus nya yg abang nya makan itu roti bg bg😅😅,2026-05-23 11:28:33+00:00,negative,0,0,0.3472580275075637,correct,6,4-7
+7024,Di indonesia MBG gk jalan krn koruptornya terlalu bnyk ... Intinya mbg bagus cm realitanya tdk sesuai harapan semua pihak justru merugukan negar dan masyrakat ... Dananyadi korupsi dan bnyak suswa yg keracunann,2026-07-09 04:05:22+00:00,positive,1,1,0.5596873673579669,correct,26,16-30
+5151,"Kalo mbg nya mandiri dari sekolah y bisa dibilang miris 
+Berarti mbg pemerintah blm bergizi maksimal, 
+Kalo mbgnya sama"" Dari pemerintah sungguh"" Terlalu kan dananyaa pasti sama, menunya minim malah sebagian keracunan.",2026-09-22 02:14:00+00:00,negative,0,0,0.12452682924862601,correct,24,16-30
+4194,cape banget kalo ngomongin mbg 😭😭😭,2026-08-30 16:00:56+00:00,negative,0,0,0.3188219168477952,correct,4,4-7
+9393,"Sebetulnya apa tujuan Mbg, mau membunuh masa depan bangsa apa  gemana si....?knp udah banyak bukannya .....cepat""  ditanggapi.",2026-09-19 12:35:19+00:00,negative,0,0,0.232167234398059,correct,18,16-30
+1115,"banyak masyarakat rakyat Indonesia juga netizen2 dan juga netizen2 menghendaki supaya MBG di hapus kan juga koprasi merah putih di hapus kan, karena berdampak mengarah kepada korupsi, saya rakyat kecil, juga menghendaki MBG dan koprasi merah putih di hapus kan,",2026-05-16 01:40:16+00:00,negative,0,0,0.2592127818337407,correct,26,16-30
+6508,seterang benderang ini laporan mbg korupsi tp pemerintah tidak ada tindakan tegas,2025-12-29 13:33:56+00:00,negative,0,0,0.279159394890724,correct,10,8-15
+554,Niatnya baik dan keuntungan berkoloni teroganisir. Kenapa tidak dihentikan saja proyek MBG apakah tidak sayang buat penerus bangsa yg dihantuhi keracunan program 😭😭😭,2026-05-19 08:37:39+00:00,negative,0,0,0.4680723207342949,correct,18,16-30
+11588,Kok malah dimakan bang🗿🗿,2026-05-17 12:47:17+00:00,negative,0,0,0.3999784848845481,correct,3,0-3
+6073,Intinya MBG itu sistemnya Prabowo untuk th 2029 sebab itu sebagai ladang KORUPSI yg sudah diprgrmkan PRABOWO makanya tidak mumgkin MBG dihentikan,2026-04-25 03:45:11+00:00,negative,0,0,0.3263326698923872,correct,16,16-30
+7595,MBG DI  nkri pisi pemerintah mlh dibtentang demo  ingin memberhentikan. Yg di sukai rakyat. Pikiran   yg kejam lebeh. suka.  Pembantaian. Gratis. Semua diem,2026-07-03 22:25:08+00:00,negative,0,0,0.13401174623257936,correct,19,16-30
+5019,Menu MBG di Sekolah internasional beda sama sekolah yang ada di pelosok desa😂😂😂,2026-09-22 06:43:30+00:00,negative,0,0,0.3793057119298107,correct,9,8-15
+3042,Ganti pemimpin bodoh,2026-09-13 12:32:43+00:00,negative,0,0,0.14878007904248924,correct,3,0-3

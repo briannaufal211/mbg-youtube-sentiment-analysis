@@ -1,46 +1,80 @@
 {
-  "dataset_rows": 12000,
-  "valid_labeled_rows": 12000,
-  "binary_rows": 3100,
-  "label_counts": {
-    "positive": 220,
-    "negative": 2880,
-    "neutral": 8900
-  },
-  "empty_after_preprocessing": 561,
-  "avg_comment_tokens": 9.859083333333333,
-  "median_comment_tokens": 6,
-  "peak_discussion_date": "2026-09-21",
-  "peak_discussion_volume": 895,
-  "sentiment_peak_by_label": {
-    "positive": {
-      "date": "2026-07-03",
-      "count": 13
-    },
-    "negative": {
-      "date": "2026-09-21",
-      "count": 233
-    },
-    "neutral": {
-      "date": "2026-09-21",
-      "count": 650
+  "dataset": {
+    "raw_rows": 12000,
+    "model_rows_after_dedup": 10934,
+    "binary_rows": 2963,
+    "sentiment_counts": {
+      "positive": 220,
+      "negative": 2880,
+      "neutral": 8900
     }
   },
-  "model_metrics": [
-    {
-      "model": "TF-IDF + Logistic Regression",
-      "accuracy": 0.9338709677419355,
-      "macro_f1": 0.7465881109748682
-    },
-    {
-      "model": "BiLSTM baseline",
-      "accuracy": 0.8887096774193548,
-      "macro_f1": 0.6410320956576463
-    },
-    {
-      "model": "BiGRU candidate",
-      "accuracy": 0.8822580575942993,
-      "macro_f1": 0.6328652893031255
+  "data_quality": {
+    "raw_rows": 12000,
+    "missing_comment": 0,
+    "empty_comment": 443,
+    "duplicate_exact_comment": 453,
+    "duplicate_normalized_comment": 1047,
+    "invalid_published_at": 0,
+    "conflicting_duplicate_groups": 18,
+    "rows_removed_conflicting_groups": 159,
+    "rows_removed_duplicate_text": 464,
+    "model_rows_after_dedup": 10934
+  },
+  "human_validation_status": "PENDING",
+  "optuna": {
+    "requested": true,
+    "executed": true,
+    "completed_trials": 5,
+    "best_params": {
+      "embedding_dim": 64,
+      "units": 32,
+      "dropout": 0.2761534422933427,
+      "lr": 0.0005724986625725797,
+      "batch_size": 32
     }
-  ]
+  },
+  "binary_models": {
+    "TF-IDF + Logistic Regression": {
+      "accuracy": 0.9370786516853933,
+      "balanced_accuracy": 0.7034136546184739,
+      "precision_positive": 0.5416666666666666,
+      "recall_positive": 0.43333333333333335,
+      "f1_positive": 0.48148148148148145,
+      "macro_f1": 0.7239943292574872,
+      "weighted_f1": 0.9338088155356045,
+      "roc_auc": 0.9052610441767068,
+      "pr_auc": 0.5471057740527293
+    },
+    "BiLSTM baseline": {
+      "accuracy": 0.9191011235955057,
+      "balanced_accuracy": 0.601004016064257,
+      "precision_positive": 0.35,
+      "recall_positive": 0.23333333333333334,
+      "f1_positive": 0.28,
+      "macro_f1": 0.6185714285714285,
+      "weighted_f1": 0.9114927768860352,
+      "roc_auc": 0.6820883534136546,
+      "pr_auc": 0.22758766455753168
+    },
+    "BiGRU + Optuna": {
+      "accuracy": 0.9393258426966292,
+      "balanced_accuracy": 0.5654618473895583,
+      "precision_positive": 0.8,
+      "recall_positive": 0.13333333333333333,
+      "f1_positive": 0.22857142857142856,
+      "macro_f1": 0.5984962406015037,
+      "weighted_f1": 0.9185435498859508,
+      "roc_auc": 0.7620883534136547,
+      "pr_auc": 0.35240971850905695
+    }
+  },
+  "selected_model_for_error_analysis": "TF-IDF + Logistic Regression",
+  "three_class": {
+    "accuracy": 0.8324159021406727,
+    "balanced_accuracy": 0.6784426220287312,
+    "macro_f1": 0.6572822445540031,
+    "weighted_f1": 0.8345995814206513,
+    "macro_pr_auc": 0.7023439959993992
+  }
 }
