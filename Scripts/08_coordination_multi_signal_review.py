@@ -87,6 +87,7 @@ def _ensure_set_map():
 def prepare_indicators(
     df: pd.DataFrame,
     analysis_dir: Path,
+    similarity_threshold: float,
 ) -> pd.DataFrame:
     base = df.copy()
     base["commenter_hash"] = base["commenter_channel_id"].map(hash_id)
@@ -208,7 +209,7 @@ def prepare_indicators(
         )
 
         strong_pairs = similar[
-            similar["similarity"].ge(STRONG_SIMILARITY_THRESHOLD)
+            similar["similarity"].ge(similarity_threshold)
         ].copy()
 
         for row in strong_pairs.itertuples(index=False):
@@ -504,15 +505,16 @@ def main() -> None:
             "--strong-similarity-threshold harus di antara 0 dan 1."
         )
 
-    global STRONG_SIMILARITY_THRESHOLD
-    STRONG_SIMILARITY_THRESHOLD = args.strong_similarity_threshold
-
     input_path = Path(args.input)
     analysis_dir = Path(args.analysis_dir)
     analysis_dir.mkdir(parents=True, exist_ok=True)
 
     df = load_data(input_path)
-    commenter_df = prepare_indicators(df, analysis_dir)
+    commenter_df = prepare_indicators(
+        df,
+        analysis_dir,
+        similarity_threshold=args.strong_similarity_threshold,
+    )
     pattern_df = build_pattern_review_table(df)
 
     commenter_file = analysis_dir / "commenter_pattern_indicators_anonymized.csv"
