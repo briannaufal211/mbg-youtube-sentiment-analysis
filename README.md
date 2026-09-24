@@ -275,6 +275,7 @@ The output is a **descriptive review queue**, not a buzzer/bot label, probabilit
 Outputs:
 
 - `data/coordination_analysis/commenter_pattern_indicators_anonymized.csv`
+- `data/coordination_analysis/coordination_multi_signal_candidates_anonymized.csv`
 - `data/coordination_analysis/coordination_pattern_review_candidates.csv`
 - `data/coordination_analysis/coordination_screening_summary.json`
 
