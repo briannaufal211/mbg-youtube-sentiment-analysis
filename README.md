@@ -213,6 +213,43 @@ The notebook writes reusable outputs to `results/`, including:
 
 The GitHub Actions workflow executes this safeguard automatically, then commits the restored dataset together with the executed notebook/results.
 
+
+## Coordination Pattern Analysis Extension
+
+After commenter metadata enrichment, the project can be extended with a **descriptive coordination-pattern analysis** using:
+
+- `comment_id`
+- `commenter_channel_id`
+- `commenter_name`
+- `parent_comment_id`
+- `video_id`
+- `published_at`
+- `comment_clean`
+- `sentiment`
+
+Run:
+
+```bash
+python Scripts/07_coordination_pattern_analysis.py
+```
+
+The script produces descriptive outputs under:
+
+`data/coordination_analysis/`
+
+including:
+
+- `coordination_exact_repetitions.csv`
+- `coordination_cross_video_repetition.csv`
+- `coordination_temporal_patterns.csv`
+- `coordination_similar_text_pairs.csv`
+- `commenter_activity_summary_anonymized.csv`
+- `coordination_analysis_summary.json`
+
+The analysis is intentionally framed as **coordination-like pattern detection**, not definitive “buzzer detection”. Repeated text, high text similarity, synchronized posting, or cross-video repetition are signals for further review; they do not by themselves establish that an account is a bot, buzzer, or coordinated actor.
+
+The exported commenter activity table uses a one-way hash rather than exposing commenter channel IDs in the portfolio analysis output.
+
 ## Reproducibility
 
 Install dependencies:
