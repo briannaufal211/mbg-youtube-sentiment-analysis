@@ -80,10 +80,6 @@ def load_data(path: Path) -> pd.DataFrame:
     return df
 
 
-def _ensure_set_map():
-    return {}
-
-
 def prepare_indicators(
     df: pd.DataFrame,
     analysis_dir: Path,
@@ -437,6 +433,7 @@ def build_pattern_review_table(df: pd.DataFrame) -> pd.DataFrame:
 def build_summary(
     commenter_df: pd.DataFrame,
     pattern_df: pd.DataFrame,
+    similarity_threshold: float,
 ) -> dict:
     return {
         "unique_commenters": int(len(commenter_df)),
@@ -466,7 +463,7 @@ def build_summary(
         ),
         "minimum_text_chars": MIN_TEXT_CHARS,
         "minimum_text_words": MIN_TEXT_WORDS,
-        "strong_similarity_threshold": STRONG_SIMILARITY_THRESHOLD,
+        "strong_similarity_threshold": similarity_threshold,
         "interpretation_boundary": (
             "These are descriptive pattern indicators for review. "
             "They do not establish that any commenter is a buzzer, bot, "
@@ -518,6 +515,9 @@ def main() -> None:
     pattern_df = build_pattern_review_table(df)
 
     commenter_file = analysis_dir / "commenter_pattern_indicators_anonymized.csv"
+    candidate_file = (
+        analysis_dir / "coordination_multi_signal_candidates_anonymized.csv"
+    )
     pattern_file = analysis_dir / "coordination_pattern_review_candidates.csv"
     summary_file = analysis_dir / "coordination_screening_summary.json"
 
@@ -528,13 +528,26 @@ def main() -> None:
         encoding="utf-8-sig",
     )
 
+    candidate_df = commenter_df[
+        commenter_df["multi_signal_review_candidate"]
+    ].copy()
+    candidate_df.to_csv(
+        candidate_file,
+        index=False,
+        encoding="utf-8-sig",
+    )
+
     pattern_df.to_csv(
         pattern_file,
         index=False,
         encoding="utf-8-sig",
     )
 
-    summary = build_summary(commenter_df, pattern_df)
+    summary = build_summary(
+        commenter_df,
+        pattern_df,
+        similarity_threshold=args.strong_similarity_threshold,
+    )
     summary_file.write_text(
         json.dumps(summary, indent=2, ensure_ascii=False),
         encoding="utf-8",
@@ -565,6 +578,7 @@ def main() -> None:
         f"{args.strong_similarity_threshold:.2f}"
     )
     print(f"Indicator table                       : {commenter_file}")
+    print(f"Strict candidate table                : {candidate_file}")
     print(f"Pattern review table                  : {pattern_file}")
     print(f"Summary                                : {summary_file}")
 
