@@ -6,7 +6,7 @@ End-to-end **Text Mining + NLP + Machine Learning + Deep Learning** project for 
 
 The project turns unstructured YouTube comments into measurable outputs through:
 
-**Data quality → duplicate-leakage control → label validation workflow → text preprocessing → exploratory text mining → binary classification → model benchmarking → imbalance-aware evaluation → Optuna tuning → error analysis → explainability → 3-class classification**
+**Data quality → duplicate-leakage control → label validation workflow → text preprocessing → exploratory text mining → sentiment modeling → model benchmarking → imbalance-aware evaluation → Optuna tuning → error analysis → explainability → 3-class classification → coordination pattern analysis**
 
 The notebook is intentionally designed to distinguish descriptive findings from model-evaluation evidence and dataset limitations.
 
@@ -192,7 +192,11 @@ The notebook writes reusable outputs to `results/`, including:
 │   ├── mbg_comments_raw.csv
 │   ├── mbg_comments_clean.csv
 │   ├── mbg_comments_to_label.csv
-│   └── mbg_comments_labeled.csv
+│   ├── mbg_comments_labeled.csv
+│   └── coordination_analysis/
+│       ├── coordination_pattern_review_candidates.csv
+│       ├── coordination_multi_signal_candidates_anonymized.csv
+│       └── coordination_screening_summary.json
 ├── Scripts/
 │   ├── 01_data_quality_cleaning.py
 │   ├── 02_prepare_labeling.py
@@ -322,4 +326,4 @@ The validation sample has now been reviewed using a binary sentiment scheme (`po
 
 ## Portfolio Takeaway
 
-This project goes beyond “train a sentiment model.” It demonstrates a complete analytics workflow with **data quality, leakage prevention, label validation workflow, NLP preprocessing, EDA, imbalanced classification, hyperparameter tuning, PR-AUC, error analysis, model explainability, and 3-class benchmarking**.
+This project goes beyond “train a sentiment model.” It demonstrates a complete analytics workflow with **data quality, leakage prevention, label validation workflow, NLP preprocessing, EDA, imbalanced classification, hyperparameter tuning, PR-AUC, error analysis, model explainability, 3-class benchmarking, and conservative coordination-pattern screening**.
