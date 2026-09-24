@@ -6,6 +6,9 @@ on:
       - "sentiment_analysis_mbg_youtube.ipynb"
       - "data/mbg_comments_labeled.csv"
       - "Scripts/05_restore_labeled_metadata.py"
+      - "data/coordination_analysis/coordination_pattern_review_candidates.csv"
+      - "data/coordination_analysis/coordination_multi_signal_candidates_anonymized.csv"
+      - "data/coordination_analysis/coordination_screening_summary.json"
       - ".github/workflows/execute-mbg-notebook.yml"
   workflow_dispatch:
 
