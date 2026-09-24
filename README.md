@@ -279,7 +279,7 @@ Outputs:
 - `data/coordination_analysis/coordination_pattern_review_candidates.csv`
 - `data/coordination_analysis/coordination_screening_summary.json`
 
-The previous `multiple_pattern_types_observed` count is retained only as a legacy/descriptive field and should not be presented as the number of suspicious commenters.
+The strict candidate table is the intended reviewer-facing output. The analysis does not produce a suspiciousness score or a buzzer/bot classification.
 
 ## Reproducibility
 
