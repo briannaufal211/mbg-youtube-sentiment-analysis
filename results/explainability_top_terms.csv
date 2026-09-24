@@ -1,41 +1,41 @@
 ﻿feature,coefficient,direction
-setuju mbg,5.561923137418746,positive
-bagus,4.481171828086946,positive
-mbg,3.1388175285065465,positive
-lanjutkan,2.9054238652563877,positive
-gak keracunan,2.7962585420088595,positive
-setuju,2.7257332438435378,positive
-lanjutkan mbg,2.5290064812767956,positive
-mbg baik,2.3415164763201095,positive
+setuju mbg,5.561923137418743,positive
+bagus,4.4811718280869455,positive
+mbg,3.138817528506542,positive
+lanjutkan,2.9054238652563864,positive
+gak keracunan,2.796258542008859,positive
+setuju,2.725733243843537,positive
+lanjutkan mbg,2.529006481276795,positive
+mbg baik,2.341516476320109,positive
 mbg bagus,2.234199362467609,positive
-hh,2.0874148334589413,positive
-dukung mbg,2.080121958976654,positive
+hh,2.0874148334589404,positive
+dukung mbg,2.0801219589766538,positive
 mbg tapi,2.074995157658327,positive
 mbg bermanfaat,1.9297869040185303,positive
-besok,1.8936997851979847,positive
-dihentikan,1.8874218048864617,positive
+besok,1.8936997851979838,positive
+dihentikan,1.8874218048864615,positive
 tidak keracunan,1.8447241553007407,positive
 bermanfaat,1.8223381447991032,positive
-bambu,1.6981433647212503,positive
-mantap mbg,1.686054288729893,positive
-dukung,1.6669520438837542,positive
-korupsi,-3.873925960108992,negative
+bambu,1.6981433647212494,positive
+mantap mbg,1.6860542887298928,positive
+dukung,1.6669520438837537,positive
+korupsi,-3.873925960108995,negative
 racun,-1.421496963572023,negative
-hentikan mbg,-1.3944213227428308,negative
-beracun,-1.2635273670789784,negative
-bodoh,-1.2243553922869408,negative
+hentikan mbg,-1.3944213227428313,negative
+beracun,-1.263527367078979,negative
+bodoh,-1.2243553922869417,negative
 stop,-1.140416627703401,negative
-bubarkan mbg,-1.1314160215606113,negative
-miskin,-1.1085906275429829,negative
-stop mbg,-1.1038255837701731,negative
-prabowo,-1.0610322449639846,negative
-makanan,-1.0057099414475816,negative
+bubarkan mbg,-1.1314160215606115,negative
+miskin,-1.1085906275429833,negative
+stop mbg,-1.1038255837701743,negative
+prabowo,-1.0610322449639866,negative
+makanan,-1.0057099414475825,negative
 punya,-0.9571298243295707,negative
-basi,-0.9544601732418645,negative
-kalian,-0.933561129850904,negative
-semua,-0.9300497862634739,negative
-tua,-0.8939620223696512,negative
+basi,-0.9544601732418647,negative
+kalian,-0.9335611298509043,negative
+semua,-0.930049786263475,negative
 orang tua,-0.8939620223696512,negative
-indonesia,-0.8762097550515896,negative
-korupsinya,-0.870693514812248,negative
-membunuh,-0.836880942489761,negative
+tua,-0.8939620223696512,negative
+indonesia,-0.8762097550515928,negative
+korupsinya,-0.8706935148122482,negative
+membunuh,-0.8368809424897614,negative
