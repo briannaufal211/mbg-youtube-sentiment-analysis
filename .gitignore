@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environments / secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+
+# Local YouTube commenter enrichment data (privacy-sensitive)
+data/mbg_comments_coordination_ready.csv
+data/commenter_metadata_cache.csv
+data/commenter_metadata_failed_ids.txt
+data/coordination_analysis/commenter_activity_summary_anonymized.csv
+data/coordination_analysis/commenter_pattern_indicators_anonymized.csv
+data/coordination_analysis/coordination_exact_repetitions.csv
+data/coordination_analysis/coordination_cross_video_repetition.csv
+data/coordination_analysis/coordination_temporal_patterns.csv
+data/coordination_analysis/coordination_similar_text_pairs.csv
+
+# Temporary / local artifacts
+*.tmp
+*.tmp.csv
+*.log
