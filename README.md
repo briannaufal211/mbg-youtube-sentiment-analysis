@@ -188,6 +188,8 @@ The notebook writes reusable outputs to `results/`, including:
 
 ```
 .
+├── Presentation/
+│   └── MBG_YouTube_Sentiment_Analysis_Final_Portfolio.pptx
 ├── data/
 │   ├── mbg_comments_raw.csv
 │   ├── mbg_comments_clean.csv
@@ -208,6 +210,10 @@ The notebook writes reusable outputs to `results/`, including:
 │   └── 08_coordination_multi_signal_review.py
 ├── results/
 ├── sentiment_analysis_mbg_youtube.ipynb
+├── best_baseline_bilstm.keras
+├── best_model.keras
+├── .env.example
+├── .gitignore
 ├── requirements.txt
 └── .github/
     └── workflows/
@@ -324,7 +330,7 @@ Then open:
 
 `sentiment_analysis_mbg_youtube.ipynb`
 
-The notebook's final portfolio snapshot can be read without a YouTube API key because the public repository stores only the anonymized/descriptive coordination outputs required by the notebook. The YouTube API key is needed only when regenerating commenter metadata locally with `Scripts/06_enrich_commenter_metadata.py`. For local setup, copy `.env.example` to `.env` and fill in `YOUTUBE_API_KEY`.
+The notebook's final portfolio snapshot can be read without a YouTube API key because the public repository stores only the anonymized/descriptive coordination outputs required by the notebook. The trained `.keras` files are reusable model artifacts, while the PowerPoint under `Presentation/` is the presentation deliverable for the same project. The YouTube API key is needed only when regenerating commenter metadata locally with `Scripts/06_enrich_commenter_metadata.py`. For local setup, copy `.env.example` to `.env` and fill in `YOUTUBE_API_KEY`.
 
 The GitHub Actions workflow executes the notebook automatically when the notebook, labeled dataset, or final coordination-analysis snapshot changes. It also re-runs safely after concurrent pushes by rebasing before the final push.
 
