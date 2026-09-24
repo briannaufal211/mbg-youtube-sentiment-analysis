@@ -198,7 +198,10 @@ The notebook writes reusable outputs to `results/`, including:
 │   ├── 02_prepare_labeling.py
 │   ├── 03_merge_labels.py
 │   ├── 04_prepare_human_validation.py
-│   └── 05_restore_labeled_metadata.py
+│   ├── 05_restore_labeled_metadata.py
+│   ├── 06_enrich_commenter_metadata.py
+│   ├── 07_coordination_pattern_analysis.py
+│   └── 08_coordination_multi_signal_review.py
 ├── results/
 ├── sentiment_analysis_mbg_youtube.ipynb
 ├── requirements.txt
@@ -249,6 +252,29 @@ including:
 The analysis is intentionally framed as **coordination-like pattern detection**, not definitive “buzzer detection”. Repeated text, high text similarity, synchronized posting, or cross-video repetition are signals for further review; they do not by themselves establish that an account is a bot, buzzer, or coordinated actor.
 
 The exported commenter activity table uses a one-way hash rather than exposing commenter channel IDs in the portfolio analysis output.
+
+### Multi-signal review
+
+After running the first coordination-pattern analysis, run:
+
+```bash
+python Scripts/08_coordination_multi_signal_review.py
+```
+
+This second-stage script aggregates several descriptive indicators at commenter level:
+
+- exact repeated-text participation
+- cross-video repeated-text participation
+- highly similar text-pair participation
+- temporal-pattern participation
+
+It reports **indicator counts and multi-pattern observations**, not a buzzer/bot classification or risk score. The commenter output is anonymized with a one-way hash. A separate pattern-review table highlights repeated-text clusters that meet the project's descriptive review criteria.
+
+Outputs:
+
+- `data/coordination_analysis/commenter_pattern_indicators_anonymized.csv`
+- `data/coordination_analysis/coordination_pattern_review_candidates.csv`
+- `data/coordination_analysis/coordination_screening_summary.json`
 
 ## Reproducibility
 
