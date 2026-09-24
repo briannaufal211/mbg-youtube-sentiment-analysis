@@ -23,9 +23,31 @@ REQUIRED_COLUMNS = {
     "commenter_channel_id",
 }
 
+# Keep stage-2 review aligned with the same minimum text-quality rule used
+# by Scripts/07_coordination_pattern_analysis.py. This prevents short/common
+# strings and emoji-only comments from becoming review clusters.
+MIN_TEXT_CHARS = 20
+MIN_TEXT_WORDS = 4
+
+# Similarity is a candidate-generation signal in stage 1. For stage 2,
+# only stronger near-duplicate pairs are used as a review signal.
+STRONG_SIMILARITY_THRESHOLD = 0.92
+
 
 def hash_id(value: str) -> str:
     return hashlib.sha256(str(value).encode("utf-8")).hexdigest()[:12]
+
+
+def make_pattern_key(text: str) -> str:
+    return " ".join(str(text).split())
+
+
+def is_eligible_text(text: str) -> bool:
+    clean = make_pattern_key(text)
+    return (
+        len(clean) >= MIN_TEXT_CHARS
+        and len(clean.split()) >= MIN_TEXT_WORDS
+    )
 
 
 def load_data(path: Path) -> pd.DataFrame:
@@ -50,7 +72,16 @@ def load_data(path: Path) -> pd.DataFrame:
     if df["published_at"].isna().any():
         raise ValueError("Terdapat published_at yang tidak valid.")
 
+    df["pattern_text"] = df["comment_clean"].map(make_pattern_key)
+    df["eligible_for_pattern_analysis"] = df["pattern_text"].map(
+        is_eligible_text
+    )
+
     return df
+
+
+def _ensure_set_map():
+    return {}
 
 
 def prepare_indicators(
@@ -60,58 +91,70 @@ def prepare_indicators(
     base = df.copy()
     base["commenter_hash"] = base["commenter_channel_id"].map(hash_id)
 
-    # 1) Exact repeated-text signal from the level-1 analysis.
-    exact_file = analysis_dir / "coordination_exact_repetitions.csv"
-    exact = pd.read_csv(exact_file, dtype=str).fillna("") if exact_file.exists() else pd.DataFrame()
+    # Signal-family participation is tracked by comment ID rather than only
+    # by group counts. This avoids treating one comment as "multi-signal"
+    # merely because the same text was picked up by several overlapping
+    # detection rules.
+    repetition_comments = {}
+    cross_video_comments = {}
+    temporal_comments = {}
+    similarity_comments = {}
 
-    exact_group_count = {}
-    if not exact.empty:
-        # Re-derive participation from the original text so the result stays
-        # aligned with the current input dataset.
-        eligible = base.copy()
-        eligible["pattern_text"] = eligible["comment_clean"].astype(str).str.split().str.join(" ")
-        repeated = eligible.groupby("pattern_text").agg(
+    # 1) Exact repeated-text signal.
+    eligible = base[base["eligible_for_pattern_analysis"]].copy()
+
+    repeated = (
+        eligible.groupby("pattern_text", dropna=False)
+        .agg(
             repeated_comment_count=("comment_id", "size"),
             distinct_commenters=("commenter_channel_id", "nunique"),
             distinct_videos=("video_id", "nunique"),
-        ).reset_index()
-
-        repeated = repeated[
-            (repeated["repeated_comment_count"] >= 2)
-            & (
-                (repeated["distinct_commenters"] >= 2)
-                | (repeated["distinct_videos"] >= 2)
-            )
-        ]
-
-        repeated_texts = set(repeated["pattern_text"])
-        base["pattern_text"] = base["comment_clean"].astype(str).str.split().str.join(" ")
-        exact_group_count = (
-            base[base["pattern_text"].isin(repeated_texts)]
-            .groupby("commenter_hash")["pattern_text"]
-            .nunique()
-            .to_dict()
         )
-    else:
-        base["pattern_text"] = base["comment_clean"].astype(str).str.split().str.join(" ")
-
-    # 2) Cross-video repetition signal.
-    cross_file = analysis_dir / "coordination_cross_video_repetition.csv"
-    cross = pd.read_csv(cross_file, dtype=str).fillna("") if cross_file.exists() else pd.DataFrame()
-    cross_texts = set(cross["pattern_text"]) if "pattern_text" in cross.columns else set()
-
-    cross_signal = (
-        base[base["pattern_text"].isin(cross_texts)]
-        .groupby("commenter_hash")["pattern_text"]
-        .nunique()
-        .to_dict()
+        .reset_index()
     )
 
-    # 3) Temporal signal: same normalized text in the same 10-minute bucket
-    # with multiple commenters.
+    repeated = repeated[
+        (repeated["repeated_comment_count"] >= 2)
+        & (repeated["distinct_commenters"] >= 2)
+    ]
+
+    repeated_texts = set(repeated["pattern_text"])
+
+    for row in eligible[eligible["pattern_text"].isin(repeated_texts)].itertuples(
+        index=False
+    ):
+        repetition_comments.setdefault(row.commenter_hash, set()).add(
+            str(row.comment_id)
+        )
+
+    # 2) Cross-video exact repetition. This is retained as a separate
+    # descriptive count, but it is part of the same "repetition" signal family
+    # for the stricter multi-signal decision below.
+    cross_file = analysis_dir / "coordination_cross_video_repetition.csv"
+    cross = (
+        pd.read_csv(cross_file, dtype=str).fillna("")
+        if cross_file.exists()
+        else pd.DataFrame()
+    )
+    cross_texts = (
+        set(cross["pattern_text"])
+        if "pattern_text" in cross.columns
+        else set()
+    )
+
+    cross_rows = eligible[eligible["pattern_text"].isin(cross_texts)]
+    for row in cross_rows.itertuples(index=False):
+        cross_video_comments.setdefault(row.commenter_hash, set()).add(
+            str(row.comment_id)
+        )
+
+    # 3) Temporal signal: same eligible text used by multiple commenters in
+    # the same 10-minute bucket.
     base["time_bucket"] = base["published_at"].dt.floor("10min")
+    eligible = base[base["eligible_for_pattern_analysis"]].copy()
+
     temporal_group = (
-        base.groupby(["time_bucket", "pattern_text"])
+        eligible.groupby(["time_bucket", "pattern_text"])
         .agg(
             comment_count=("comment_id", "size"),
             distinct_commenters=("commenter_channel_id", "nunique"),
@@ -131,15 +174,14 @@ def prepare_indicators(
         )
     )
 
-    temporal_counts = {}
-    for row in base.itertuples(index=False):
+    for row in eligible.itertuples(index=False):
         key = (str(row.time_bucket), row.pattern_text)
         if key in temporal_keys:
-            temporal_counts[row.commenter_hash] = (
-                temporal_counts.get(row.commenter_hash, 0) + 1
+            temporal_comments.setdefault(row.commenter_hash, set()).add(
+                str(row.comment_id)
             )
 
-    # 4) Text-similarity signal from level-1 pairs.
+    # 4) Strong near-duplicate text signal.
     similar_file = analysis_dir / "coordination_similar_text_pairs.csv"
     similar = (
         pd.read_csv(similar_file, dtype=str).fillna("")
@@ -147,38 +189,60 @@ def prepare_indicators(
         else pd.DataFrame()
     )
 
-    similarity_counts = {}
+    similarity_pair_counts = {}
     similarity_partner_counts = {}
 
     if not similar.empty:
-        high_pairs = similar.copy()
-
-        if "similarity" in high_pairs.columns:
-            high_pairs["similarity"] = pd.to_numeric(
-                high_pairs["similarity"], errors="coerce"
+        if "similarity" in similar.columns:
+            similar["similarity"] = pd.to_numeric(
+                similar["similarity"], errors="coerce"
             )
+        else:
+            similar["similarity"] = float("nan")
 
-        # Count unique comment IDs and unique paired IDs per commenter.
-        comment_to_commenters = {}
-        for row in base[["comment_id", "commenter_hash"]].itertuples(index=False):
-            comment_to_commenters[str(row.comment_id)] = row.commenter_hash
+        comment_lookup = (
+            base[["comment_id", "commenter_hash", "video_id"]]
+            .astype(str)
+            .set_index("comment_id")
+            .to_dict("index")
+        )
 
-        for row in high_pairs.itertuples(index=False):
+        strong_pairs = similar[
+            similar["similarity"].ge(STRONG_SIMILARITY_THRESHOLD)
+        ].copy()
+
+        for row in strong_pairs.itertuples(index=False):
             a = str(getattr(row, "comment_id_a", ""))
             b = str(getattr(row, "comment_id_b", ""))
 
-            ha = comment_to_commenters.get(a)
-            hb = comment_to_commenters.get(b)
+            info_a = comment_lookup.get(a)
+            info_b = comment_lookup.get(b)
 
-            if ha and hb and ha != hb:
-                similarity_counts[ha] = similarity_counts.get(ha, 0) + 1
-                similarity_counts[hb] = similarity_counts.get(hb, 0) + 1
+            if not info_a or not info_b:
+                continue
 
-                similarity_partner_counts.setdefault(ha, set()).add(hb)
-                similarity_partner_counts.setdefault(hb, set()).add(ha)
+            # Only compare different commenters. For stage 2, cross-video
+            # similarity is preferred because same-video similarity can often
+            # arise from normal discussion or replies to the same topic.
+            if info_a["commenter_hash"] == info_b["commenter_hash"]:
+                continue
 
-    # 5) Basic activity context. These are descriptive, not suspicious by
-    # themselves.
+            if info_a["video_id"] == info_b["video_id"]:
+                continue
+
+            ha = info_a["commenter_hash"]
+            hb = info_b["commenter_hash"]
+
+            similarity_comments.setdefault(ha, set()).add(a)
+            similarity_comments.setdefault(hb, set()).add(b)
+
+            similarity_pair_counts[ha] = similarity_pair_counts.get(ha, 0) + 1
+            similarity_pair_counts[hb] = similarity_pair_counts.get(hb, 0) + 1
+
+            similarity_partner_counts.setdefault(ha, set()).add(hb)
+            similarity_partner_counts.setdefault(hb, set()).add(ha)
+
+    # 5) Descriptive activity context. These are not suspicious by themselves.
     activity = (
         base.groupby("commenter_hash")
         .agg(
@@ -191,50 +255,118 @@ def prepare_indicators(
         .reset_index()
     )
 
-    activity["exact_repetition_groups"] = (
-        activity["commenter_hash"].map(exact_group_count).fillna(0).astype(int)
+    def count_for(mapping, key):
+        return len(mapping.get(key, set()))
+
+    def union_for(key):
+        return (
+            repetition_comments.get(key, set())
+            | temporal_comments.get(key, set())
+            | similarity_comments.get(key, set())
+        )
+
+    activity["eligible_pattern_comments"] = (
+        base.groupby("commenter_hash")["eligible_for_pattern_analysis"]
+        .sum()
+        .astype(int)
+        .reindex(activity["commenter_hash"])
+        .fillna(0)
+        .astype(int)
+        .to_numpy()
     )
-    activity["cross_video_repetition_groups"] = (
-        activity["commenter_hash"].map(cross_signal).fillna(0).astype(int)
+
+    activity["exact_repetition_comments"] = activity["commenter_hash"].map(
+        lambda x: count_for(repetition_comments, x)
     )
-    activity["similar_text_pairs"] = (
-        activity["commenter_hash"].map(similarity_counts).fillna(0).astype(int)
+    activity["cross_video_repetition_comments"] = activity["commenter_hash"].map(
+        lambda x: count_for(cross_video_comments, x)
     )
-    activity["similar_text_partner_count"] = (
+    activity["temporal_pattern_comments"] = activity["commenter_hash"].map(
+        lambda x: count_for(temporal_comments, x)
+    )
+    activity["strong_similarity_comments"] = activity["commenter_hash"].map(
+        lambda x: count_for(similarity_comments, x)
+    )
+
+    # Preserve pair/partner counts as descriptive context.
+    activity["strong_similarity_pairs"] = (
+        activity["commenter_hash"]
+        .map(similarity_pair_counts)
+        .fillna(0)
+        .astype(int)
+    )
+    activity["strong_similarity_partner_count"] = (
         activity["commenter_hash"]
         .map(lambda x: len(similarity_partner_counts.get(x, set())))
         .astype(int)
     )
-    activity["temporal_pattern_comments"] = (
-        activity["commenter_hash"].map(temporal_counts).fillna(0).astype(int)
+
+    # Exact repetition and cross-video repetition overlap, so they are treated
+    # as one signal family for the stricter review candidate logic.
+    activity["repetition_signal_observed"] = (
+        activity["exact_repetition_comments"] > 0
+    )
+    activity["temporal_signal_observed"] = (
+        activity["temporal_pattern_comments"] > 0
+    )
+    activity["similarity_signal_observed"] = (
+        activity["strong_similarity_comments"] > 0
     )
 
-    # A descriptive multi-signal count. This is deliberately NOT a buzzer
-    # label or risk score. It only counts how many different pattern types
-    # are present for a commenter in this dataset.
-    activity["pattern_types_observed"] = (
-        (activity["exact_repetition_groups"] > 0).astype(int)
-        + (activity["cross_video_repetition_groups"] > 0).astype(int)
-        + (activity["similar_text_pairs"] > 0).astype(int)
+    activity["signal_families_observed"] = (
+        activity["repetition_signal_observed"].astype(int)
+        + activity["temporal_signal_observed"].astype(int)
+        + activity["similarity_signal_observed"].astype(int)
+    )
+
+    activity["pattern_comment_count"] = activity["commenter_hash"].map(
+        lambda x: len(union_for(x))
+    )
+
+    # A stricter, portfolio-safe review candidate requires:
+    # 1) at least two comments from the same commenter,
+    # 2) at least two comments participating in detected patterns, and
+    # 3) at least two independent signal families.
+    #
+    # This is still a descriptive screening rule, NOT a buzzer/bot label.
+    activity["multi_signal_review_candidate"] = (
+        (activity["comment_count"] >= 2)
+        & (activity["pattern_comment_count"] >= 2)
+        & (activity["signal_families_observed"] >= 2)
+    )
+
+    # Backward-compatible descriptive field. It should NOT be used as the
+    # final screening count because overlapping rules can fire on one comment.
+    activity["pattern_types_observed_legacy"] = (
+        (activity["exact_repetition_comments"] > 0).astype(int)
+        + (activity["cross_video_repetition_comments"] > 0).astype(int)
+        + (activity["strong_similarity_comments"] > 0).astype(int)
         + (activity["temporal_pattern_comments"] > 0).astype(int)
     )
 
-    activity["multiple_pattern_types_observed"] = (
-        activity["pattern_types_observed"] >= 2
+    activity["multiple_pattern_types_observed_legacy"] = (
+        activity["pattern_types_observed_legacy"] >= 2
     )
 
     return activity.sort_values(
-        ["pattern_types_observed", "similar_text_pairs", "comment_count"],
-        ascending=[False, False, False],
+        [
+            "multi_signal_review_candidate",
+            "signal_families_observed",
+            "pattern_comment_count",
+            "comment_count",
+            "strong_similarity_pairs",
+        ],
+        ascending=[False, False, False, False, False],
     )
 
 
 def build_pattern_review_table(df: pd.DataFrame) -> pd.DataFrame:
-    work = df.copy()
-    work["pattern_text"] = (
-        work["comment_clean"].astype(str).str.split().str.join(" ")
-    )
-    work = work[work["pattern_text"].ne("")].copy()
+    # IMPORTANT: use the same eligibility filter as stage 1 so short/common
+    # strings and emoji-only comments never become review clusters.
+    work = df[
+        df["eligible_for_pattern_analysis"]
+        & df["pattern_text"].ne("")
+    ].copy()
 
     groups = (
         work.groupby("pattern_text")
@@ -261,10 +393,18 @@ def build_pattern_review_table(df: pd.DataFrame) -> pd.DataFrame:
         / 3600
     ).round(2)
 
+    # A final review cluster must have:
+    # - meaningful text length,
+    # - repeated text across commenters, and
+    # - either cross-video reuse OR very tight temporal reuse (<= 1 hour).
+    # This sharply reduces noise from generic single-word comments.
     groups["pattern_cluster_candidate"] = (
         groups["repeated_text"]
         & groups["cross_commenter"]
-        & (groups["cross_video"] | (groups["duration_hours"] <= 1))
+        & (
+            groups["cross_video"]
+            | (groups["duration_hours"] <= 1)
+        )
     )
 
     return groups[
@@ -299,17 +439,23 @@ def build_summary(
 ) -> dict:
     return {
         "unique_commenters": int(len(commenter_df)),
-        "commenters_with_multiple_pattern_types": int(
-            commenter_df["multiple_pattern_types_observed"].sum()
+        "commenters_with_legacy_multiple_pattern_types": int(
+            commenter_df["multiple_pattern_types_observed_legacy"].sum()
+        ),
+        "commenters_with_two_or_more_signal_families": int(
+            (commenter_df["signal_families_observed"] >= 2).sum()
+        ),
+        "strict_multi_signal_review_candidates": int(
+            commenter_df["multi_signal_review_candidate"].sum()
         ),
         "commenters_with_exact_repetition": int(
-            (commenter_df["exact_repetition_groups"] > 0).sum()
+            (commenter_df["exact_repetition_comments"] > 0).sum()
         ),
         "commenters_with_cross_video_repetition": int(
-            (commenter_df["cross_video_repetition_groups"] > 0).sum()
+            (commenter_df["cross_video_repetition_comments"] > 0).sum()
         ),
-        "commenters_in_similar_text_pairs": int(
-            (commenter_df["similar_text_pairs"] > 0).sum()
+        "commenters_in_strong_cross_video_similarity": int(
+            (commenter_df["strong_similarity_comments"] > 0).sum()
         ),
         "commenters_in_temporal_patterns": int(
             (commenter_df["temporal_pattern_comments"] > 0).sum()
@@ -317,6 +463,9 @@ def build_summary(
         "pattern_clusters_for_review": int(
             pattern_df["pattern_cluster_candidate"].sum()
         ),
+        "minimum_text_chars": MIN_TEXT_CHARS,
+        "minimum_text_words": MIN_TEXT_WORDS,
+        "strong_similarity_threshold": STRONG_SIMILARITY_THRESHOLD,
         "interpretation_boundary": (
             "These are descriptive pattern indicators for review. "
             "They do not establish that any commenter is a buzzer, bot, "
@@ -327,7 +476,10 @@ def build_summary(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Aggregate coordination-like indicators without assigning buzzer labels."
+        description=(
+            "Aggregate stricter coordination-like indicators without "
+            "assigning buzzer labels."
+        )
     )
     parser.add_argument(
         "--input",
@@ -339,7 +491,21 @@ def main() -> None:
         default=str(DEFAULT_ANALYSIS_DIR),
         help="Directory containing level-1 coordination outputs.",
     )
+    parser.add_argument(
+        "--strong-similarity-threshold",
+        type=float,
+        default=STRONG_SIMILARITY_THRESHOLD,
+        help="Minimum cosine similarity for stage-2 near-duplicate review.",
+    )
     args = parser.parse_args()
+
+    if not 0 < args.strong_similarity_threshold <= 1:
+        raise ValueError(
+            "--strong-similarity-threshold harus di antara 0 dan 1."
+        )
+
+    global STRONG_SIMILARITY_THRESHOLD
+    STRONG_SIMILARITY_THRESHOLD = args.strong_similarity_threshold
 
     input_path = Path(args.input)
     analysis_dir = Path(args.analysis_dir)
@@ -373,16 +539,28 @@ def main() -> None:
     )
 
     print("=" * 80)
-    print("COORDINATION SCREENING - MULTI-SIGNAL AGGREGATION")
+    print("COORDINATION SCREENING - STRICT MULTI-SIGNAL REVIEW")
     print("=" * 80)
     print(f"Unique commenters                     : {len(commenter_df):,}")
     print(
-        "Commenters with >=2 pattern types    : "
-        f"{int(commenter_df['multiple_pattern_types_observed'].sum()):,}"
+        "Legacy overlapping multi-pattern rows : "
+        f"{int(commenter_df['multiple_pattern_types_observed_legacy'].sum()):,}"
+    )
+    print(
+        "Commenters with >=2 signal families   : "
+        f"{int((commenter_df['signal_families_observed'] >= 2).sum()):,}"
+    )
+    print(
+        "Strict review candidates              : "
+        f"{int(commenter_df['multi_signal_review_candidate'].sum()):,}"
     )
     print(
         "Pattern clusters for review           : "
         f"{int(pattern_df['pattern_cluster_candidate'].sum()):,}"
+    )
+    print(
+        f"Strong similarity threshold           : "
+        f"{args.strong_similarity_threshold:.2f}"
     )
     print(f"Indicator table                       : {commenter_file}")
     print(f"Pattern review table                  : {pattern_file}")
@@ -390,9 +568,8 @@ def main() -> None:
 
     print("\nInterpretation:")
     print(
-        "Use these outputs to prioritize descriptive review of repeated or "
-        "similar commenting patterns. Do not convert the flags into a "
-        "definitive buzzer/bot label."
+        "The strict candidate set is only a descriptive review queue. "
+        "It is not a buzzer, bot, or coordination label."
     )
 
 
