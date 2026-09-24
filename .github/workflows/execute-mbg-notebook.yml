@@ -47,6 +47,37 @@ jobs:
         run: |
           python Scripts/05_restore_labeled_metadata.py
 
+      - name: Validate notebook and coordination snapshot
+        run: |
+          python - <<'PY'
+          import json
+          import nbformat
+          from pathlib import Path
+
+          notebook_path = Path("sentiment_analysis_mbg_youtube.ipynb")
+          nb = nbformat.read(notebook_path, as_version=4)
+          nbformat.validate(nb)
+
+          required = [
+              Path("data/coordination_analysis/coordination_pattern_review_candidates.csv"),
+              Path("data/coordination_analysis/coordination_multi_signal_candidates_anonymized.csv"),
+              Path("data/coordination_analysis/coordination_screening_summary.json"),
+          ]
+          missing = [str(p) for p in required if not p.exists()]
+          if missing:
+              raise SystemExit(f"Missing coordination portfolio outputs: {missing}")
+
+          with open(required[-1], "r", encoding="utf-8") as f:
+              summary = json.load(f)
+
+          assert summary["strict_multi_signal_review_candidates"] == 0
+          assert summary["pattern_clusters_for_review"] == 4
+          assert summary["minimum_text_chars"] == 20
+          assert summary["minimum_text_words"] == 4
+          assert summary["strong_similarity_threshold"] == 0.92
+          print("Notebook JSON and coordination snapshot validation passed.")
+          PY
+
       - name: Execute notebook
         run: |
           jupyter nbconvert \
