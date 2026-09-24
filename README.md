@@ -281,6 +281,19 @@ Outputs:
 
 The strict candidate table is the intended reviewer-facing output. The analysis does not produce a suspiciousness score or a buzzer/bot classification.
 
+### Final coordination snapshot
+
+The portfolio notebook now includes a dedicated **Coordination Pattern Analysis** section that consumes the anonymized/descriptive coordination outputs stored under `data/coordination_analysis/`.
+
+The final snapshot reports:
+
+- **11,205 unique commenters** in the coordination-ready sample;
+- **12 commenters** associated with at least two signal families;
+- **0 strict multi-signal review candidates** after the conservative account-level criteria;
+- **4 repeated-text pattern clusters** meeting the final text-quality, cross-commenter, and cross-video criteria.
+
+These numbers are presented as descriptive pattern-analysis results. They are **not** a buzzer/bot count, a probability, or a classification of coordinated actors.
+
 ## Reproducibility
 
 Install dependencies:
