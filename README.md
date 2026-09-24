@@ -261,20 +261,24 @@ After running the first coordination-pattern analysis, run:
 python Scripts/08_coordination_multi_signal_review.py
 ```
 
-This second-stage script aggregates several descriptive indicators at commenter level:
+Stage 2 intentionally applies stricter filters than the initial pattern discovery:
 
-- exact repeated-text participation
-- cross-video repeated-text participation
-- highly similar text-pair participation
-- temporal-pattern participation
+- the same **minimum text-quality rule** as stage 1 (at least 20 characters and 4 words);
+- exact repeated text must involve **multiple commenters**;
+- near-duplicate similarity is promoted to a review signal only at **cosine similarity >= 0.92** and across **different videos**;
+- a commenter is considered a strict **multi-signal review candidate** only when at least **2 of their comments participate in detected patterns** and at least **2 independent signal families** are observed.
 
-It reports **indicator counts and multi-pattern observations**, not a buzzer/bot classification or risk score. The commenter output is anonymized with a one-way hash. A separate pattern-review table highlights repeated-text clusters that meet the project's descriptive review criteria.
+Exact repetition and cross-video repetition are treated as one signal family because cross-video repetition is a subset of repeated-text evidence. This prevents one comment from being counted as several independent signals just because multiple overlapping rules detected it.
+
+The output is a **descriptive review queue**, not a buzzer/bot label, probability, or risk score. Commenter identifiers are anonymized with a one-way hash. The pattern-review table removes short/common strings and emoji-only comments that previously created noisy clusters.
 
 Outputs:
 
 - `data/coordination_analysis/commenter_pattern_indicators_anonymized.csv`
 - `data/coordination_analysis/coordination_pattern_review_candidates.csv`
 - `data/coordination_analysis/coordination_screening_summary.json`
+
+The previous `multiple_pattern_types_observed` count is retained only as a legacy/descriptive field and should not be presented as the number of suspicious commenters.
 
 ## Reproducibility
 
