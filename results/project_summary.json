@@ -81,5 +81,15 @@
     "macro_f1": 0.6572822445540031,
     "weighted_f1": 0.8345995814206513,
     "macro_pr_auc": 0.7023439959993992
+  },
+  "coordination_pattern_analysis": {
+    "unique_commenters": 11205,
+    "commenters_with_two_or_more_signal_families": 12,
+    "strict_multi_signal_review_candidates": 0,
+    "pattern_clusters_for_review": 4,
+    "minimum_text_chars": 20,
+    "minimum_text_words": 4,
+    "strong_similarity_threshold": 0.92,
+    "interpretation_boundary": "These are descriptive pattern indicators for review. They do not establish that any commenter is a buzzer, bot, or coordinated actor, and they are not a supervised classifier."
   }
 }
