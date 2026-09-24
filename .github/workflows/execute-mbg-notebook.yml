@@ -66,6 +66,8 @@ jobs:
           if git diff --cached --quiet; then
             echo "No notebook/result/data changes to commit."
           else
-            git commit -m "Fix labeled dataset metadata alignment"
-            git push
+            git commit -m "Execute final MBG portfolio notebook"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
           fi
