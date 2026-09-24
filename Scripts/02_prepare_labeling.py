@@ -36,11 +36,23 @@ def main():
     else:
         sample_df = df.sample(sample_size, random_state=RANDOM_STATE)
 
+    # Keep stable source identifiers and useful metadata in the annotation file.
     label_columns = [
-        "row_id", "comment", "comment_clean", "video_title",
-        "channel_title", "published_at", "like_count",
-        "sentiment", "label_notes"
+        "row_id",
+        "comment_id",
+        "video_id",
+        "comment",
+        "comment_clean",
+        "video_title",
+        "channel_id",
+        "channel_title",
+        "published_at",
+        "like_count",
+        "comment_like_count",
+        "sentiment",
+        "label_notes",
     ]
+
     available = [c for c in label_columns if c in sample_df.columns]
     sample_df = sample_df[available].copy()
 
