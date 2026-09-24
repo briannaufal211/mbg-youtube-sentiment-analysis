@@ -285,6 +285,20 @@ Outputs:
 
 The strict candidate table is the intended reviewer-facing output. The analysis does not produce a suspiciousness score or a buzzer/bot classification.
 
+
+
+### Coordination data privacy and reproducibility boundary
+
+The enriched file `data/mbg_comments_coordination_ready.csv` contains commenter-level metadata retrieved from YouTube (including commenter identifiers/names) and is intentionally kept local rather than committed to the public repository. The same applies to the metadata cache.
+
+For portfolio reproducibility, the repository keeps only the anonymized/descriptive final outputs needed by the notebook:
+
+- `coordination_pattern_review_candidates.csv`
+- `coordination_multi_signal_candidates_anonymized.csv`
+- `coordination_screening_summary.json`
+
+The stage-1 discovery tables (`coordination_exact_repetitions.csv`, `coordination_cross_video_repetition.csv`, `coordination_temporal_patterns.csv`, `coordination_similar_text_pairs.csv`, and `commenter_activity_summary_anonymized.csv`) can be regenerated locally from the coordination-ready input with Scripts 07–08. They are not required to view the final portfolio notebook.
+
 ### Final coordination snapshot
 
 The portfolio notebook now includes a dedicated **Coordination Pattern Analysis** section that consumes the anonymized/descriptive coordination outputs stored under `data/coordination_analysis/`.
