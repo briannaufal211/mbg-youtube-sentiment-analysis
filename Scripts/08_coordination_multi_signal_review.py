@@ -281,7 +281,7 @@ def prepare_indicators(
     activity["temporal_pattern_comments"] = activity["commenter_hash"].map(
         lambda x: count_for(temporal_comments, x)
     )
-    activity["strong_similarity_comments"] = activity["commenter_hash"].map(
+    activity["strong_similarity_cross_video_comments"] = activity["commenter_hash"].map(
         lambda x: count_for(similarity_comments, x)
     )
 
@@ -307,7 +307,7 @@ def prepare_indicators(
         activity["temporal_pattern_comments"] > 0
     )
     activity["similarity_signal_observed"] = (
-        activity["strong_similarity_comments"] > 0
+        activity["strong_similarity_cross_video_comments"] > 0
     )
 
     activity["signal_families_observed"] = (
@@ -330,19 +330,6 @@ def prepare_indicators(
         (activity["comment_count"] >= 2)
         & (activity["pattern_comment_count"] >= 2)
         & (activity["signal_families_observed"] >= 2)
-    )
-
-    # Backward-compatible descriptive field. It should NOT be used as the
-    # final screening count because overlapping rules can fire on one comment.
-    activity["pattern_types_observed_legacy"] = (
-        (activity["exact_repetition_comments"] > 0).astype(int)
-        + (activity["cross_video_repetition_comments"] > 0).astype(int)
-        + (activity["strong_similarity_comments"] > 0).astype(int)
-        + (activity["temporal_pattern_comments"] > 0).astype(int)
-    )
-
-    activity["multiple_pattern_types_observed_legacy"] = (
-        activity["pattern_types_observed_legacy"] >= 2
     )
 
     return activity.sort_values(
@@ -437,9 +424,6 @@ def build_summary(
 ) -> dict:
     return {
         "unique_commenters": int(len(commenter_df)),
-        "commenters_with_legacy_multiple_pattern_types": int(
-            commenter_df["multiple_pattern_types_observed_legacy"].sum()
-        ),
         "commenters_with_two_or_more_signal_families": int(
             (commenter_df["signal_families_observed"] >= 2).sum()
         ),
@@ -453,7 +437,7 @@ def build_summary(
             (commenter_df["cross_video_repetition_comments"] > 0).sum()
         ),
         "commenters_in_strong_cross_video_similarity": int(
-            (commenter_df["strong_similarity_comments"] > 0).sum()
+            (commenter_df["strong_similarity_cross_video_comments"] > 0).sum()
         ),
         "commenters_in_temporal_patterns": int(
             (commenter_df["temporal_pattern_comments"] > 0).sum()
@@ -557,10 +541,6 @@ def main() -> None:
     print("COORDINATION SCREENING - STRICT MULTI-SIGNAL REVIEW")
     print("=" * 80)
     print(f"Unique commenters                     : {len(commenter_df):,}")
-    print(
-        "Legacy overlapping multi-pattern rows : "
-        f"{int(commenter_df['multiple_pattern_types_observed_legacy'].sum()):,}"
-    )
     print(
         "Commenters with >=2 signal families   : "
         f"{int((commenter_df['signal_families_observed'] >= 2).sum()):,}"
