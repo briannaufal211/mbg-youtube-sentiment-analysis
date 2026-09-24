@@ -5,6 +5,7 @@ on:
     paths:
       - "sentiment_analysis_mbg_youtube.ipynb"
       - "data/mbg_comments_labeled.csv"
+      - "Scripts/05_restore_labeled_metadata.py"
       - ".github/workflows/execute-mbg-notebook.yml"
   workflow_dispatch:
 
@@ -39,22 +40,32 @@ jobs:
         run: |
           python -m pip install -r requirements.txt
 
+      - name: Restore labeled dataset metadata
+        run: |
+          python Scripts/05_restore_labeled_metadata.py
+
       - name: Execute notebook
         run: |
-          jupyter nbconvert             --to notebook             --execute             --ExecutePreprocessor.timeout=1800             --ExecutePreprocessor.kernel_name=python3             --output sentiment_analysis_mbg_youtube_executed.ipynb             sentiment_analysis_mbg_youtube.ipynb
+          jupyter nbconvert \
+            --to notebook \
+            --execute \
+            --ExecutePreprocessor.timeout=1800 \
+            --ExecutePreprocessor.kernel_name=python3 \
+            --output sentiment_analysis_mbg_youtube_executed.ipynb \
+            sentiment_analysis_mbg_youtube.ipynb
 
       - name: Replace portfolio notebook with executed version
         run: |
           mv sentiment_analysis_mbg_youtube_executed.ipynb sentiment_analysis_mbg_youtube.ipynb
 
-      - name: Commit executed notebook and results
+      - name: Commit executed notebook, restored dataset, and results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sentiment_analysis_mbg_youtube.ipynb results/ best_baseline_bilstm.keras best_model.keras
+          git add data/mbg_comments_labeled.csv sentiment_analysis_mbg_youtube.ipynb results/ best_baseline_bilstm.keras best_model.keras
           if git diff --cached --quiet; then
-            echo "No notebook/result changes to commit."
+            echo "No notebook/result/data changes to commit."
           else
-            git commit -m "Execute refined MBG sentiment portfolio notebook"
+            git commit -m "Fix labeled dataset metadata alignment"
             git push
           fi
