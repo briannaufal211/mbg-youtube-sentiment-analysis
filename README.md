@@ -1,4 +1,4 @@
-# MBG YouTube Sentiment Analysis & Text Mining
+# MBG YouTube Sentiment Analysis, Text Mining & Coordination Pattern Analysis
 
 End-to-end **Text Mining + NLP + Machine Learning + Deep Learning** project for analyzing 12,000 YouTube comments related to the MBG discussion.
 
