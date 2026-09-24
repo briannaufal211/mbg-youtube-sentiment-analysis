@@ -324,7 +324,9 @@ Then open:
 
 `sentiment_analysis_mbg_youtube.ipynb`
 
-The notebook is designed to run from the repository root. The GitHub Actions workflow also executes it automatically when the notebook or its labeled dataset changes.
+The notebook's final portfolio snapshot can be read without a YouTube API key because the public repository stores only the anonymized/descriptive coordination outputs required by the notebook. The YouTube API key is needed only when regenerating commenter metadata locally with `Scripts/06_enrich_commenter_metadata.py`. For local setup, copy `.env.example` to `.env` and fill in `YOUTUBE_API_KEY`.
+
+The GitHub Actions workflow executes the notebook automatically when the notebook, labeled dataset, or final coordination-analysis snapshot changes. It also re-runs safely after concurrent pushes by rebasing before the final push.
 
 ## Important Interpretation Boundary
 
