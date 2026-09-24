@@ -16,7 +16,31 @@ Primary portfolio file:
 
 `data/mbg_comments_labeled.csv`
 
-Current dataset snapshot in the repository contains 12,000 labeled comments. The notebook computes the exact post-deduplication modeling counts at runtime instead of hard-coding them.
+Current dataset snapshot in the repository contains **12,000 labeled comments** and preserves the source collection metadata used for downstream analysis.
+
+Key fields include:
+
+- `comment_id`
+- `video_id`
+- `comment`
+- `comment_clean`
+- `published_at`
+- `comment_like_count`
+- `video_title`
+- `channel_id`
+- `channel_title`
+- `sentiment`
+
+### Dataset lineage
+
+The repository intentionally keeps different data stages with different purposes:
+
+- `data/mbg_comments_raw.csv` — 12,000 raw comments collected from YouTube.
+- `data/mbg_comments_clean.csv` — 11,557 rows after the cleaning helper removes invalid/empty comments; this is a preprocessing/annotation helper dataset.
+- `data/mbg_comments_to_label.csv` — annotation sample prepared by `Scripts/02_prepare_labeling.py`.
+- `data/mbg_comments_labeled.csv` — the complete 12,000-row portfolio labeling snapshot, aligned to the raw collection and retaining source metadata.
+
+The different row counts are therefore intentional: the **clean helper dataset is filtered**, while the **portfolio labeled snapshot preserves the full labeled raw-aligned corpus**. The notebook performs its own model-ready validity and duplicate controls before train/validation/test splitting.
 
 ### Labeling
 
@@ -25,7 +49,7 @@ The current portfolio dataset uses **AI-assisted semantic labeling** for:
 - `negative`
 - `neutral`
 
-The repository also contains `Scripts/02_prepare_labeling.py`, which prepares a sample for annotation.
+The repository also contains `Scripts/02_prepare_labeling.py`, which prepares a sample for annotation and now retains stable comment/video metadata.
 
 For validation, the project uses a **binary sentiment framework** with:
 - `positive`
@@ -173,7 +197,8 @@ The notebook writes reusable outputs to `results/`, including:
 │   ├── 01_data_quality_cleaning.py
 │   ├── 02_prepare_labeling.py
 │   ├── 03_merge_labels.py
-│   └── 04_prepare_human_validation.py
+│   ├── 04_prepare_human_validation.py
+│   └── 05_restore_labeled_metadata.py
 ├── results/
 ├── sentiment_analysis_mbg_youtube.ipynb
 ├── requirements.txt
@@ -181,6 +206,12 @@ The notebook writes reusable outputs to `results/`, including:
     └── workflows/
         └── execute-mbg-notebook.yml
 ```
+
+### Metadata consistency safeguard
+
+`Scripts/05_restore_labeled_metadata.py` validates the 12,000-row raw/labeled alignment and restores source metadata into the portfolio labeled snapshot before the notebook runs.
+
+The GitHub Actions workflow executes this safeguard automatically, then commits the restored dataset together with the executed notebook/results.
 
 ## Reproducibility
 
